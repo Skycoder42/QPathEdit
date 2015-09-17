@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+  <namespace>org.doxygen.QPathEdit</namespace>
+  <virtualFolder>doc</virtualFolder>
+  <filterSection>
+    <filterAttribute>doxygen</filterAttribute>
+    <toc>
+      <section title="QPathEdit 1.0.0" ref="index.html">
+        <section title="Introduction" ref="index.html#into" />
+        <section title="Details" ref="index.html#details">
+          <section title="The QPathEdit Class" ref="index.html#details_class" />
+          <section title="Usage - A simple Example" ref="index.html#details_usage" />
+          <section title="Installing the Plugin" ref="index.html#details_plugin" />
+        </section>
+        <section title="Download" ref="index.html#download" />
+        <section title="Classes">
+          <section title="Class List" ref="annotated.html">
+            <section title="QPathEdit" ref="class_q_path_edit.html">
+              <section title="PathMode" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454b">
+                <section title="ExistingFile" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba2ea5d8e5baab38eee5bf159066f79f2b" />
+                <section title="ExistingFolder" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba10336bb20184a76743b531002b0ec7c5" />
+                <section title="AnyFile" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba73d8fd8ecb7e0012a5f8988de9d3127b" />
+              </section>
+              <section title="Style" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5">
+                <section title="SeperatedButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5ac518d837301b035e7fd80f8a2e39c7ba" />
+                <section title="JoinedButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a7a5f4c7286921e056de61863b7f0881e" />
+                <section title="NoButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a0a4f96e969427195af7e97dbd3a36ff4" />
+                <section title="NoDialog" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a871baeafe5de03b83e1d3540a26498bc" />
+              </section>
+              <section title="QPathEdit" ref="class_q_path_edit.html#a32a5b9c90d9e67f79eaa117e0b5f0e62" />
+              <section title="QPathEdit" ref="class_q_path_edit.html#af28b15442b84e95c5dab1e83f7cf8cd9" />
+              <section title="QPathEdit" ref="class_q_path_edit.html#a5f5bbcba2c377da296a382a32ea81c55" />
+              <section title="defaultDirectory" ref="class_q_path_edit.html#a53eb651342642c480d45d605aefeab80" />
+              <section title="dialogButtonIcon" ref="class_q_path_edit.html#afdda9a62258556ba83f258c2d278dc17" />
+              <section title="dialogOptions" ref="class_q_path_edit.html#a9d8a20571ff9e25e75ac625522824607" />
+              <section title="isEditable" ref="class_q_path_edit.html#a83df0df76bf9551d7c7f835ad2a54545" />
+              <section title="isEmptyPathAllowed" ref="class_q_path_edit.html#a805802e8e00e2160be5658328a777a78" />
+              <section title="nameFilters" ref="class_q_path_edit.html#a82e7d9e8150770d1c73a2ab88a364f64" />
+              <section title="path" ref="class_q_path_edit.html#a173e2cf9fc2ed454739ff5c23c33a7ed" />
+              <section title="pathChanged" ref="class_q_path_edit.html#aef3a7669cfb6a6e6b6c8b0fc573163c6" />
+              <section title="pathMode" ref="class_q_path_edit.html#a7276511cb70f2011bbd640f947720c7d" />
+              <section title="pathUrl" ref="class_q_path_edit.html#a36028fc61e6f6b913ca3c8b777acb5bd" />
+              <section title="placeholder" ref="class_q_path_edit.html#a7e78a691d8644912aeacec4e89c1423d" />
+              <section title="setAllowEmptyPath" ref="class_q_path_edit.html#a0c3528301303946e6c0ad76342cbd44e" />
+              <section title="setDefaultDirectory" ref="class_q_path_edit.html#a5ae5f11fddb6df5e6e759f4518f26e67" />
+              <section title="setDialogButtonIcon" ref="class_q_path_edit.html#ae5a53b70f97fe086e62f170c6610fae0" />
+              <section title="setDialogOptions" ref="class_q_path_edit.html#a74428b901f7b212d0d0dd0879e0b9fbe" />
+              <section title="setEditable" ref="class_q_path_edit.html#a517b474893fd93028cf11289195ffd04" />
+              <section title="setNameFilters" ref="class_q_path_edit.html#a5c0b1269f8eb4ce83cc8199cb42ab2a2" />
+              <section title="setPath" ref="class_q_path_edit.html#aa157d650dabb35e85ba07d9705ba2368" />
+              <section title="setPathMode" ref="class_q_path_edit.html#a1778da36610ef97465cbb3cf795370a2" />
+              <section title="setPlaceholder" ref="class_q_path_edit.html#aa4c034da96ae3c3fdde4b8a9eba13ac2" />
+              <section title="setStyle" ref="class_q_path_edit.html#a72ac39571390c2dcbb65398eacaba863" />
+              <section title="setUseCompleter" ref="class_q_path_edit.html#a6ead24e287828efe0e0c5dae504ecbdc" />
+              <section title="showDialog" ref="class_q_path_edit.html#a60b5a5b4bbf60a331f229c6745c45503" />
+              <section title="style" ref="class_q_path_edit.html#a970a798980cd2aa21ff397e113a2381a" />
+              <section title="useCompleter" ref="class_q_path_edit.html#aeee486c496906bbbc063e1e3ca35fbdc" />
+              <section title="allowEmptyPath" ref="class_q_path_edit.html#a2c65d9743bb54d4f3c70a68463998297" />
+              <section title="defaultDirectory" ref="class_q_path_edit.html#ad77b6c18b3ebf71d32f61b857aeb1279" />
+              <section title="dialogButtonIcon" ref="class_q_path_edit.html#add3dacd7a1b27d19c50a1f50cda88d94" />
+              <section title="dialogOptions" ref="class_q_path_edit.html#afb4349c665eb0587db7ecaea278c4f2d" />
+              <section title="editable" ref="class_q_path_edit.html#aa48149088474711a00dad2ec26214ae8" />
+              <section title="nameFilters" ref="class_q_path_edit.html#a2c11672712401b2378603f1dd1b39714" />
+              <section title="path" ref="class_q_path_edit.html#a77d188b336db30ce0ee4e4a9837e9467" />
+              <section title="pathMode" ref="class_q_path_edit.html#a67d580d8281be9b14875a8bc5df569d8" />
+              <section title="placeholder" ref="class_q_path_edit.html#aac7a05dbb443ef5c5453f99c96ec0077" />
+              <section title="style" ref="class_q_path_edit.html#a255c10dfa28cb55d6e63537df32c1d40" />
+              <section title="useCompleter" ref="class_q_path_edit.html#a8eef119413965cade66069691c4008e4" />
+            </section>
+          </section>
+          <section title="Class Index" ref="classes.html" />
+          <section title="Class Hierarchy" ref="hierarchy.html">
+            <section title="QObject" ref="qobject.html">
+              <section title="QWidget" ref="qwidget.html">
+                <section title="QPathEdit" ref="class_q_path_edit.html" />
+              </section>
+            </section>
+            <section title="QPaintDevice" ref="qpaintdevice.html">
+              <section title="QWidget" ref="qwidget.html" />
+            </section>
+          </section>
+          <section title="Class Members" ref="functions.html">
+            <section title="All" ref="functions.html" />
+            <section title="Functions" ref="functions_func.html" />
+            <section title="Enumerations" ref="functions_enum.html" />
+            <section title="Enumerator" ref="functions_eval.html" />
+            <section title="Properties" ref="functions_prop.html" />
+          </section>
+        </section>
+        <section title="Files">
+          <section title="File List" ref="files.html">
+            <section title="qpathedit.cpp" ref="qpathedit_8cpp_source.html" />
+            <section title="qpathedit.h" ref="qpathedit_8h_source.html" />
+          </section>
+        </section>
+      </section>
+    </toc>
+    <keywords>
+      <keyword name="QPathEdit" id="QPathEdit" ref="class_q_path_edit.html" />
+      <keyword name="showDialog" id="QPathEdit::showDialog" ref="class_q_path_edit.html#a60b5a5b4bbf60a331f229c6745c45503" />
+      <keyword name="pathChanged" id="QPathEdit::pathChanged" ref="class_q_path_edit.html#aef3a7669cfb6a6e6b6c8b0fc573163c6" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a32a5b9c90d9e67f79eaa117e0b5f0e62" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#af28b15442b84e95c5dab1e83f7cf8cd9" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a5f5bbcba2c377da296a382a32ea81c55" />
+      <keyword name="pathMode" id="QPathEdit::pathMode" ref="class_q_path_edit.html#a7276511cb70f2011bbd640f947720c7d" />
+      <keyword name="dialogOptions" id="QPathEdit::dialogOptions" ref="class_q_path_edit.html#a9d8a20571ff9e25e75ac625522824607" />
+      <keyword name="isEmptyPathAllowed" id="QPathEdit::isEmptyPathAllowed" ref="class_q_path_edit.html#a805802e8e00e2160be5658328a777a78" />
+      <keyword name="defaultDirectory" id="QPathEdit::defaultDirectory" ref="class_q_path_edit.html#a53eb651342642c480d45d605aefeab80" />
+      <keyword name="path" id="QPathEdit::path" ref="class_q_path_edit.html#a173e2cf9fc2ed454739ff5c23c33a7ed" />
+      <keyword name="pathUrl" id="QPathEdit::pathUrl" ref="class_q_path_edit.html#a36028fc61e6f6b913ca3c8b777acb5bd" />
+      <keyword name="placeholder" id="QPathEdit::placeholder" ref="class_q_path_edit.html#a7e78a691d8644912aeacec4e89c1423d" />
+      <keyword name="nameFilters" id="QPathEdit::nameFilters" ref="class_q_path_edit.html#a82e7d9e8150770d1c73a2ab88a364f64" />
+      <keyword name="isEditable" id="QPathEdit::isEditable" ref="class_q_path_edit.html#a83df0df76bf9551d7c7f835ad2a54545" />
+      <keyword name="useCompleter" id="QPathEdit::useCompleter" ref="class_q_path_edit.html#aeee486c496906bbbc063e1e3ca35fbdc" />
+      <keyword name="style" id="QPathEdit::style" ref="class_q_path_edit.html#a970a798980cd2aa21ff397e113a2381a" />
+      <keyword name="dialogButtonIcon" id="QPathEdit::dialogButtonIcon" ref="class_q_path_edit.html#afdda9a62258556ba83f258c2d278dc17" />
+      <keyword name="setPathMode" id="QPathEdit::setPathMode" ref="class_q_path_edit.html#a1778da36610ef97465cbb3cf795370a2" />
+      <keyword name="setDialogOptions" id="QPathEdit::setDialogOptions" ref="class_q_path_edit.html#a74428b901f7b212d0d0dd0879e0b9fbe" />
+      <keyword name="setAllowEmptyPath" id="QPathEdit::setAllowEmptyPath" ref="class_q_path_edit.html#a0c3528301303946e6c0ad76342cbd44e" />
+      <keyword name="setDefaultDirectory" id="QPathEdit::setDefaultDirectory" ref="class_q_path_edit.html#a5ae5f11fddb6df5e6e759f4518f26e67" />
+      <keyword name="setPath" id="QPathEdit::setPath" ref="class_q_path_edit.html#aa157d650dabb35e85ba07d9705ba2368" />
+      <keyword name="setPlaceholder" id="QPathEdit::setPlaceholder" ref="class_q_path_edit.html#aa4c034da96ae3c3fdde4b8a9eba13ac2" />
+      <keyword name="setNameFilters" id="QPathEdit::setNameFilters" ref="class_q_path_edit.html#a5c0b1269f8eb4ce83cc8199cb42ab2a2" />
+      <keyword name="setEditable" id="QPathEdit::setEditable" ref="class_q_path_edit.html#a517b474893fd93028cf11289195ffd04" />
+      <keyword name="setUseCompleter" id="QPathEdit::setUseCompleter" ref="class_q_path_edit.html#a6ead24e287828efe0e0c5dae504ecbdc" />
+      <keyword name="setStyle" id="QPathEdit::setStyle" ref="class_q_path_edit.html#a72ac39571390c2dcbb65398eacaba863" />
+      <keyword name="setDialogButtonIcon" id="QPathEdit::setDialogButtonIcon" ref="class_q_path_edit.html#ae5a53b70f97fe086e62f170c6610fae0" />
+      <keyword name="QWidget" id="QWidget::QWidget" ref="qwidget.html#QWidget" />
+      <keyword name="winId" id="QWidget::winId" ref="qwidget.html#winId" />
+      <keyword name="effectiveWinId" id="QWidget::effectiveWinId" ref="qwidget.html#effectiveWinId" />
+      <keyword name="style" id="QWidget::style" ref="qwidget.html#style" />
+      <keyword name="setStyle" id="QWidget::setStyle" ref="qwidget.html#setStyle" />
+      <keyword name="isTopLevel" id="QWidget::isTopLevel" ref="qwidget.html#isTopLevel" />
+      <keyword name="isWindow" id="QWidget::isWindow" ref="qwidget.html#isWindow" />
+      <keyword name="isModal" id="QWidget::isModal" ref="qwidget.html#modal-prop" />
+      <keyword name="windowModality" id="QWidget::windowModality" ref="qwidget.html#windowModality-prop" />
+      <keyword name="setWindowModality" id="QWidget::setWindowModality" ref="qwidget.html#windowModality-prop" />
+      <keyword name="isEnabled" id="QWidget::isEnabled" ref="qwidget.html#enabled-prop" />
+      <keyword name="isEnabledTo" id="QWidget::isEnabledTo" ref="qwidget.html#isEnabledTo" />
+      <keyword name="isEnabledToTLW" id="QWidget::isEnabledToTLW" ref="qwidget.html#isEnabledToTLW" />
+      <keyword name="setEnabled" id="QWidget::setEnabled" ref="qwidget.html#enabled-prop" />
+      <keyword name="setDisabled" id="QWidget::setDisabled" ref="qwidget.html#setDisabled" />
+      <keyword name="setWindowModified" id="QWidget::setWindowModified" ref="qwidget.html#windowModified-prop" />
+      <keyword name="frameGeometry" id="QWidget::frameGeometry" ref="qwidget.html#frameGeometry-prop" />
+      <keyword name="geometry" id="QWidget::geometry" ref="qwidget.html#geometry-prop" />
+      <keyword name="normalGeometry" id="QWidget::normalGeometry" ref="qwidget.html#normalGeometry-prop" />
+      <keyword name="x" id="QWidget::x" ref="qwidget.html#x-prop" />
+      <keyword name="y" id="QWidget::y" ref="qwidget.html#y-prop" />
+      <keyword name="pos" id="QWidget::pos" ref="qwidget.html#pos-prop" />
+      <keyword name="frameSize" id="QWidget::frameSize" ref="qwidget.html#frameSize-prop" />
+      <keyword name="size" id="QWidget::size" ref="qwidget.html#size-prop" />
+      <keyword name="width" id="QWidget::width" ref="qwidget.html#width-prop" />
+      <keyword name="height" id="QWidget::height" ref="qwidget.html#height-prop" />
+      <keyword name="rect" id="QWidget::rect" ref="qwidget.html#rect-prop" />
+      <keyword name="childrenRect" id="QWidget::childrenRect" ref="qwidget.html#childrenRect-prop" />
+      <keyword name="childrenRegion" id="QWidget::childrenRegion" ref="qwidget.html#childrenRegion-prop" />
+      <keyword name="minimumSize" id="QWidget::minimumSize" ref="qwidget.html#minimumSize-prop" />
+      <keyword name="maximumSize" id="QWidget::maximumSize" ref="qwidget.html#maximumSize-prop" />
+      <keyword name="minimumWidth" id="QWidget::minimumWidth" ref="qwidget.html#minimumWidth-prop" />
+      <keyword name="minimumHeight" id="QWidget::minimumHeight" ref="qwidget.html#minimumHeight-prop" />
+      <keyword name="maximumWidth" id="QWidget::maximumWidth" ref="qwidget.html#maximumWidth-prop" />
+      <keyword name="maximumHeight" id="QWidget::maximumHeight" ref="qwidget.html#maximumHeight-prop" />
+      <keyword name="setMinimumSize" id="QWidget::setMinimumSize" ref="qwidget.html#minimumSize-prop" />
+      <keyword name="setMinimumSize" id="QWidget::setMinimumSize" ref="qwidget.html#minimumSize-prop" />
+      <keyword name="setMaximumSize" id="QWidget::setMaximumSize" ref="qwidget.html#maximumSize-prop" />
+      <keyword name="setMaximumSize" id="QWidget::setMaximumSize" ref="qwidget.html#maximumSize-prop" />
+      <keyword name="setMinimumWidth" id="QWidget::setMinimumWidth" ref="qwidget.html#minimumWidth-prop" />
+      <keyword name="setMinimumHeight" id="QWidget::setMinimumHeight" ref="qwidget.html#minimumHeight-prop" />
+      <keyword name="setMaximumWidth" id="QWidget::setMaximumWidth" ref="qwidget.html#maximumWidth-prop" />
+      <keyword name="setMaximumHeight" id="QWidget::setMaximumHeight" ref="qwidget.html#maximumHeight-prop" />
+      <keyword name="setupUi" id="QWidget::setupUi" ref="qwidget.html#setupUi" />
+      <keyword name="sizeIncrement" id="QWidget::sizeIncrement" ref="qwidget.html#sizeIncrement-prop" />
+      <keyword name="setSizeIncrement" id="QWidget::setSizeIncrement" ref="qwidget.html#sizeIncrement-prop" />
+      <keyword name="setSizeIncrement" id="QWidget::setSizeIncrement" ref="qwidget.html#sizeIncrement-prop" />
+      <keyword name="baseSize" id="QWidget::baseSize" ref="qwidget.html#baseSize-prop" />
+      <keyword name="setBaseSize" id="QWidget::setBaseSize" ref="qwidget.html#baseSize-prop" />
+      <keyword name="setBaseSize" id="QWidget::setBaseSize" ref="qwidget.html#baseSize-prop" />
+      <keyword name="setFixedSize" id="QWidget::setFixedSize" ref="qwidget.html#setFixedSize" />
+      <keyword name="setFixedSize" id="QWidget::setFixedSize" ref="qwidget.html#setFixedSize-2" />
+      <keyword name="setFixedWidth" id="QWidget::setFixedWidth" ref="qwidget.html#setFixedWidth" />
+      <keyword name="setFixedHeight" id="QWidget::setFixedHeight" ref="qwidget.html#setFixedHeight" />
+      <keyword name="mapToGlobal" id="QWidget::mapToGlobal" ref="qwidget.html#mapToGlobal" />
+      <keyword name="mapFromGlobal" id="QWidget::mapFromGlobal" ref="qwidget.html#mapFromGlobal" />
+      <keyword name="mapToParent" id="QWidget::mapToParent" ref="qwidget.html#mapToParent" />
+      <keyword name="mapFromParent" id="QWidget::mapFromParent" ref="qwidget.html#mapFromParent" />
+      <keyword name="mapTo" id="QWidget::mapTo" ref="qwidget.html#mapTo" />
+      <keyword name="mapFrom" id="QWidget::mapFrom" ref="qwidget.html#mapFrom" />
+      <keyword name="window" id="QWidget::window" ref="qwidget.html#window" />
+      <keyword name="nativeParentWidget" id="QWidget::nativeParentWidget" ref="qwidget.html#nativeParentWidget" />
+      <keyword name="topLevelWidget" id="QWidget::topLevelWidget" ref="qwidget.html#topLevelWidget" />
+      <keyword name="palette" id="QWidget::palette" ref="qwidget.html#palette-prop" />
+      <keyword name="setPalette" id="QWidget::setPalette" ref="qwidget.html#palette-prop" />
+      <keyword name="setBackgroundRole" id="QWidget::setBackgroundRole" ref="qwidget.html#setBackgroundRole" />
+      <keyword name="backgroundRole" id="QWidget::backgroundRole" ref="qwidget.html#backgroundRole" />
+      <keyword name="setForegroundRole" id="QWidget::setForegroundRole" ref="qwidget.html#setForegroundRole" />
+      <keyword name="foregroundRole" id="QWidget::foregroundRole" ref="qwidget.html#foregroundRole" />
+      <keyword name="font" id="QWidget::font" ref="qwidget.html#font-prop" />
+      <keyword name="setFont" id="QWidget::setFont" ref="qwidget.html#font-prop" />
+      <keyword name="fontMetrics" id="QWidget::fontMetrics" ref="qwidget.html#fontMetrics" />
+      <keyword name="fontInfo" id="QWidget::fontInfo" ref="qwidget.html#fontInfo" />
+      <keyword name="cursor" id="QWidget::cursor" ref="qwidget.html#cursor-prop" />
+      <keyword name="setCursor" id="QWidget::setCursor" ref="qwidget.html#cursor-prop" />
+      <keyword name="unsetCursor" id="QWidget::unsetCursor" ref="qwidget.html#cursor-prop" />
+      <keyword name="setMouseTracking" id="QWidget::setMouseTracking" ref="qwidget.html#mouseTracking-prop" />
+      <keyword name="hasMouseTracking" id="QWidget::hasMouseTracking" ref="qwidget.html#mouseTracking-prop" />
+      <keyword name="underMouse" id="QWidget::underMouse" ref="qwidget.html#underMouse" />
+      <keyword name="setMask" id="QWidget::setMask" ref="qwidget.html#setMask" />
+      <keyword name="setMask" id="QWidget::setMask" ref="qwidget.html#setMask-2" />
+      <keyword name="mask" id="QWidget::mask" ref="qwidget.html#mask" />
+      <keyword name="clearMask" id="QWidget::clearMask" ref="qwidget.html#clearMask" />
+      <keyword name="render" id="QWidget::render" ref="qwidget.html#render" />
+      <keyword name="render" id="QWidget::render" ref="qwidget.html#render-2" />
+      <keyword name="grab" id="QWidget::grab" ref="qwidget.html#grab" />
+      <keyword name="graphicsEffect" id="QWidget::graphicsEffect" ref="qwidget.html#graphicsEffect" />
+      <keyword name="setGraphicsEffect" id="QWidget::setGraphicsEffect" ref="qwidget.html#setGraphicsEffect" />
+      <keyword name="grabGesture" id="QWidget::grabGesture" ref="qwidget.html#grabGesture" />
+      <keyword name="ungrabGesture" id="QWidget::ungrabGesture" ref="qwidget.html#ungrabGesture" />
+      <keyword name="setWindowTitle" id="QWidget::setWindowTitle" ref="qwidget.html#windowTitle-prop" />
+      <keyword name="setStyleSheet" id="QWidget::setStyleSheet" ref="qwidget.html#styleSheet-prop" />
+      <keyword name="styleSheet" id="QWidget::styleSheet" ref="qwidget.html#styleSheet-prop" />
+      <keyword name="windowTitle" id="QWidget::windowTitle" ref="qwidget.html#windowTitle-prop" />
+      <keyword name="setWindowIcon" id="QWidget::setWindowIcon" ref="qwidget.html#windowIcon-prop" />
+      <keyword name="windowIcon" id="QWidget::windowIcon" ref="qwidget.html#windowIcon-prop" />
+      <keyword name="setWindowIconText" id="QWidget::setWindowIconText" ref="qwidget.html#windowIconText-prop" />
+      <keyword name="windowIconText" id="QWidget::windowIconText" ref="qwidget.html#windowIconText-prop" />
+      <keyword name="setWindowRole" id="QWidget::setWindowRole" ref="qwidget.html#setWindowRole" />
+      <keyword name="windowRole" id="QWidget::windowRole" ref="qwidget.html#windowRole" />
+      <keyword name="setWindowFilePath" id="QWidget::setWindowFilePath" ref="qwidget.html#windowFilePath-prop" />
+      <keyword name="windowFilePath" id="QWidget::windowFilePath" ref="qwidget.html#windowFilePath-prop" />
+      <keyword name="setWindowOpacity" id="QWidget::setWindowOpacity" ref="qwidget.html#windowOpacity-prop" />
+      <keyword name="windowOpacity" id="QWidget::windowOpacity" ref="qwidget.html#windowOpacity-prop" />
+      <keyword name="isWindowModified" id="QWidget::isWindowModified" ref="qwidget.html#windowModified-prop" />
+      <keyword name="setToolTip" id="QWidget::setToolTip" ref="qwidget.html#toolTip-prop" />
+      <keyword name="toolTip" id="QWidget::toolTip" ref="qwidget.html#toolTip-prop" />
+      <keyword name="setToolTipDuration" id="QWidget::setToolTipDuration" ref="qwidget.html#toolTipDuration-prop" />
+      <keyword name="toolTipDuration" id="QWidget::toolTipDuration" ref="qwidget.html#toolTipDuration-prop" />
+      <keyword name="setStatusTip" id="QWidget::setStatusTip" ref="qwidget.html#statusTip-prop" />
+      <keyword name="statusTip" id="QWidget::statusTip" ref="qwidget.html#statusTip-prop" />
+      <keyword name="setWhatsThis" id="QWidget::setWhatsThis" ref="qwidget.html#whatsThis-prop" />
+      <keyword name="whatsThis" id="QWidget::whatsThis" ref="qwidget.html#whatsThis-prop" />
+      <keyword name="accessibleName" id="QWidget::accessibleName" ref="qwidget.html#accessibleName-prop" />
+      <keyword name="setAccessibleName" id="QWidget::setAccessibleName" ref="qwidget.html#accessibleName-prop" />
+      <keyword name="accessibleDescription" id="QWidget::accessibleDescription" ref="qwidget.html#accessibleDescription-prop" />
+      <keyword name="setAccessibleDescription" id="QWidget::setAccessibleDescription" ref="qwidget.html#accessibleDescription-prop" />
+      <keyword name="setLayoutDirection" id="QWidget::setLayoutDirection" ref="qwidget.html#layoutDirection-prop" />
+      <keyword name="layoutDirection" id="QWidget::layoutDirection" ref="qwidget.html#layoutDirection-prop" />
+      <keyword name="unsetLayoutDirection" id="QWidget::unsetLayoutDirection" ref="qwidget.html#layoutDirection-prop" />
+      <keyword name="setLocale" id="QWidget::setLocale" ref="qwidget.html#locale-prop" />
+      <keyword name="locale" id="QWidget::locale" ref="qwidget.html#locale-prop" />
+      <keyword name="unsetLocale" id="QWidget::unsetLocale" ref="qwidget.html#locale-prop" />
+      <keyword name="setFocus" id="QWidget::setFocus" ref="qwidget.html#setFocus-2" />
+      <keyword name="isActiveWindow" id="QWidget::isActiveWindow" ref="qwidget.html#isActiveWindow-prop" />
+      <keyword name="activateWindow" id="QWidget::activateWindow" ref="qwidget.html#activateWindow" />
+      <keyword name="clearFocus" id="QWidget::clearFocus" ref="qwidget.html#clearFocus" />
+      <keyword name="setFocus" id="QWidget::setFocus" ref="qwidget.html#setFocus" />
+      <keyword name="focusPolicy" id="QWidget::focusPolicy" ref="qwidget.html#focusPolicy-prop" />
+      <keyword name="setFocusPolicy" id="QWidget::setFocusPolicy" ref="qwidget.html#focusPolicy-prop" />
+      <keyword name="hasFocus" id="QWidget::hasFocus" ref="qwidget.html#focus-prop" />
+      <keyword name="setFocusProxy" id="QWidget::setFocusProxy" ref="qwidget.html#setFocusProxy" />
+      <keyword name="focusProxy" id="QWidget::focusProxy" ref="qwidget.html#focusProxy" />
+      <keyword name="contextMenuPolicy" id="QWidget::contextMenuPolicy" ref="qwidget.html#contextMenuPolicy-prop" />
+      <keyword name="setContextMenuPolicy" id="QWidget::setContextMenuPolicy" ref="qwidget.html#contextMenuPolicy-prop" />
+      <keyword name="grabMouse" id="QWidget::grabMouse" ref="qwidget.html#grabMouse" />
+      <keyword name="grabMouse" id="QWidget::grabMouse" ref="qwidget.html#grabMouse-2" />
+      <keyword name="releaseMouse" id="QWidget::releaseMouse" ref="qwidget.html#releaseMouse" />
+      <keyword name="grabKeyboard" id="QWidget::grabKeyboard" ref="qwidget.html#grabKeyboard" />
+      <keyword name="releaseKeyboard" id="QWidget::releaseKeyboard" ref="qwidget.html#releaseKeyboard" />
+      <keyword name="grabShortcut" id="QWidget::grabShortcut" ref="qwidget.html#grabShortcut" />
+      <keyword name="releaseShortcut" id="QWidget::releaseShortcut" ref="qwidget.html#releaseShortcut" />
+      <keyword name="setShortcutEnabled" id="QWidget::setShortcutEnabled" ref="qwidget.html#setShortcutEnabled" />
+      <keyword name="setShortcutAutoRepeat" id="QWidget::setShortcutAutoRepeat" ref="qwidget.html#setShortcutAutoRepeat" />
+      <keyword name="updatesEnabled" id="QWidget::updatesEnabled" ref="qwidget.html#updatesEnabled-prop" />
+      <keyword name="setUpdatesEnabled" id="QWidget::setUpdatesEnabled" ref="qwidget.html#updatesEnabled-prop" />
+      <keyword name="graphicsProxyWidget" id="QWidget::graphicsProxyWidget" ref="qwidget.html#graphicsProxyWidget" />
+      <keyword name="update" id="QWidget::update" ref="qwidget.html#update" />
+      <keyword name="repaint" id="QWidget::repaint" ref="qwidget.html#repaint" />
+      <keyword name="update" id="QWidget::update" ref="qwidget.html#update-2" />
+      <keyword name="update" id="QWidget::update" ref="qwidget.html#update-3" />
+      <keyword name="update" id="QWidget::update" ref="qwidget.html#update-4" />
+      <keyword name="repaint" id="QWidget::repaint" ref="qwidget.html#repaint-2" />
+      <keyword name="repaint" id="QWidget::repaint" ref="qwidget.html#repaint-3" />
+      <keyword name="repaint" id="QWidget::repaint" ref="qwidget.html#repaint-4" />
+      <keyword name="setVisible" id="QWidget::setVisible" ref="qwidget.html#visible-prop" />
+      <keyword name="setHidden" id="QWidget::setHidden" ref="qwidget.html#setHidden" />
+      <keyword name="show" id="QWidget::show" ref="qwidget.html#show" />
+      <keyword name="hide" id="QWidget::hide" ref="qwidget.html#hide" />
+      <keyword name="showMinimized" id="QWidget::showMinimized" ref="qwidget.html#showMinimized" />
+      <keyword name="showMaximized" id="QWidget::showMaximized" ref="qwidget.html#showMaximized" />
+      <keyword name="showFullScreen" id="QWidget::showFullScreen" ref="qwidget.html#showFullScreen" />
+      <keyword name="showNormal" id="QWidget::showNormal" ref="qwidget.html#showNormal" />
+      <keyword name="close" id="QWidget::close" ref="qwidget.html#close" />
+      <keyword name="raise" id="QWidget::raise" ref="qwidget.html#raise" />
+      <keyword name="lower" id="QWidget::lower" ref="qwidget.html#lower" />
+      <keyword name="stackUnder" id="QWidget::stackUnder" ref="qwidget.html#stackUnder" />
+      <keyword name="move" id="QWidget::move" ref="qwidget.html#pos-prop" />
+      <keyword name="move" id="QWidget::move" ref="qwidget.html#pos-prop" />
+      <keyword name="resize" id="QWidget::resize" ref="qwidget.html#size-prop" />
+      <keyword name="resize" id="QWidget::resize" ref="qwidget.html#size-prop" />
+      <keyword name="setGeometry" id="QWidget::setGeometry" ref="qwidget.html#geometry-prop" />
+      <keyword name="setGeometry" id="QWidget::setGeometry" ref="qwidget.html#geometry-prop" />
+      <keyword name="saveGeometry" id="QWidget::saveGeometry" ref="qwidget.html#saveGeometry" />
+      <keyword name="restoreGeometry" id="QWidget::restoreGeometry" ref="qwidget.html#restoreGeometry" />
+      <keyword name="adjustSize" id="QWidget::adjustSize" ref="qwidget.html#adjustSize" />
+      <keyword name="isVisible" id="QWidget::isVisible" ref="qwidget.html#visible-prop" />
+      <keyword name="isVisibleTo" id="QWidget::isVisibleTo" ref="qwidget.html#isVisibleTo" />
+      <keyword name="isHidden" id="QWidget::isHidden" ref="qwidget.html#isHidden" />
+      <keyword name="isMinimized" id="QWidget::isMinimized" ref="qwidget.html#minimized-prop" />
+      <keyword name="isMaximized" id="QWidget::isMaximized" ref="qwidget.html#maximized-prop" />
+      <keyword name="isFullScreen" id="QWidget::isFullScreen" ref="qwidget.html#fullScreen-prop" />
+      <keyword name="windowState" id="QWidget::windowState" ref="qwidget.html#windowState" />
+      <keyword name="setWindowState" id="QWidget::setWindowState" ref="qwidget.html#setWindowState" />
+      <keyword name="sizeHint" id="QWidget::sizeHint" ref="qwidget.html#sizeHint-prop" />
+      <keyword name="minimumSizeHint" id="QWidget::minimumSizeHint" ref="qwidget.html#minimumSizeHint-prop" />
+      <keyword name="sizePolicy" id="QWidget::sizePolicy" ref="qwidget.html#sizePolicy-prop" />
+      <keyword name="setSizePolicy" id="QWidget::setSizePolicy" ref="qwidget.html#sizePolicy-prop" />
+      <keyword name="setSizePolicy" id="QWidget::setSizePolicy" ref="qwidget.html#sizePolicy-prop" />
+      <keyword name="heightForWidth" id="QWidget::heightForWidth" ref="qwidget.html#heightForWidth" />
+      <keyword name="hasHeightForWidth" id="QWidget::hasHeightForWidth" ref="qwidget.html#hasHeightForWidth" />
+      <keyword name="visibleRegion" id="QWidget::visibleRegion" ref="qwidget.html#visibleRegion" />
+      <keyword name="setContentsMargins" id="QWidget::setContentsMargins" ref="qwidget.html#setContentsMargins" />
+      <keyword name="setContentsMargins" id="QWidget::setContentsMargins" ref="qwidget.html#setContentsMargins-2" />
+      <keyword name="getContentsMargins" id="QWidget::getContentsMargins" ref="qwidget.html#getContentsMargins" />
+      <keyword name="contentsMargins" id="QWidget::contentsMargins" ref="qwidget.html#contentsMargins" />
+      <keyword name="contentsRect" id="QWidget::contentsRect" ref="qwidget.html#contentsRect" />
+      <keyword name="layout" id="QWidget::layout" ref="qwidget.html#layout" />
+      <keyword name="setLayout" id="QWidget::setLayout" ref="qwidget.html#setLayout" />
+      <keyword name="updateGeometry" id="QWidget::updateGeometry" ref="qwidget.html#updateGeometry" />
+      <keyword name="setParent" id="QWidget::setParent" ref="qwidget.html#setParent" />
+      <keyword name="setParent" id="QWidget::setParent" ref="qwidget.html#setParent-2" />
+      <keyword name="scroll" id="QWidget::scroll" ref="qwidget.html#scroll" />
+      <keyword name="scroll" id="QWidget::scroll" ref="qwidget.html#scroll-2" />
+      <keyword name="focusWidget" id="QWidget::focusWidget" ref="qwidget.html#focusWidget" />
+      <keyword name="nextInFocusChain" id="QWidget::nextInFocusChain" ref="qwidget.html#nextInFocusChain" />
+      <keyword name="previousInFocusChain" id="QWidget::previousInFocusChain" ref="qwidget.html#previousInFocusChain" />
+      <keyword name="acceptDrops" id="QWidget::acceptDrops" ref="qwidget.html#acceptDrops-prop" />
+      <keyword name="setAcceptDrops" id="QWidget::setAcceptDrops" ref="qwidget.html#acceptDrops-prop" />
+      <keyword name="addAction" id="QWidget::addAction" ref="qwidget.html#addAction" />
+      <keyword name="addActions" id="QWidget::addActions" ref="qwidget.html#addActions" />
+      <keyword name="insertAction" id="QWidget::insertAction" ref="qwidget.html#insertAction" />
+      <keyword name="insertActions" id="QWidget::insertActions" ref="qwidget.html#insertActions" />
+      <keyword name="removeAction" id="QWidget::removeAction" ref="qwidget.html#removeAction" />
+      <keyword name="actions" id="QWidget::actions" ref="qwidget.html#actions" />
+      <keyword name="parentWidget" id="QWidget::parentWidget" ref="qwidget.html#parentWidget" />
+      <keyword name="setWindowFlags" id="QWidget::setWindowFlags" ref="qwidget.html#windowFlags-prop" />
+      <keyword name="windowFlags" id="QWidget::windowFlags" ref="qwidget.html#windowFlags-prop" />
+      <keyword name="overrideWindowFlags" id="QWidget::overrideWindowFlags" ref="qwidget.html#overrideWindowFlags" />
+      <keyword name="windowType" id="QWidget::windowType" ref="qwidget.html#windowType" />
+      <keyword name="childAt" id="QWidget::childAt" ref="qwidget.html#childAt" />
+      <keyword name="childAt" id="QWidget::childAt" ref="qwidget.html#childAt-2" />
+      <keyword name="x11Info" id="QWidget::x11Info" ref="qwidget.html#x11Info" />
+      <keyword name="x11PictureHandle" id="QWidget::x11PictureHandle" ref="qwidget.html#x11PictureHandle" />
+      <keyword name="macQDHandle" id="QWidget::macQDHandle" ref="qwidget.html#macQDHandle" />
+      <keyword name="macCGHandle" id="QWidget::macCGHandle" ref="qwidget.html#macCGHandle" />
+      <keyword name="setAttribute" id="QWidget::setAttribute" ref="qwidget.html#setAttribute" />
+      <keyword name="testAttribute" id="QWidget::testAttribute" ref="qwidget.html#testAttribute" />
+      <keyword name="paintEngine" id="QWidget::paintEngine" ref="qwidget.html#paintEngine" />
+      <keyword name="ensurePolished" id="QWidget::ensurePolished" ref="qwidget.html#ensurePolished" />
+      <keyword name="isAncestorOf" id="QWidget::isAncestorOf" ref="qwidget.html#isAncestorOf" />
+      <keyword name="hasEditFocus" id="QWidget::hasEditFocus" ref="qwidget.html#hasEditFocus" />
+      <keyword name="setEditFocus" id="QWidget::setEditFocus" ref="qwidget.html#setEditFocus" />
+      <keyword name="autoFillBackground" id="QWidget::autoFillBackground" ref="qwidget.html#autoFillBackground-prop" />
+      <keyword name="setAutoFillBackground" id="QWidget::setAutoFillBackground" ref="qwidget.html#autoFillBackground-prop" />
+      <keyword name="backingStore" id="QWidget::backingStore" ref="qwidget.html#backingStore" />
+      <keyword name="windowHandle" id="QWidget::windowHandle" ref="qwidget.html#windowHandle" />
+      <keyword name="windowTitleChanged" id="QWidget::windowTitleChanged" ref="qwidget.html#windowTitle-prop" />
+      <keyword name="windowIconChanged" id="QWidget::windowIconChanged" ref="qwidget.html#windowIcon-prop" />
+      <keyword name="windowIconTextChanged" id="QWidget::windowIconTextChanged" ref="qwidget.html#windowIconText-prop" />
+      <keyword name="customContextMenuRequested" id="QWidget::customContextMenuRequested" ref="qwidget.html#customContextMenuRequested" />
+      <keyword name="inputMethodQuery" id="QWidget::inputMethodQuery" ref="qwidget.html#inputMethodQuery" />
+      <keyword name="inputMethodHints" id="QWidget::inputMethodHints" ref="qwidget.html#inputMethodHints-prop" />
+      <keyword name="setInputMethodHints" id="QWidget::setInputMethodHints" ref="qwidget.html#inputMethodHints-prop" />
+      <keyword name="QObject" id="QObject::QObject" ref="qobject.html#QObject" />
+      <keyword name="eventFilter" id="QObject::eventFilter" ref="qobject.html#eventFilter" />
+      <keyword name="metaObject" id="QObject::metaObject" ref="qobject.html#metaObject" />
+      <keyword name="objectName" id="QObject::objectName" ref="qobject.html#objectName-prop" />
+      <keyword name="setObjectName" id="QObject::setObjectName" ref="qobject.html#objectName-prop" />
+      <keyword name="isWidgetType" id="QObject::isWidgetType" ref="qobject.html#isWidgetType" />
+      <keyword name="isWindowType" id="QObject::isWindowType" ref="qobject.html#isWindowType" />
+      <keyword name="signalsBlocked" id="QObject::signalsBlocked" ref="qobject.html#signalsBlocked" />
+      <keyword name="blockSignals" id="QObject::blockSignals" ref="qobject.html#blockSignals" />
+      <keyword name="thread" id="QObject::thread" ref="qobject.html#thread" />
+      <keyword name="moveToThread" id="QObject::moveToThread" ref="qobject.html#moveToThread" />
+      <keyword name="startTimer" id="QObject::startTimer" ref="qobject.html#startTimer" />
+      <keyword name="killTimer" id="QObject::killTimer" ref="qobject.html#killTimer" />
+      <keyword name="findChild" id="QObject::findChild" ref="qobject.html#findChild" />
+      <keyword name="findChildren" id="QObject::findChildren" ref="qobject.html#findChildren" />
+      <keyword name="findChildren" id="QObject::findChildren" ref="qobject.html#findChildren-2" />
+      <keyword name="findChildren" id="QObject::findChildren" ref="qobject.html#findChildren-3" />
+      <keyword name="children" id="QObject::children" ref="qobject.html#children" />
+      <keyword name="setParent" id="QObject::setParent" ref="qobject.html#setParent" />
+      <keyword name="installEventFilter" id="QObject::installEventFilter" ref="qobject.html#installEventFilter" />
+      <keyword name="removeEventFilter" id="QObject::removeEventFilter" ref="qobject.html#removeEventFilter" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect-3" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect-4" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect-5" />
+      <keyword name="dumpObjectTree" id="QObject::dumpObjectTree" ref="qobject.html#dumpObjectTree" />
+      <keyword name="dumpObjectInfo" id="QObject::dumpObjectInfo" ref="qobject.html#dumpObjectInfo" />
+      <keyword name="setProperty" id="QObject::setProperty" ref="qobject.html#setProperty" />
+      <keyword name="property" id="QObject::property" ref="qobject.html#property" />
+      <keyword name="dynamicPropertyNames" id="QObject::dynamicPropertyNames" ref="qobject.html#dynamicPropertyNames" />
+      <keyword name="destroyed" id="QObject::destroyed" ref="qobject.html#destroyed" />
+      <keyword name="objectNameChanged" id="QObject::objectNameChanged" ref="qobject.html#objectName-prop" />
+      <keyword name="parent" id="QObject::parent" ref="qobject.html#parent" />
+      <keyword name="inherits" id="QObject::inherits" ref="qobject.html#inherits" />
+      <keyword name="deleteLater" id="QObject::deleteLater" ref="qobject.html#deleteLater" />
+      <keyword name="paintingActive" id="QPaintDevice::paintingActive" ref="qpaintdevice.html#paintingActive" />
+      <keyword name="paintEngine" id="QPaintDevice::paintEngine" ref="qpaintdevice.html#paintEngine" />
+      <keyword name="width" id="QPaintDevice::width" ref="qpaintdevice.html#width" />
+      <keyword name="height" id="QPaintDevice::height" ref="qpaintdevice.html#height" />
+      <keyword name="widthMM" id="QPaintDevice::widthMM" ref="qpaintdevice.html#widthMM" />
+      <keyword name="heightMM" id="QPaintDevice::heightMM" ref="qpaintdevice.html#heightMM" />
+      <keyword name="logicalDpiX" id="QPaintDevice::logicalDpiX" ref="qpaintdevice.html#logicalDpiX" />
+      <keyword name="logicalDpiY" id="QPaintDevice::logicalDpiY" ref="qpaintdevice.html#logicalDpiY" />
+      <keyword name="physicalDpiX" id="QPaintDevice::physicalDpiX" ref="qpaintdevice.html#physicalDpiX" />
+      <keyword name="physicalDpiY" id="QPaintDevice::physicalDpiY" ref="qpaintdevice.html#physicalDpiY" />
+      <keyword name="devicePixelRatio" id="QPaintDevice::devicePixelRatio" ref="qpaintdevice.html#devicePixelRatio" />
+      <keyword name="colorCount" id="QPaintDevice::colorCount" ref="qpaintdevice.html#colorCount" />
+      <keyword name="depth" id="QPaintDevice::depth" ref="qpaintdevice.html#depth" />
+      <keyword name="style" id="QPathEdit::style" ref="class_q_path_edit.html#a255c10dfa28cb55d6e63537df32c1d40" />
+      <keyword name="dialogButtonIcon" id="QPathEdit::dialogButtonIcon" ref="class_q_path_edit.html#add3dacd7a1b27d19c50a1f50cda88d94" />
+      <keyword name="pathMode" id="QPathEdit::pathMode" ref="class_q_path_edit.html#a67d580d8281be9b14875a8bc5df569d8" />
+      <keyword name="dialogOptions" id="QPathEdit::dialogOptions" ref="class_q_path_edit.html#afb4349c665eb0587db7ecaea278c4f2d" />
+      <keyword name="editable" id="QPathEdit::editable" ref="class_q_path_edit.html#aa48149088474711a00dad2ec26214ae8" />
+      <keyword name="allowEmptyPath" id="QPathEdit::allowEmptyPath" ref="class_q_path_edit.html#a2c65d9743bb54d4f3c70a68463998297" />
+      <keyword name="useCompleter" id="QPathEdit::useCompleter" ref="class_q_path_edit.html#a8eef119413965cade66069691c4008e4" />
+      <keyword name="defaultDirectory" id="QPathEdit::defaultDirectory" ref="class_q_path_edit.html#ad77b6c18b3ebf71d32f61b857aeb1279" />
+      <keyword name="path" id="QPathEdit::path" ref="class_q_path_edit.html#a77d188b336db30ce0ee4e4a9837e9467" />
+      <keyword name="placeholder" id="QPathEdit::placeholder" ref="class_q_path_edit.html#aac7a05dbb443ef5c5453f99c96ec0077" />
+      <keyword name="nameFilters" id="QPathEdit::nameFilters" ref="class_q_path_edit.html#a2c11672712401b2378603f1dd1b39714" />
+      <keyword name="modal" id="QWidget::modal" ref="qwidget.html#modal-prop" />
+      <keyword name="windowModality" id="QWidget::windowModality" ref="qwidget.html#windowModality-prop" />
+      <keyword name="enabled" id="QWidget::enabled" ref="qwidget.html#enabled-prop" />
+      <keyword name="geometry" id="QWidget::geometry" ref="qwidget.html#geometry-prop" />
+      <keyword name="frameGeometry" id="QWidget::frameGeometry" ref="qwidget.html#frameGeometry-prop" />
+      <keyword name="normalGeometry" id="QWidget::normalGeometry" ref="qwidget.html#normalGeometry-prop" />
+      <keyword name="x" id="QWidget::x" ref="qwidget.html#x-prop" />
+      <keyword name="y" id="QWidget::y" ref="qwidget.html#y-prop" />
+      <keyword name="pos" id="QWidget::pos" ref="qwidget.html#pos-prop" />
+      <keyword name="frameSize" id="QWidget::frameSize" ref="qwidget.html#frameSize-prop" />
+      <keyword name="size" id="QWidget::size" ref="qwidget.html#size-prop" />
+      <keyword name="width" id="QWidget::width" ref="qwidget.html#width-prop" />
+      <keyword name="height" id="QWidget::height" ref="qwidget.html#height-prop" />
+      <keyword name="rect" id="QWidget::rect" ref="qwidget.html#rect-prop" />
+      <keyword name="childrenRect" id="QWidget::childrenRect" ref="qwidget.html#childrenRect-prop" />
+      <keyword name="childrenRegion" id="QWidget::childrenRegion" ref="qwidget.html#childrenRegion-prop" />
+      <keyword name="sizePolicy" id="QWidget::sizePolicy" ref="qwidget.html#sizePolicy-prop" />
+      <keyword name="minimumSize" id="QWidget::minimumSize" ref="qwidget.html#minimumSize-prop" />
+      <keyword name="maximumSize" id="QWidget::maximumSize" ref="qwidget.html#maximumSize-prop" />
+      <keyword name="minimumWidth" id="QWidget::minimumWidth" ref="qwidget.html#minimumWidth-prop" />
+      <keyword name="minimumHeight" id="QWidget::minimumHeight" ref="qwidget.html#minimumHeight-prop" />
+      <keyword name="maximumWidth" id="QWidget::maximumWidth" ref="qwidget.html#maximumWidth-prop" />
+      <keyword name="maximumHeight" id="QWidget::maximumHeight" ref="qwidget.html#maximumHeight-prop" />
+      <keyword name="sizeIncrement" id="QWidget::sizeIncrement" ref="qwidget.html#sizeIncrement-prop" />
+      <keyword name="baseSize" id="QWidget::baseSize" ref="qwidget.html#baseSize-prop" />
+      <keyword name="palette" id="QWidget::palette" ref="qwidget.html#palette-prop" />
+      <keyword name="font" id="QWidget::font" ref="qwidget.html#font-prop" />
+      <keyword name="cursor" id="QWidget::cursor" ref="qwidget.html#cursor-prop" />
+      <keyword name="mouseTracking" id="QWidget::mouseTracking" ref="qwidget.html#mouseTracking-prop" />
+      <keyword name="isActiveWindow" id="QWidget::isActiveWindow" ref="qwidget.html#isActiveWindow-prop" />
+      <keyword name="focusPolicy" id="QWidget::focusPolicy" ref="qwidget.html#focusPolicy-prop" />
+      <keyword name="focus" id="QWidget::focus" ref="qwidget.html#focus-prop" />
+      <keyword name="contextMenuPolicy" id="QWidget::contextMenuPolicy" ref="qwidget.html#contextMenuPolicy-prop" />
+      <keyword name="updatesEnabled" id="QWidget::updatesEnabled" ref="qwidget.html#updatesEnabled-prop" />
+      <keyword name="visible" id="QWidget::visible" ref="qwidget.html#visible-prop" />
+      <keyword name="minimized" id="QWidget::minimized" ref="qwidget.html#minimized-prop" />
+      <keyword name="maximized" id="QWidget::maximized" ref="qwidget.html#maximized-prop" />
+      <keyword name="fullScreen" id="QWidget::fullScreen" ref="qwidget.html#fullScreen-prop" />
+      <keyword name="sizeHint" id="QWidget::sizeHint" ref="qwidget.html#sizeHint-prop" />
+      <keyword name="minimumSizeHint" id="QWidget::minimumSizeHint" ref="qwidget.html#minimumSizeHint-prop" />
+      <keyword name="acceptDrops" id="QWidget::acceptDrops" ref="qwidget.html#acceptDrops-prop" />
+      <keyword name="windowTitle" id="QWidget::windowTitle" ref="qwidget.html#windowTitle-prop" />
+      <keyword name="windowIcon" id="QWidget::windowIcon" ref="qwidget.html#windowIcon-prop" />
+      <keyword name="windowIconText" id="QWidget::windowIconText" ref="qwidget.html#windowIconText-prop" />
+      <keyword name="windowOpacity" id="QWidget::windowOpacity" ref="qwidget.html#windowOpacity-prop" />
+      <keyword name="windowModified" id="QWidget::windowModified" ref="qwidget.html#windowModified-prop" />
+      <keyword name="toolTip" id="QWidget::toolTip" ref="qwidget.html#toolTip-prop" />
+      <keyword name="toolTipDuration" id="QWidget::toolTipDuration" ref="qwidget.html#toolTipDuration-prop" />
+      <keyword name="statusTip" id="QWidget::statusTip" ref="qwidget.html#statusTip-prop" />
+      <keyword name="whatsThis" id="QWidget::whatsThis" ref="qwidget.html#whatsThis-prop" />
+      <keyword name="accessibleName" id="QWidget::accessibleName" ref="qwidget.html#accessibleName-prop" />
+      <keyword name="accessibleDescription" id="QWidget::accessibleDescription" ref="qwidget.html#accessibleDescription-prop" />
+      <keyword name="layoutDirection" id="QWidget::layoutDirection" ref="qwidget.html#layoutDirection-prop" />
+      <keyword name="windowFlags" id="QWidget::windowFlags" ref="qwidget.html#windowFlags-prop" />
+      <keyword name="autoFillBackground" id="QWidget::autoFillBackground" ref="qwidget.html#autoFillBackground-prop" />
+      <keyword name="styleSheet" id="QWidget::styleSheet" ref="qwidget.html#styleSheet-prop" />
+      <keyword name="locale" id="QWidget::locale" ref="qwidget.html#locale-prop" />
+      <keyword name="windowFilePath" id="QWidget::windowFilePath" ref="qwidget.html#windowFilePath-prop" />
+      <keyword name="inputMethodHints" id="QWidget::inputMethodHints" ref="qwidget.html#inputMethodHints-prop" />
+      <keyword name="objectName" id="QObject::objectName" ref="qobject.html#objectName-prop" />
+      <keyword name="setTabOrder" id="QWidget::setTabOrder" ref="qwidget.html#setTabOrder" />
+      <keyword name="mouseGrabber" id="QWidget::mouseGrabber" ref="qwidget.html#mouseGrabber" />
+      <keyword name="keyboardGrabber" id="QWidget::keyboardGrabber" ref="qwidget.html#keyboardGrabber" />
+      <keyword name="find" id="QWidget::find" ref="qwidget.html#find" />
+      <keyword name="createWindowContainer" id="QWidget::createWindowContainer" ref="qwidget.html#createWindowContainer" />
+      <keyword name="tr" id="QObject::tr" ref="qobject.html#tr" />
+      <keyword name="trUtf8" id="QObject::trUtf8" ref="qobject.html#trUtf8" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect-2" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect-4" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect-5" />
+      <keyword name="connect" id="QObject::connect" ref="qobject.html#connect-6" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect-2" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect-3" />
+      <keyword name="disconnect" id="QObject::disconnect" ref="qobject.html#disconnect-6" />
+      <keyword name="RenderFlags" id="QWidget::RenderFlags" ref="qwidget.html#RenderFlag-enum" />
+      <keyword name="event" id="QWidget::event" ref="qwidget.html#event" />
+      <keyword name="mousePressEvent" id="QWidget::mousePressEvent" ref="qwidget.html#mousePressEvent" />
+      <keyword name="mouseReleaseEvent" id="QWidget::mouseReleaseEvent" ref="qwidget.html#mouseReleaseEvent" />
+      <keyword name="mouseDoubleClickEvent" id="QWidget::mouseDoubleClickEvent" ref="qwidget.html#mouseDoubleClickEvent" />
+      <keyword name="mouseMoveEvent" id="QWidget::mouseMoveEvent" ref="qwidget.html#mouseMoveEvent" />
+      <keyword name="wheelEvent" id="QWidget::wheelEvent" ref="qwidget.html#wheelEvent" />
+      <keyword name="keyPressEvent" id="QWidget::keyPressEvent" ref="qwidget.html#keyPressEvent" />
+      <keyword name="keyReleaseEvent" id="QWidget::keyReleaseEvent" ref="qwidget.html#keyReleaseEvent" />
+      <keyword name="focusInEvent" id="QWidget::focusInEvent" ref="qwidget.html#focusInEvent" />
+      <keyword name="focusOutEvent" id="QWidget::focusOutEvent" ref="qwidget.html#focusOutEvent" />
+      <keyword name="enterEvent" id="QWidget::enterEvent" ref="qwidget.html#enterEvent" />
+      <keyword name="leaveEvent" id="QWidget::leaveEvent" ref="qwidget.html#leaveEvent" />
+      <keyword name="paintEvent" id="QWidget::paintEvent" ref="qwidget.html#paintEvent" />
+      <keyword name="moveEvent" id="QWidget::moveEvent" ref="qwidget.html#moveEvent" />
+      <keyword name="resizeEvent" id="QWidget::resizeEvent" ref="qwidget.html#resizeEvent" />
+      <keyword name="closeEvent" id="QWidget::closeEvent" ref="qwidget.html#closeEvent" />
+      <keyword name="contextMenuEvent" id="QWidget::contextMenuEvent" ref="qwidget.html#contextMenuEvent" />
+      <keyword name="tabletEvent" id="QWidget::tabletEvent" ref="qwidget.html#tabletEvent" />
+      <keyword name="actionEvent" id="QWidget::actionEvent" ref="qwidget.html#actionEvent" />
+      <keyword name="dragEnterEvent" id="QWidget::dragEnterEvent" ref="qwidget.html#dragEnterEvent" />
+      <keyword name="dragMoveEvent" id="QWidget::dragMoveEvent" ref="qwidget.html#dragMoveEvent" />
+      <keyword name="dragLeaveEvent" id="QWidget::dragLeaveEvent" ref="qwidget.html#dragLeaveEvent" />
+      <keyword name="dropEvent" id="QWidget::dropEvent" ref="qwidget.html#dropEvent" />
+      <keyword name="showEvent" id="QWidget::showEvent" ref="qwidget.html#showEvent" />
+      <keyword name="hideEvent" id="QWidget::hideEvent" ref="qwidget.html#hideEvent" />
+      <keyword name="nativeEvent" id="QWidget::nativeEvent" ref="qwidget.html#nativeEvent" />
+      <keyword name="changeEvent" id="QWidget::changeEvent" ref="qwidget.html#changeEvent" />
+      <keyword name="metric" id="QWidget::metric" ref="qwidget.html#metric" />
+      <keyword name="initPainter" id="QWidget::initPainter" ref="qwidget.html#initPainter" />
+      <keyword name="redirected" id="QWidget::redirected" ref="qwidget.html#redirected" />
+      <keyword name="sharedPainter" id="QWidget::sharedPainter" ref="qwidget.html#sharedPainter" />
+      <keyword name="inputMethodEvent" id="QWidget::inputMethodEvent" ref="qwidget.html#inputMethodEvent" />
+      <keyword name="updateMicroFocus" id="QWidget::updateMicroFocus" ref="qwidget.html#updateMicroFocus" />
+      <keyword name="create" id="QWidget::create" ref="qwidget.html#create" />
+      <keyword name="destroy" id="QWidget::destroy" ref="qwidget.html#destroy" />
+      <keyword name="focusNextPrevChild" id="QWidget::focusNextPrevChild" ref="qwidget.html#focusNextPrevChild" />
+      <keyword name="focusNextChild" id="QWidget::focusNextChild" ref="qwidget.html#focusNextChild" />
+      <keyword name="focusPreviousChild" id="QWidget::focusPreviousChild" ref="qwidget.html#focusPreviousChild" />
+      <keyword name="sender" id="QObject::sender" ref="qobject.html#sender" />
+      <keyword name="senderSignalIndex" id="QObject::senderSignalIndex" ref="qobject.html#senderSignalIndex" />
+      <keyword name="receivers" id="QObject::receivers" ref="qobject.html#receivers" />
+      <keyword name="isSignalConnected" id="QObject::isSignalConnected" ref="qobject.html#isSignalConnected" />
+      <keyword name="timerEvent" id="QObject::timerEvent" ref="qobject.html#timerEvent" />
+      <keyword name="childEvent" id="QObject::childEvent" ref="qobject.html#childEvent" />
+      <keyword name="customEvent" id="QObject::customEvent" ref="qobject.html#customEvent" />
+      <keyword name="connectNotify" id="QObject::connectNotify" ref="qobject.html#connectNotify" />
+      <keyword name="disconnectNotify" id="QObject::disconnectNotify" ref="qobject.html#disconnectNotify" />
+      <keyword name="ExistingFile" id="QPathEdit::ExistingFile" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba2ea5d8e5baab38eee5bf159066f79f2b" />
+      <keyword name="ExistingFolder" id="QPathEdit::ExistingFolder" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba10336bb20184a76743b531002b0ec7c5" />
+      <keyword name="AnyFile" id="QPathEdit::AnyFile" ref="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454ba73d8fd8ecb7e0012a5f8988de9d3127b" />
+      <keyword name="SeperatedButton" id="QPathEdit::SeperatedButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5ac518d837301b035e7fd80f8a2e39c7ba" />
+      <keyword name="JoinedButton" id="QPathEdit::JoinedButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a7a5f4c7286921e056de61863b7f0881e" />
+      <keyword name="NoButton" id="QPathEdit::NoButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a0a4f96e969427195af7e97dbd3a36ff4" />
+      <keyword name="NoDialog" id="QPathEdit::NoDialog" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a871baeafe5de03b83e1d3540a26498bc" />
+    </keywords>
+    <files>
+      <file>tabs.css</file>
+      <file>tab_a.png</file>
+      <file>tab_b.png</file>
+      <file>tab_h.png</file>
+      <file>tab_s.png</file>
+      <file>nav_h.png</file>
+      <file>nav_f.png</file>
+      <file>bc_s.png</file>
+      <file>doxygen.png</file>
+      <file>closed.png</file>
+      <file>open.png</file>
+      <file>bdwn.png</file>
+      <file>sync_on.png</file>
+      <file>sync_off.png</file>
+      <file>doc.png</file>
+      <file>folderopen.png</file>
+      <file>folderclosed.png</file>
+      <file>arrowdown.png</file>
+      <file>arrowright.png</file>
+      <file>splitbar.png</file>
+      <file>doxygen.css</file>
+      <file>search/search_l.png</file>
+      <file>search/search_m.png</file>
+      <file>search/search_r.png</file>
+      <file>search/close.png</file>
+      <file>search/mag_sel.png</file>
+      <file>search/search.css</file>
+      <file>search/search.js</file>
+      <file>qpathedit_8cpp_source.html</file>
+      <file>qpathedit_8h_source.html</file>
+      <file>class_q_path_edit.html</file>
+      <file>class_q_path_edit.png</file>
+      <file>sepbtn.png</file>
+      <file>joinbtn.png</file>
+      <file>nobtn.png</file>
+      <file>nodiag.png</file>
+      <file>class_q_path_edit-members.html</file>
+      <file>index.html</file>
+      <file>annotated.html</file>
+      <file>classes.html</file>
+      <file>hierarchy.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_enum.html</file>
+      <file>functions_enum.html</file>
+      <file>functions_eval.html</file>
+      <file>functions_eval.html</file>
+      <file>functions_eval.html</file>
+      <file>functions_eval.html</file>
+      <file>functions_eval.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>functions_prop.html</file>
+      <file>files.html</file>
+    </files>
+  </filterSection>
+</QtHelpProject>
