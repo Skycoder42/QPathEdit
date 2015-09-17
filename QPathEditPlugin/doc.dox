@@ -1,0 +1,299 @@
+/**
+ * \mainpage
+ *
+ * \tableofcontents
+ *
+ * \section into Introduction
+ *
+ * The QPathEdit class was designed to provide a widget that allows the user to easily
+ * enter or select a path. The widget comes with a plugin for QtCreator
+ *
+ * \section details Details
+ *
+ * \subsection details_class The QPathEdit Class
+ * The QPathEdit class provides the following features:
+ * <ul>
+ *  <li>Appereance: The Edit is composed of a QLineEdit and QToolButton. It uses natives
+ *		styles. It should look "normal" on any plattform. It provides 4 different styles
+ *		to allows customisation of the way these components are displayed</li>
+ *  <li>Dialog: The user will be able to select his path using QFileDialog. The dialog
+ *		can be customized to a limited amount</li>
+ *  <li>Validation: The edit automatically validates entered and selected paths and makes
+ *		shure, that it always returns a valid path to your program</li>
+ *  <li>Editable: The edit can be editable or readonly. If editable, the validator will
+ *		mark invalid paths and a completer will simplify path entering</li>
+ *  <li>Completer: The edit uses a completer, that uses the underlying file-system to provide
+ *		paths as autocompletion to make entering paths even easiert. It can be turned on and off</li>
+ *  <li>QtCreator Plugin: The edit widget comes with an designer-plugin for Qt-Creator, to
+ *		make it possible to user the pathEdit insider .ui files
+ * </ul>
+ *
+ * You can check out the documentation by clicking on QPathEdit, or download the files below.
+ *
+ * \subsection details_usage Usage - A simple Example
+ *
+ * Since the QPathEdit is just a simple widget, you can use it like any other widget. To
+ * use the class, simply download the zip below and add the files "qpathedit.h", "qpathedit.cpp" 
+ * with "qpathedit.pri" to you project - thats all you need.<br>
+ * The following example will create a simple window with the QPathEdit inside. If the user
+ * enters a path, the new path will be logged on the console
+ *
+ * \code{.cpp}
+ *	#include <QApplication>
+ *	#include <QWidget>
+ *	#include <QVBoxLayout>
+ *	#include <QPathEdit>
+ *
+ *	int main(int argc, char *argv[])
+ *	{
+ *		QApplication a(argc, argv);
+ *
+ *		QWidget window;
+ *
+ *		QVBoxLayout *layout = new QVBoxLayout(&window);
+ *		QPathEdit *edit = new QPathEdit(&window);
+ *		layout->addWidget(edit);
+ *		window.setLayout(layout);
+ *
+ *		QObject::connect(edit, &QPathEdit::pathChanged, [](QString path){
+ *			qDebug() << path;
+ *		});
+ *
+ *		windows.show();
+ *		return a.exec();
+ *	}
+ * \endcode
+ *
+ * \subsection details_plugin Installing the Plugin
+ * To install the plugin, you need to copy the right file from the zip-package to the
+ * QtCreators designer plugin path. Inside the `designerplugin` folder, there are a number
+ * of subfolders for operating systems I've created the plugin for. If yours is not present,
+ * you need to compile the plugin yourself. Copy file (for example qpatheditplugin.dll) into
+ * QtCreators path. The default path would be `<path_to_qt>/Tools/QtCreator/bin/plugins/designer` for windows and unix
+ * and `<qt_creator_bundle>/contents/plugins/designer` for mac.
+ * After restarting the creator, navigate to the designer and to Tools > Form Editor > About Qt Designer Plugins.
+ * The plugin should appear there. You can find it inside the "Input Widgets" Section.
+ *
+ * For more details, check <a href="http://doc.qt.io/qtcreator/adding-plugins.html">Adding Qt Designer Plugins</a>
+ *
+ * \section download Download
+ *
+ * <ul>
+ *	<li><a href="">QPathEdit class with QtCreator plugins</a></li>
+ *	<li><a href="">QPathEdit class</a></li>
+ *	<li><a href="">Source files</a></li>
+ * </ul>
+ */
+
+/**
+ * \class QPathEdit
+ *
+ * The QPathEdit widget class is a special kind of an edit field, with the purpose to
+ * retriev file-paths from the user. See \ref index "Main Page" for more details
+ */
+
+/**
+ * \property QPathEdit::style
+ *
+ * \default{QPathEdit::SeperatedButton}
+ *
+ * The Style describes the visual appeareance of the edit. The following styles are available
+ * <table>
+ *  <tr>
+ *   <th>Name</th>
+ *   <td>SeperatedButton</td>
+ *   <td>JoinedButton</td>
+ *   <td>NoButton</td>
+ *   <td>NoDialog</td>
+ *  </tr>
+ *  <tr>
+ *   <th>Visual appeareance</th>
+ *   <td>\image html sepbtn.png</td>
+ *   <td>\image html joinbtn.png</td>
+ *   <td>\image html nobtn.png</td>
+ *   <td>\image html nodiag.png</td>
+ *  </tr>
+ * </table>
+ * <br>
+ *
+ * \accessors{
+ *  \readAc{style()}
+ *  \writeAc{setStyle()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::dialogButtonIcon
+ *
+ * \default{"..." (No icon is set, thus this string will be shown)}
+ *
+ * This property holds the icon to be used for the QToolButton that shows the QFileDialog.
+ * It is save to change this property, even if the current Style does not use the icon
+ *
+ * \accessors{
+ *  \readAc{dialogButtonIcon()}
+ *  \writeAc{setDialogButtonIcon()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::pathMode
+ *
+ * \default{QPathEdit::ExistingFile}
+ *
+ * The mode for filters for the completer, the validator, and the dialog.
+ * See QPathEdit::PathMode for more details
+ *
+ * \accessors{
+ *  \readAc{pathMode()}
+ *  \writeAc{setPathMode()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::dialogOptions
+ *
+ * \default{0}
+ *
+ * Options for the QFileDialog. See QFileDialog::Options for details
+ *
+ * \accessors{
+ *  \readAc{dialogOptions()}
+ *  \writeAc{setDialogOptions()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::editable
+ *
+ * \default{false}
+ *
+ * If set to false, the user will see the path and be able to select and copy it. However,
+ * he will not be able to edit it manually.
+ * If set to true, the user can edit the path manually. However, since theres a validator
+ * working in the background, the QPathEdit::path will only be update, if the entered path is
+ * valid. In addition to that, invalid paths will be marked red, to indicate the user, that
+ * his path is wrong
+ *
+ * \accessors{
+ *  \readAc{isEditable()}
+ *  \writeAc{setEditable()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::allowEmptyPath
+ *
+ * \default{true}
+ *
+ * Specifies whether the validator allows empty paths or not. As long as you set a default
+ * path, this property can guaranty, that there will always be a valid path (if set to false).
+ * However, this property will only have effect, if you set editable to true, too.
+ *
+ * \accessors{
+ *  \readAc{isEmptyPathAllowed()}
+ *  \writeAc{setAllowEmptyPath()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::useCompleter
+ *
+ * \default{true}
+ *
+ * Activates or deactivates the completer. The completer is an auto-completer-mechanism,
+ * that will allow the user easier path finding, if the QPathEdit is editable. It uses an
+ * underlying QFileSystemModel to get the paths.
+ * Since I have only limited control with that model, there are a few important points
+ * regarding the completer:
+ * <ul>
+ *  <li>Filters: All filters will be applied to the completer too. However, since you can't
+ *		choose a filter like in the QFileDialog, the completer will always use all filters.
+ *		That means, if you one of you filters is the wildcard-filter (*), the model will show
+ *		all files, ignoring any other filters. Files that don't apply to the filter will be
+ *		disabled, not hidden</li>
+ *  <li>Paths: The model uses native paths, more accurate native seperators. To maintain
+ *		the cross-plattform-ability of this class, all entered paths will be converted to
+ *		Qt-style seperators (/). The model does accept both seperators, if listing paths</li>
+ * </ul>
+ *
+ * \accessors{
+ *  \readAc{useCompleter()}
+ *  \writeAc{setUseCompleter()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::defaultDirectory
+ *
+ * \default{<a href="http://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum">QStandardPaths::HomeLocation</a>}
+ *
+ * The default directory is the directory for the QFileDialog. If currently no path is
+ * set, the QFileDialog will show the default directory. If not set, this will be the
+ * users home directory
+ *
+ * \accessors{
+ *  \readAc{defaultDirectory()}
+ *  \writeAc{setDefaultDirectory()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::path
+ *
+ * Holds the current entered path. This path is guaranteed to be always a valid file PathValidator
+ * or empty. If the user enters invalid data, this path won't be updated. In fact, it only
+ * changes as soon as the user finish editing (QLineEdit::editingFinished() is used to
+ * determine this). If you set the path, the displayed path will always be updated. However,
+ * if you pass an invalid path, it may or may not be stored as path. Check the write
+ * accessor for more details
+ *
+ * \accessors{
+ *  \readAc{path()}
+ *  \writeAc{setPath()}
+ *  \notifyAc{pathChanged()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::placeholder
+ *
+ * The line edits placeholder to be shown if currently no path is entered
+ *
+ * \accessors{
+ *  \readAc{placeholder()}
+ *  \writeAc{setPlaceholder()}
+ * }
+ */
+
+/**
+ * \property QPathEdit::nameFilters
+ *
+ * \default{"All Files (*)" (may differ, since the value of QFileDialog::nameFilters is used)}
+ *
+ * This property holds the name filters for both the dialog and the completer. For more
+ * details on this filters, check QFileDialog::setNameFilters
+ *
+ * \accessors{
+ *  \readAc{nameFilters()}
+ *  \writeAc{setNameFilters()}
+ * }
+ */
+
+/**
+ * \fn QPathEdit::setPath
+ *
+ * \param path the path to be set
+ * \param allowInvalid Allow path to be invalid. If true, and the path is invalid, only
+ * the contents of the QLineEdit will be changed, not the stored, valid path. If invalid and
+ * false, this function does nothing. If the path is valid, it will always be set
+ */
+
+/**
+ * \fn QPathEdit::showDialog
+ *
+ * This slot can be used to manually show the Dialog. It will be automatically called, when
+ * the user clicks the button. Even if the Dialog is not user-accessibale (style is set to
+ * QPathEdit::NoDialog), this slot will still show the dialog. This way you can use the
+ * complete functionality of the QPathEdit, even if you can't show a button next to the edit
+ */
