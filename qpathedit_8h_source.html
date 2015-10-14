@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>QPathEdit: qpathedit.h Source File</title>
+<title>QPathEdit: QPathEdit/qpathedit.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QPathEdit
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -132,17 +132,17 @@ $(document).ready(function(){initNavTree('qpathedit_8h_source.html','');});
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a255c10dfa28cb55d6e63537df32c1d40">   29</a></span>&#160;    Q_PROPERTY(<a class="code" href="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5">Style</a> style READ style WRITE setStyle)</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#add3dacd7a1b27d19c50a1f50cda88d94">   31</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon)</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a67d580d8281be9b14875a8bc5df569d8">   33</a></span>&#160;    Q_PROPERTY(<a class="code" href="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454b">PathMode</a> pathMode READ pathMode WRITE setPathMode)</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#afb4349c665eb0587db7ecaea278c4f2d">   35</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions READ dialogOptions WRITE setDialogOptions)</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#ac65a65f7527d8b61c5c084a54f419247">   29</a></span>&#160;    Q_PROPERTY(<a class="code" href="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5">Style</a> style READ style WRITE setStyle)</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#af44176d32cdd7d7b7342ae96d5c1dbef">   31</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon)</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a5bd95f202fe662ca86945089e6e49cd4">   33</a></span>&#160;    Q_PROPERTY(<a class="code" href="class_q_path_edit.html#a0227cd4cadd247ba6b0114bb588b454b">PathMode</a> pathMode READ pathMode WRITE setPathMode)</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a49b4aca151175b8abd7f085835e04f5d">   35</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions READ dialogOptions WRITE setDialogOptions)</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#aa48149088474711a00dad2ec26214ae8">   37</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> editable READ isEditable WRITE setEditable)</div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a2c65d9743bb54d4f3c70a68463998297">   39</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> allowEmptyPath READ isEmptyPathAllowed WRITE setAllowEmptyPath)</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a8eef119413965cade66069691c4008e4">   41</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> useCompleter READ useCompleter WRITE setUseCompleter)</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#ad77b6c18b3ebf71d32f61b857aeb1279">   43</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory READ defaultDirectory WRITE setDefaultDirectory)</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a77d188b336db30ce0ee4e4a9837e9467">   45</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path READ path WRITE setPath NOTIFY pathChanged)</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#aac7a05dbb443ef5c5453f99c96ec0077">   47</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder READ placeholder WRITE setPlaceholder)</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a2c11672712401b2378603f1dd1b39714">   49</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters READ nameFilters WRITE setNameFilters)</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a0435ab2d0ad0a42e30f8c78484280344">   41</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> useCompleter READ useCompleter WRITE setUseCompleter)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a157ef6d361de2c433392bd0dc2ccbba2">   43</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory READ defaultDirectory WRITE setDefaultDirectory)</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#ae062741d4c062a38263f2d69d69551af">   45</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path READ path WRITE setPath RESET clear NOTIFY pathChanged)</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#ab7fd11c796f29e683ba8cb2d868f106a">   47</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder READ placeholder WRITE setPlaceholder)</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#aa70b6d7f79cfe35bbe6d76c2df509338">   49</a></span>&#160;    Q_PROPERTY(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters READ nameFilters WRITE setNameFilters)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;public:</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5">   53</a></span>&#160;    enum <a class="code" href="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5">Style</a> {</div>
@@ -161,47 +161,46 @@ $(document).ready(function(){initNavTree('qpathedit_8h_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Q_ENUM(PathMode)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//TODO non static</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(PathMode pathMode, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(PathMode pathMode, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    PathMode pathMode() const;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions() const;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> isEmptyPathAllowed() const;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory() const;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path() const;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qurl.html">QUrl</a> pathUrl() const;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder() const;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters() const;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> isEditable() const;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> useCompleter() const;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    Style style() const;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> dialogButtonIcon();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> setPathMode(PathMode pathMode);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> setDialogOptions(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> setAllowEmptyPath(<span class="keywordtype">bool</span> allowEmptyPath);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> setDefaultDirectory(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> setPath(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path, <span class="keywordtype">bool</span> allowInvalid = false);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> setPlaceholder(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> setNameFilters(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> setEditable(<span class="keywordtype">bool</span> editable);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> setUseCompleter(<span class="keywordtype">bool</span> useCompleter);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> setStyle(Style style);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> setDialogButtonIcon(const <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> &amp;icon);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;public slots:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> showDialog();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;signals:</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> pathChanged(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;private slots:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> editTextUpdate(const <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> &amp;str = <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a>());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(PathMode pathMode, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    explicit <a class="code" href="class_q_path_edit.html">QPathEdit</a>(PathMode pathMode, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory, <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent = NULL, Style style = SeperatedButton);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    PathMode pathMode() const;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions() const;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> isEmptyPathAllowed() const;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory() const;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path() const;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qurl.html">QUrl</a> pathUrl() const;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder() const;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters() const;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> isEditable() const;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> useCompleter() const;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    Style style() const;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> dialogButtonIcon();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> setPathMode(PathMode pathMode);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> setDialogOptions(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a>::Options dialogOptions);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> setAllowEmptyPath(<span class="keywordtype">bool</span> allowEmptyPath);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> setDefaultDirectory(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> defaultDirectory);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> setPath(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path, <span class="keywordtype">bool</span> allowInvalid = false);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> setPlaceholder(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> placeholder);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> setNameFilters(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilters);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> setEditable(<span class="keywordtype">bool</span> editable);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> setUseCompleter(<span class="keywordtype">bool</span> useCompleter);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> setStyle(Style style);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> setDialogButtonIcon(const <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qicon.html">QIcon</a> &amp;icon);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;public slots:</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> showDialog();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;signals:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> pathChanged(<a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> path);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;private slots:</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> updateValidInfo(const <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a> &amp;conHelp = <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qstring.html">QString</a>());</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> editTextUpdate();</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;private:</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="codeRef" target="_blank" doxygen="C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags:http://doc.qt.io/qt-5/" href="http://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> *edit;</div>
@@ -256,8 +255,8 @@ $(document).ready(function(){initNavTree('qpathedit_8h_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>qpathedit.h</b></li>
-    <li class="footer">Generated on Mon Sep 7 2015 20:43:23 for QPathEdit by
+    <li class="navelem"><a class="el" href="dir_11dce7d6b6d8577acf244a2c489fb92d.html">QPathEdit</a></li><li class="navelem"><b>qpathedit.h</b></li>
+    <li class="footer">Generated on Wed Oct 14 2015 22:15:36 for QPathEdit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -70,7 +70,7 @@ var searchData=
   ['stickyfocus',['stickyFocus',['http://doc.qt.io/qt-5/qgraphicsscene.html#stickyFocus-prop',0,'QGraphicsScene']]],
   ['strength',['strength',['http://doc.qt.io/qt-5/qgraphicscolorizeeffect.html#strength-prop',0,'QGraphicsColorizeEffect']]],
   ['stretchlastsection',['stretchLastSection',['http://doc.qt.io/qt-5/qheaderview.html#stretchLastSection-prop',0,'QHeaderView']]],
-  ['style',['style',['../class_q_path_edit.html#a255c10dfa28cb55d6e63537df32c1d40',1,'QPathEdit']]],
+  ['style',['style',['../class_q_path_edit.html#ac65a65f7527d8b61c5c084a54f419247',1,'QPathEdit']]],
   ['stylesheet',['styleSheet',['http://doc.qt.io/qt-5/qapplication.html#styleSheet-prop',0,'QApplication::styleSheet()'],['http://doc.qt.io/qt-5/qwidget.html#styleSheet-prop',0,'QWidget::styleSheet()']]],
   ['submitpolicy',['submitPolicy',['http://doc.qt.io/qt-5/qdatawidgetmapper.html#submitPolicy-prop',0,'QDataWidgetMapper']]],
   ['subtitle',['subTitle',['http://doc.qt.io/qt-5/qwizardpage.html#subTitle-prop',0,'QWizardPage']]],
