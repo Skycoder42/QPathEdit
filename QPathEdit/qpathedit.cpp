@@ -395,10 +395,10 @@ void QPathEdit::setupUiJoined()
 	this->edit->installEventFilter(tbtn);
 
 	//start timer to move button
-	QTimer::singleShot(0, this, [tbtn, this](){
+    QTimer::singleShot(0, this, [tbtn, this](){
 		if(this->uiStyle == JoinedButton){
-			tbtn->fitPos();
-			tbtn->show();
+            tbtn->show();
+            tbtn->fitPos();
 		}
 	});
 }
