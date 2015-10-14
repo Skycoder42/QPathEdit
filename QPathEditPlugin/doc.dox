@@ -70,18 +70,19 @@
  * of subfolders for operating systems I've created the plugin for. If yours is not present,
  * you need to compile the plugin yourself. Copy file (for example qpatheditplugin.dll) into
  * QtCreators path. The default path would be `<path_to_qt>/Tools/QtCreator/bin/plugins/designer` for windows and unix
- * and `<qt_creator_bundle>/contents/plugins/designer` for mac.
- * After restarting the creator, navigate to the designer and to Tools > Form Editor > About Qt Designer Plugins.
+ * and `<qt_creator_bundle>/Contents/PlugIns/designer` for mac.
+ * After restarting the creator, navigate to the designer and to "Tools > Form Editor > About Qt Designer Plugins".
  * The plugin should appear there. You can find it inside the "Input Widgets" Section.
  *
  * For more details, check <a href="http://doc.qt.io/qtcreator/adding-plugins.html">Adding Qt Designer Plugins</a>
  *
  * \section download Download
  *
+ * All downloads are located at <a href="https://github.com/Skycoder42/QPathEdit">github</a>, however there are direct download links below:
  * <ul>
- *	<li><a href="">QPathEdit class with QtCreator plugins</a></li>
- *	<li><a href="">QPathEdit class</a></li>
- *	<li><a href="">Source files</a></li>
+ *  <li><a href="https://github.com/Skycoder42/QPathEdit/releases/download/1.1.0/QPathEdit_with_Plugins.zip" download="QPathEdit_with_Plugins.zip" type="application/zip">QPathEdit class with QtCreator plugins</a> </li>
+ *  <li><a href="https://github.com/Skycoder42/QPathEdit/releases/download/1.1.0/QPathEdit_without_Plugins.zip" download="QPathEdit.zip" type="application/zip">QPathEdit class</a> </li>
+ *  <li><a href="https://github.com/Skycoder42/QPathEdit/archive/1.1.0.zip" download="QPathEdit_src.zip" type="application/zip">Source files</a> </li>
  * </ul>
  */
 
@@ -251,6 +252,7 @@
  * \accessors{
  *  \readAc{path()}
  *  \writeAc{setPath()}
+ *  \resetAc{clear()}
  *  \notifyAc{pathChanged()}
  * }
  */

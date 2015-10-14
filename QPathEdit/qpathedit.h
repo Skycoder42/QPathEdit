@@ -30,7 +30,7 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	//! Holds the icon to be used for the edits button
 	Q_PROPERTY(QIcon dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon)
 	//! Specifies the kind of path to be entered
-	Q_PROPERTY(PathMode pathMode READ pathMode WRITE setPathMode RESET clear)
+	Q_PROPERTY(PathMode pathMode READ pathMode WRITE setPathMode)
 	//! Options for the QFileDialog
 	Q_PROPERTY(QFileDialog::Options dialogOptions READ dialogOptions WRITE setDialogOptions)
 	//! Specifies whether the path can be manually entered or not
@@ -42,7 +42,7 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	//! Holds the default directory for the QFileDialog
 	Q_PROPERTY(QString defaultDirectory READ defaultDirectory WRITE setDefaultDirectory)
 	//! Holds the currently entered, valid path
-	Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+	Q_PROPERTY(QString path READ path WRITE setPath RESET clear NOTIFY pathChanged)
 	//! Specifiy a placeholder to be shown if no path is entered
 	Q_PROPERTY(QString placeholder READ placeholder WRITE setPlaceholder)
 	//! Holds name filters for the dialog and the completer
