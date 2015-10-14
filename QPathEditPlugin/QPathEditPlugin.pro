@@ -1,4 +1,3 @@
-
 QT       += core gui widgets uiplugin
 CONFIG      += plugin
 TARGET      = $$qtLibraryTarget(qpatheditplugin)
@@ -13,7 +12,7 @@ INSTALLS    += target
 
 DEFINES += DESIGNER_PLUGIN
 
-include(qpathedit.pri)
+include(../QPathEdit/qpathedit.pri)
 
 DISTFILES += \
     QPathEdit.doxy \

@@ -30,7 +30,7 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	//! Holds the icon to be used for the edits button
 	Q_PROPERTY(QIcon dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon)
 	//! Specifies the kind of path to be entered
-	Q_PROPERTY(PathMode pathMode READ pathMode WRITE setPathMode)
+	Q_PROPERTY(PathMode pathMode READ pathMode WRITE setPathMode RESET clear)
 	//! Options for the QFileDialog
 	Q_PROPERTY(QFileDialog::Options dialogOptions READ dialogOptions WRITE setDialogOptions)
 	//! Specifies whether the path can be manually entered or not
@@ -107,7 +107,9 @@ public:
 	//! WRITE-ACCESSOR for defaultDirectory
 	void setDefaultDirectory(QString defaultDirectory);
 	//! WRITE-ACCESSOR for path
-	void setPath(QString path, bool allowInvalid = false);
+	bool setPath(QString path, bool allowInvalid = false);
+	//! RESET-ACCESSOR for path
+	void clear();
 	//! WRITE-ACCESSOR for placeholder
 	void setPlaceholder(QString placeholder);
 	//! WRITE-ACCESSOR for nameFilters
@@ -130,7 +132,7 @@ signals:
 	void pathChanged(QString path);
 
 private slots:
-	void editTextUpdate(const QString &str = QString());
+	void editTextUpdate(const QString &path);
 
 private:
 	QLineEdit *edit;

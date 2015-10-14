@@ -94,8 +94,10 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	this->edit->setValidator(this->pathValidator);
 	this->edit->setDragEnabled(true);
 	this->edit->setReadOnly(true);
-	connect(this->edit, SIGNAL(editingFinished()),
-			this, SLOT(editTextUpdate()), Qt::QueuedConnection);
+	connect(this->edit, &QLineEdit::editingFinished,
+			this, [this](){
+		this->editTextUpdate(this->edit->text());
+	} , Qt::QueuedConnection);
 	connect(this->pathCompleter, SIGNAL(highlighted(QString)),
 			this, SLOT(editTextUpdate(QString)), Qt::QueuedConnection);
 	//setup this
@@ -136,6 +138,7 @@ void QPathEdit::setPathMode(PathMode pathMode)
 	this->mode = pathMode;
 	this->pathValidator->setMode(pathMode);
 	this->currentValidPath.clear();
+	emit pathChanged(QString());
 	this->edit->clear();
 	switch(pathMode) {
 	case ExistingFile:
@@ -199,10 +202,10 @@ QUrl QPathEdit::pathUrl() const
 	return QUrl::fromLocalFile(this->currentValidPath);
 }
 
-void QPathEdit::setPath(QString path, bool allowInvalid)
+bool QPathEdit::setPath(QString path, bool allowInvalid)
 {
 	if (this->edit->text() == path)
-		return;
+		return true;
 
 	if(allowInvalid)
 		this->edit->setText(path);
@@ -213,7 +216,16 @@ void QPathEdit::setPath(QString path, bool allowInvalid)
 		if(!allowInvalid)
 			this->edit->setText(path);
 		emit pathChanged(path);
-	}
+		return true;
+	} else
+		return false;
+}
+
+void QPathEdit::clear()
+{
+	this->edit->clear();
+	this->currentValidPath.clear();
+	emit pathChanged(QString());
 }
 
 QString QPathEdit::placeholder() const
@@ -319,17 +331,19 @@ void QPathEdit::showDialog()
 								 .first()
 								 .replace(QStringLiteral("\\"), QStringLiteral("/"));
 		this->edit->setText(this->currentValidPath);
-		this->editTextUpdate();
+		this->editTextUpdate(this->currentValidPath);
 	}
 }
 
-void QPathEdit::editTextUpdate(const QString &)
+void QPathEdit::editTextUpdate(const QString &path)
 {
 	if(this->edit->hasAcceptableInput()) {
 		if(!this->wasPathValid) {
 			this->wasPathValid = true;
 			this->edit->setPalette(this->palette());
 		}
+		this->currentValidPath = path;
+		emit pathChanged(this->currentValidPath);
 	} else {
 		if(this->wasPathValid) {
 			this->wasPathValid = false;
