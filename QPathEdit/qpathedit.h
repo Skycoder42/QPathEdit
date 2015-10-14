@@ -132,7 +132,8 @@ signals:
 	void pathChanged(QString path);
 
 private slots:
-	void editTextUpdate(const QString &path);
+	void updateValidInfo(const QString &conHelp = QString());
+	void editTextUpdate();
 
 private:
 	QLineEdit *edit;

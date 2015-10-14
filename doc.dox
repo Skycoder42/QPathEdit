@@ -286,9 +286,14 @@
  * \fn QPathEdit::setPath
  *
  * \param path the path to be set
- * \param allowInvalid Allow path to be invalid. If true, and the path is invalid, only
- * the contents of the QLineEdit will be changed, not the stored, valid path. If invalid and
- * false, this function does nothing. If the path is valid, it will always be set
+ * \param allowInvalid Allow path to be invalid.
+ *
+ * \return true, if the set path is valid, false if not (If invalid paths are allowed,
+ * the path inside the edit will be set, even if false is returend)
+ *
+ * If allowInvalid is true, and the path is invalid, only the contents of the QLineEdit
+ * will be changed, not the stored, valid path. If invalid and false, this function
+ * does nothing. If the path is valid, it will always be set.
  */
 
 /**

@@ -13,7 +13,3 @@ INSTALLS    += target
 DEFINES += DESIGNER_PLUGIN
 
 include(../QPathEdit/qpathedit.pri)
-
-DISTFILES += \
-    QPathEdit.doxy \
-    doc.dox

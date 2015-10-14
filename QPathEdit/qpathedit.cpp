@@ -94,12 +94,8 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	this->edit->setValidator(this->pathValidator);
 	this->edit->setDragEnabled(true);
 	this->edit->setReadOnly(true);
-	connect(this->edit, &QLineEdit::editingFinished,
-			this, [this](){
-		this->editTextUpdate(this->edit->text());
-	} , Qt::QueuedConnection);
-	connect(this->pathCompleter, SIGNAL(highlighted(QString)),
-			this, SLOT(editTextUpdate(QString)), Qt::QueuedConnection);
+	connect(this->edit, &QLineEdit::editingFinished, this, &QPathEdit::editTextUpdate);
+	connect(this->edit, &QLineEdit::textChanged, this, &QPathEdit::updateValidInfo);
 	//setup this
 	QHBoxLayout *layout = new QHBoxLayout(this);
 	layout->setContentsMargins(QMargins());
@@ -327,29 +323,37 @@ void QPathEdit::showDialog()
 	}
 
 	if(this->dialog->exec()) {
-		this->currentValidPath = this->dialog->selectedFiles()
-								 .first()
-								 .replace(QStringLiteral("\\"), QStringLiteral("/"));
-		this->edit->setText(this->currentValidPath);
-		this->editTextUpdate(this->currentValidPath);
+		this->edit->setText(this->dialog->selectedFiles()
+							.first()
+							.replace(QStringLiteral("\\"), QStringLiteral("/")));
+		this->editTextUpdate();
 	}
 }
 
-void QPathEdit::editTextUpdate(const QString &path)
+void QPathEdit::updateValidInfo(const QString &)
 {
 	if(this->edit->hasAcceptableInput()) {
 		if(!this->wasPathValid) {
 			this->wasPathValid = true;
 			this->edit->setPalette(this->palette());
 		}
-		this->currentValidPath = path;
-		emit pathChanged(this->currentValidPath);
 	} else {
 		if(this->wasPathValid) {
 			this->wasPathValid = false;
 			QPalette pal = this->palette();
 			pal.setColor(QPalette::Text, QColor(QStringLiteral("#B40404")));
 			this->edit->setPalette(pal);
+		}
+	}
+}
+
+void QPathEdit::editTextUpdate()
+{
+	if(this->edit->hasAcceptableInput()) {
+		QString newPath = this->edit->text().replace(QStringLiteral("\\"), QStringLiteral("/"));
+		if(this->currentValidPath != newPath) {
+			this->currentValidPath = newPath;
+			emit pathChanged(this->currentValidPath);
 		}
 	}
 }
@@ -392,8 +396,10 @@ void QPathEdit::setupUiJoined()
 
 	//start timer to move button
 	QTimer::singleShot(0, this, [tbtn, this](){
-		if(this->uiStyle == JoinedButton)
+		if(this->uiStyle == JoinedButton){
 			tbtn->fitPos();
+			tbtn->show();
+		}
 	});
 }
 
@@ -482,18 +488,25 @@ QValidator::State PathValidator::validate(QString &text, int &) const
 	if(!pathInfo.dir().exists())
 		return QValidator::Invalid;
 
-	//if any file -> always valid as long as dir exists
-	if(this->mode == QPathEdit::AnyFile)
-		return QValidator::Acceptable;
+	switch(this->mode) {
+	case QPathEdit::AnyFile://acceptable, as long as it's not an directoy
+		if(pathInfo.isDir())
+			return QValidator::Intermediate;
+		else
+			return QValidator::Acceptable;
+	case QPathEdit::ExistingFile://must be an existing file
+		if(pathInfo.exists() && pathInfo.isFile())
+			return QValidator::Acceptable;
+		else
+			return QValidator::Intermediate;
+	case QPathEdit::ExistingFolder://must be an existing folder
+		if(pathInfo.exists() && pathInfo.isDir())
+			return QValidator::Acceptable;
+		else
+			return QValidator::Intermediate;
+	default:
+		Q_UNREACHABLE();
+	}
 
-	//for others: if path exists and is file/dir
-	if(pathInfo.exists()) {
-		if(this->mode == QPathEdit::ExistingFile)//if not a file -> dir -> next parent
-			return pathInfo.isFile() ? QValidator::Acceptable : QValidator::Intermediate;
-		else if(this->mode == QPathEdit::ExistingFolder)//if not a dir -> invalid
-			return pathInfo.isDir() ? QValidator::Acceptable : QValidator::Invalid;
-	} else
-		return QValidator::Intermediate;
-
-	return QValidator::Acceptable;
+	return QValidator::Invalid;
 }
