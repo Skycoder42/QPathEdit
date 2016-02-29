@@ -80,15 +80,20 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	currentToolButton(NULL),
 	setupResetObject(NULL)
 {
-	//detup dialog
+	//setup dialog
 	this->dialog->setOptions(0);
+	this->dialog->setWindowModality(Qt::WindowModal);
+	this->dialog->setWindowFlags(this->dialog->windowFlags() & ~Qt::WindowContextHelpButtonHint);
 	this->setPathMode(pathMode);
+	connect(this->dialog, &QFileDialog::fileSelected, this, &QPathEdit::dialogFileSelected);
+
 	//setup completer
 	this->completerModel->setRootPath("");
 	connect(this->completerModel, &QFileSystemModel::directoryLoaded, this->pathCompleter, [this](QString){
 		this->pathCompleter->complete();
 	});
 	this->pathCompleter->setModel(this->completerModel);
+
 	//setup lineedit
 	this->edit->setCompleter(this->pathCompleter);
 	this->edit->setValidator(this->pathValidator);
@@ -102,6 +107,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	layout->setSpacing(0);
 	layout->addWidget(this->edit);
 	this->setLayout(layout);
+
 	//setup "button"
 	switch(style) {
 	case SeperatedButton:
@@ -307,6 +313,12 @@ void QPathEdit::setDialogButtonIcon(const QIcon &icon)
 
 void QPathEdit::showDialog()
 {
+	if(this->dialog->isVisible()) {
+		this->dialog->raise();
+		this->dialog->activateWindow();
+		return;
+	}
+
 	QString oldPath = this->edit->text();
 	if(oldPath.isEmpty())
 		this->dialog->setDirectory(this->defaultDir);
@@ -322,12 +334,7 @@ void QPathEdit::showDialog()
 		}
 	}
 
-	if(this->dialog->exec()) {
-		this->edit->setText(this->dialog->selectedFiles()
-							.first()
-							.replace(QStringLiteral("\\"), QStringLiteral("/")));
-		this->editTextUpdate();
-	}
+	this->dialog->open();
 }
 
 void QPathEdit::updateValidInfo(const QString &)
@@ -355,6 +362,16 @@ void QPathEdit::editTextUpdate()
 			this->currentValidPath = newPath;
 			emit pathChanged(this->currentValidPath);
 		}
+	}
+}
+
+void QPathEdit::dialogFileSelected(const QString &file)
+{
+	if(!file.isEmpty()) {
+		this->edit->setText(this->dialog->selectedFiles()
+							.first()
+							.replace(QStringLiteral("\\"), QStringLiteral("/")));
+		this->editTextUpdate();
 	}
 }
 

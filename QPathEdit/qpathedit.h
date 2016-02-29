@@ -135,6 +135,8 @@ private slots:
 	void updateValidInfo(const QString &conHelp = QString());
 	void editTextUpdate();
 
+	void dialogFileSelected(const QString & file);
+
 private:
 	QLineEdit *edit;
 	QCompleter *pathCompleter;
