@@ -39,7 +39,7 @@ QString QPathEditPlugin::includeFile() const
 
 QIcon QPathEditPlugin::icon() const
 {
-	return QIcon(QStringLiteral(":/lineedit.png"));
+	return QIcon(QStringLiteral(":/qpathedit/icons/lineedit.png"));
 }
 
 bool QPathEditPlugin::isContainer() const
@@ -65,13 +65,16 @@ void QPathEditPlugin::initialize(QDesignerFormEditorInterface *core)
 QString QPathEditPlugin::domXml() const
 {
 	return QLatin1String("<ui language=\"c++\">\n"
-		   " <widget class=\"QPathEdit\" name=\"pathedit\">\n"
-		   " </widget>\n"
+		   " <widget class=\"QPathEdit\" name=\"pathedit\" />\n"
 		   " <customwidgets>\n"
 		   "  <customwidget>\n"
 		   "   <class>QPathEdit</class>\n"
 		   "   <extends>QWidget</extends>\n"
 		   "   <header>qpathedit.h</header>\n"
+		   "   <propertyspecifications>\n"
+		   "    <stringpropertyspecification name=\"defaultDirectory\" notr=\"true\" type=\"url\"/>\n"
+		   "    <stringpropertyspecification name=\"path\" notr=\"true\" type=\"url\"/>\n"
+		   "   </propertyspecifications>\n"
 		   "  </customwidget>\n"
 		   " </customwidgets>\n"
 		   "</ui>\n");

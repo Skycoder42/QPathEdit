@@ -9,7 +9,7 @@ class QPathEditPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
 	Q_OBJECT
 #if QT_VERSION >= 0x050000
-	Q_PLUGIN_METADATA(IID "com.SkycoderSoft.widgets.QPathEdit")
+	Q_PLUGIN_METADATA(IID QDesignerCustomWidgetInterface_iid FILE "qpathedit.json")
 #endif // QT_VERSION >= 0x050000
 	Q_INTERFACES(QDesignerCustomWidgetInterface)
 

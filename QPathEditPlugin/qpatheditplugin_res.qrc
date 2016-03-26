@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/qpathedit/icons">
+        <file>lineedit.png</file>
+    </qresource>
+</RCC>

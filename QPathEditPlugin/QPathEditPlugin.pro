@@ -5,7 +5,8 @@ TEMPLATE    = lib
 
 HEADERS     = qpatheditplugin.h
 SOURCES     = qpatheditplugin.cpp
-RESOURCES   = icons.qrc
+RESOURCES   = \
+    qpatheditplugin_res.qrc
 
 target.path = $$[QT_INSTALL_PLUGINS]/designer
 INSTALLS    += target
@@ -13,3 +14,6 @@ INSTALLS    += target
 DEFINES += DESIGNER_PLUGIN
 
 include(../QPathEdit/qpathedit.pri)
+
+DISTFILES += \
+    qpathedit.json
