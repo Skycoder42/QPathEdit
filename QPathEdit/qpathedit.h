@@ -133,7 +133,7 @@ signals:
 	void pathChanged(QString path);
 
 private slots:
-	void updateValidInfo(const QString &conHelp = QString());
+	void updateValidInfo(const QString &text = QString());
 	void editTextUpdate();
 
 	void dialogFileSelected(const QString & file);

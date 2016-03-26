@@ -301,21 +301,23 @@ void QPathEdit::showDialog()
 	if(oldPath.isEmpty())
 		this->dialog->setDirectory(this->defaultDir);
 	else {
-		QFileInfo info(oldPath);
 		if(this->mode == ExistingFolder)
-			this->dialog->setDirectory(info.dir());
+			this->dialog->setDirectory(oldPath);
 		else {
+			QFileInfo info(oldPath);
 			if(info.isDir())
 				this->dialog->setDirectory(oldPath);
-			else
+			else {
 				this->dialog->setDirectory(info.dir());
+				this->dialog->selectFile(info.fileName());
+			}
 		}
 	}
 
 	this->dialog->open();
 }
 
-void QPathEdit::updateValidInfo(const QString &)
+void QPathEdit::updateValidInfo(const QString &text)
 {
 	if(this->edit->hasAcceptableInput()) {
 		if(!this->wasPathValid) {
@@ -330,6 +332,8 @@ void QPathEdit::updateValidInfo(const QString &)
 			this->edit->setPalette(pal);
 		}
 	}
+	if(!text.isEmpty())
+		this->edit->completer()->complete();
 }
 
 void QPathEdit::editTextUpdate()
