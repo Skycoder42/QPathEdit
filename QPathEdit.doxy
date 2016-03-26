@@ -1,4 +1,4 @@
-# Doxyfile 1.8.9.1
+# Doxyfile 1.8.11
 
 # This file describes the settings to be used by the documentation system
 # doxygen (www.doxygen.org) for a project.
@@ -38,13 +38,13 @@ PROJECT_NAME           = QPathEdit
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.1.0
+PROJECT_NUMBER         = 1.2.0
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = 
+PROJECT_BRIEF          = "A Qt-Widget to get local file and folder-paths in an optimized and simple way"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = ./doc_QPathEdit
+OUTPUT_DIRECTORY       = ../QPathEdit_doc_generated
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -364,7 +364,14 @@ IDL_PROPERTY_SUPPORT   = YES
 # all members of a group must be documented explicitly.
 # The default value is: NO.
 
-DISTRIBUTE_GROUP_DOC   = NO
+DISTRIBUTE_GROUP_DOC   = YES
+
+# If one adds a struct or class to a group and this option is enabled, then also
+# any nested class or struct is added to the same group. By default this option
+# is disabled and one has to add nested compounds explicitly via \ingroup.
+# The default value is: NO.
+
+GROUP_NESTED_COMPOUNDS = NO
 
 # Set the SUBGROUPING tag to YES to allow class member groups of the same type
 # (for instance a group of public functions) to be put as a subgroup of that
@@ -755,6 +762,12 @@ WARN_IF_DOC_ERROR      = YES
 
 WARN_NO_PARAMDOC       = YES
 
+# If the WARN_AS_ERROR tag is set to YES then doxygen will immediately stop when
+# a warning is encountered.
+# The default value is: NO.
+
+WARN_AS_ERROR          = NO
+
 # The WARN_FORMAT tag determines the format of the warning messages that doxygen
 # can produce. The string should contain the $file, $line, and $text tags, which
 # will be replaced by the file and line number from which the warning originated
@@ -778,12 +791,12 @@ WARN_LOGFILE           =
 # The INPUT tag is used to specify the files and/or directories that contain
 # documented source files. You may enter file names like myfile.cpp or
 # directories like /usr/src/myproject. Separate the files or directories with
-# spaces.
+# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  = doc.dox \
                          QPathEdit/qpathedit.h \
-                         QPathEdit/qpathedit.cpp
+                         README.md
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -796,12 +809,17 @@ INPUT_ENCODING         = UTF-8
 
 # If the value of the INPUT tag contains directories, you can use the
 # FILE_PATTERNS tag to specify one or more wildcard patterns (like *.cpp and
-# *.h) to filter out the source-files in the directories. If left blank the
-# following patterns are tested:*.c, *.cc, *.cxx, *.cpp, *.c++, *.java, *.ii,
-# *.ixx, *.ipp, *.i++, *.inl, *.idl, *.ddl, *.odl, *.h, *.hh, *.hxx, *.hpp,
-# *.h++, *.cs, *.d, *.php, *.php4, *.php5, *.phtml, *.inc, *.m, *.markdown,
-# *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
-# *.qsf, *.as and *.js.
+# *.h) to filter out the source-files in the directories.
+#
+# Note that for custom extensions or not directly supported extensions you also
+# need to set EXTENSION_MAPPING for the extension otherwise the files are not
+# read by doxygen.
+#
+# If left blank the following patterns are tested:*.c, *.cc, *.cxx, *.cpp,
+# *.c++, *.java, *.ii, *.ixx, *.ipp, *.i++, *.inl, *.idl, *.ddl, *.odl, *.h,
+# *.hh, *.hxx, *.hpp, *.h++, *.cs, *.d, *.php, *.php4, *.php5, *.phtml, *.inc,
+# *.m, *.markdown, *.md, *.mm, *.dox, *.py, *.pyw, *.f90, *.f, *.for, *.tcl,
+# *.vhd, *.vhdl, *.ucf, *.qsf, *.as and *.js.
 
 FILE_PATTERNS          = *.c \
                          *.cc \
@@ -889,7 +907,12 @@ EXCLUDE_PATTERNS       = moc_* \
 # Note that the wildcards are matched against the file with absolute path, so to
 # exclude all test directories use the pattern */test/*
 
-EXCLUDE_SYMBOLS        = 
+EXCLUDE_SYMBOLS        = QBasicAtomicInteger \
+                         QBasicAtomicPointer \
+                         QFutureWatcherBase \
+                         QListSpecialMethods \
+                         QPaintEngineEx \
+                         QQmlExtensionInterface
 
 # The EXAMPLE_PATH tag can be used to specify one or more files or directories
 # that contain example code fragments that are included (see the \include
@@ -931,6 +954,10 @@ IMAGE_PATH             = ./images
 # Note that the filter must not add or remove lines; it is applied before the
 # code is scanned, but not when the output code is generated. If lines are added
 # or removed, the anchors will not be placed correctly.
+#
+# Note that for custom extensions or not directly supported extensions you also
+# need to set EXTENSION_MAPPING for the extension otherwise the files are not
+# properly processed by doxygen.
 
 INPUT_FILTER           = 
 
@@ -940,6 +967,10 @@ INPUT_FILTER           =
 # (like *.cpp=my_cpp_filter). See INPUT_FILTER for further information on how
 # filters are used. If the FILTER_PATTERNS tag is empty or if none of the
 # patterns match the file name, INPUT_FILTER is applied.
+#
+# Note that for custom extensions or not directly supported extensions you also
+# need to set EXTENSION_MAPPING for the extension otherwise the files are not
+# properly processed by doxygen.
 
 FILTER_PATTERNS        = 
 
@@ -963,7 +994,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = 
+USE_MDFILE_AS_MAINPAGE = README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -1057,7 +1088,7 @@ VERBATIM_HEADERS       = YES
 # rich C++ code for which doxygen's built-in parser lacks the necessary type
 # information.
 # Note: The availability of this option depends on whether or not doxygen was
-# compiled with the --with-libclang option.
+# generated with the -Duse-libclang=ON option for CMake.
 # The default value is: NO.
 
 CLANG_ASSISTED_PARSING = NO
@@ -1194,7 +1225,7 @@ HTML_EXTRA_FILES       =
 # Minimum value: 0, maximum value: 359, default value: 220.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE_HUE    = 115
+HTML_COLORSTYLE_HUE    = 120
 
 # The HTML_COLORSTYLE_SAT tag controls the purity (or saturation) of the colors
 # in the HTML output. For a value of 0 the output will use grayscales only. A
@@ -1202,7 +1233,7 @@ HTML_COLORSTYLE_HUE    = 115
 # Minimum value: 0, maximum value: 255, default value: 100.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE_SAT    = 169
+HTML_COLORSTYLE_SAT    = 86
 
 # The HTML_COLORSTYLE_GAMMA tag controls the gamma correction applied to the
 # luminance component of the colors in the HTML output. Values below 100
@@ -1213,12 +1244,13 @@ HTML_COLORSTYLE_SAT    = 169
 # Minimum value: 40, maximum value: 240, default value: 80.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE_GAMMA  = 67
+HTML_COLORSTYLE_GAMMA  = 89
 
 # If the HTML_TIMESTAMP tag is set to YES then the footer of each generated HTML
 # page will contain the date and time when the page was generated. Setting this
-# to NO can help when comparing the output of multiple runs.
-# The default value is: YES.
+# to YES can help to show when doxygen was last run and thus if the
+# documentation is up to date.
+# The default value is: NO.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 HTML_TIMESTAMP         = YES
@@ -1371,7 +1403,7 @@ QCH_FILE               = QPathEditHelp.qch
 # The default value is: org.doxygen.Project.
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
-QHP_NAMESPACE          = org.doxygen.QPathEdit
+QHP_NAMESPACE          = com.Sykcoder42.QPathEdit
 
 # The QHP_VIRTUAL_FOLDER tag specifies the namespace to use when generating Qt
 # Help Project output. For more information please see Qt Help Project / Virtual
@@ -1380,7 +1412,7 @@ QHP_NAMESPACE          = org.doxygen.QPathEdit
 # The default value is: doc.
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
-QHP_VIRTUAL_FOLDER     = doc
+QHP_VIRTUAL_FOLDER     = com.Sykcoder42.QPathEdit
 
 # If the QHP_CUST_FILTER_NAME tag is set, it specifies the name of a custom
 # filter to add. For more information please see Qt Help Project / Custom
@@ -1410,7 +1442,7 @@ QHP_SECT_FILTER_ATTRS  =
 # generated .qhp file.
 # This tag requires that the tag GENERATE_QHP is set to YES.
 
-QHG_LOCATION           = C:/Qt/5.5/msvc2013/bin/qhelpgenerator.exe
+QHG_LOCATION           = C:/Qt/5.6/msvc2015_64/bin/qhelpgenerator.exe
 
 # If the GENERATE_ECLIPSEHELP tag is set to YES, additional index files will be
 # generated, together with the HTML files, they form an Eclipse help plugin. To
@@ -1458,7 +1490,7 @@ DISABLE_INDEX          = NO
 # The default value is: NO.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-GENERATE_TREEVIEW      = YES
+GENERATE_TREEVIEW      = NO
 
 # The ENUM_VALUES_PER_LINE tag can be used to set the number of enum values that
 # doxygen will group on one line in the generated HTML documentation.
@@ -1692,9 +1724,12 @@ COMPACT_LATEX          = NO
 PAPER_TYPE             = a4
 
 # The EXTRA_PACKAGES tag can be used to specify one or more LaTeX package names
-# that should be included in the LaTeX output. To get the times font for
-# instance you can specify
-# EXTRA_PACKAGES=times
+# that should be included in the LaTeX output. The package can be specified just
+# by its name or with the correct syntax as to be used with the LaTeX
+# \usepackage command. To get the times font for instance you can specify :
+# EXTRA_PACKAGES=times or EXTRA_PACKAGES={times}
+# To use the option intlimits with the amsmath package you can specify:
+# EXTRA_PACKAGES=[intlimits]{amsmath}
 # If left blank no extra packages will be included.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
@@ -1796,6 +1831,14 @@ LATEX_SOURCE_CODE      = NO
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
 LATEX_BIB_STYLE        = plain
+
+# If the LATEX_TIMESTAMP tag is set to YES then the footer of each generated
+# page will contain the date and time when the page was generated. Setting this
+# to NO can help when comparing the output of multiple runs.
+# The default value is: NO.
+# This tag requires that the tag GENERATE_LATEX is set to YES.
+
+LATEX_TIMESTAMP        = NO
 
 #---------------------------------------------------------------------------
 # Configuration options related to the RTF output
@@ -2050,7 +2093,7 @@ SEARCH_INCLUDES        = YES
 # preprocessor.
 # This tag requires that the tag SEARCH_INCLUDES is set to YES.
 
-INCLUDE_PATH           = C:/Qt/5.5/msvc2013/bin/../include
+INCLUDE_PATH           = C:/Qt/5.6/msvc2015_64/include
 
 # You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard
 # patterns (like *.h and *.hpp) to filter out the header-files in the
@@ -2108,35 +2151,37 @@ SKIP_FUNCTION_MACROS   = YES
 # the path). If a tag file is not located in the directory in which doxygen is
 # run, you must also specify the path to the tagfile here.
 
-TAGFILES               = C:/Qt/Docs/Qt-5.5/activeqt/activeqt.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtbluetooth/qtbluetooth.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtconcurrent/qtconcurrent.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtcore/qtcore.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtgraphicaleffects/qtgraphicaleffects.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtgui/qtgui.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtlocation/qtlocation.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtnetwork/qtnetwork.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtnfc/qtnfc.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtpositioning/qtpositioning.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtprintsupport/qtprintsupport.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtqml/qtqml.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtquick/qtquick.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtsensors/qtsensors.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtsql/qtsql.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtsvg/qtsvg.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qttestlib/qttestlib.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtwebchannel/qtwebchannel.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtwebengine/qtwebengine.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtwebenginewidgets/qtwebenginewidgets.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtwebsockets/qtwebsockets.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtwidgets/qtwidgets.tags=http://doc.qt.io/qt-5 \
-                         C:/Qt/Docs/Qt-5.5/qtxml/qtxml.tags=http://doc.qt.io/qt-5
+TAGFILES               = C:/Qt/Docs/Qt-5.6/qtwebengine/qtwebengine.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtgraphicaleffects/qtgraphicaleffects.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtwebchannel/qtwebchannel.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtwebsockets/qtwebsockets.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtbluetooth/qtbluetooth.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtnfc/qtnfc.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtsensors/qtsensors.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtlocation/qtlocation.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtpositioning/qtpositioning.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/activeqt/activeqt.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtquickcontrols/qtquickcontrols.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtqml/qtqml.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtquick/qtquick.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtxmlpatterns/qtxmlpatterns.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtsvg/qtsvg.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qdoc/qdoc.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtprintsupport/qtprintsupport.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtconcurrent/qtconcurrent.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtgui/qtgui.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qttestlib/qttestlib.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtwidgets/qtwidgets.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtcore/qtcore.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtnetwork/qtnetwork.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtsql/qtsql.tags=http://doc.qt.io/qt-5 \
+                         C:/Qt/Docs/Qt-5.6/qtxml/qtxml.tags=http://doc.qt.io/qt-5
 
 # When a file name is specified after GENERATE_TAGFILE, doxygen will create a
 # tag file that is based on the input files it reads. See section "Linking to
 # external documentation" for more information about the usage of tag files.
 
-GENERATE_TAGFILE       = ./doc_QPathEdit/QPathEdit.tag
+GENERATE_TAGFILE       = ../../QPathEdit_doc_generatedQPathEdit.tags
 
 # If the ALLEXTERNALS tag is set to YES, all external class will be listed in
 # the class index. If set to NO, only the inherited external classes will be
@@ -2319,7 +2364,8 @@ INCLUDED_BY_GRAPH      = YES
 #
 # Note that enabling this option will significantly increase the time of a run.
 # So in most cases it will be better to enable call graphs for selected
-# functions only using the \callgraph command.
+# functions only using the \callgraph command. Disabling a call graph can be
+# accomplished by means of the command \hidecallgraph.
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
@@ -2330,7 +2376,8 @@ CALL_GRAPH             = NO
 #
 # Note that enabling this option will significantly increase the time of a run.
 # So in most cases it will be better to enable caller graphs for selected
-# functions only using the \callergraph command.
+# functions only using the \callergraph command. Disabling a caller graph can be
+# accomplished by means of the command \hidecallergraph.
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
@@ -2353,11 +2400,15 @@ GRAPHICAL_HIERARCHY    = YES
 DIRECTORY_GRAPH        = YES
 
 # The DOT_IMAGE_FORMAT tag can be used to set the image format of the images
-# generated by dot.
+# generated by dot. For an explanation of the image formats see the section
+# output formats in the documentation of the dot tool (Graphviz (see:
+# http://www.graphviz.org/)).
 # Note: If you choose svg you need to set HTML_FILE_EXTENSION to xhtml in order
 # to make the SVG files visible in IE 9+ (other browsers do not have this
 # requirement).
-# Possible values are: png, jpg, gif and svg.
+# Possible values are: png, jpg, gif, svg, png:gd, png:gd:gd, png:cairo,
+# png:cairo:gd, png:cairo:cairo, png:cairo:gdiplus, png:gdiplus and
+# png:gdiplus:gdiplus.
 # The default value is: png.
 # This tag requires that the tag HAVE_DOT is set to YES.
 

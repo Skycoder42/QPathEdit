@@ -74,60 +74,60 @@ public:
 	//! Constructs a new QPathEdit widget with the given default directory
 	explicit QPathEdit(PathMode pathMode, QString defaultDirectory, QWidget *parent = NULL, Style style = SeperatedButton);
 
-	//! READ-ACCESSOR for pathMode
+	//! READ-ACCESSOR for QPathEdit::pathMode
 	PathMode pathMode() const;
-	//! READ-ACCESSOR for dialogOptions
+	//! READ-ACCESSOR for QPathEdit::dialogOptions
 	QFileDialog::Options dialogOptions() const;
-	//! READ-ACCESSOR for allowEmptyPath
+	//! READ-ACCESSOR for QPathEdit::allowEmptyPath
 	bool isEmptyPathAllowed() const;
-	//! READ-ACCESSOR for defaultDirectory
+	//! READ-ACCESSOR for QPathEdit::defaultDirectory
 	QString defaultDirectory() const;
-	//! READ-ACCESSOR for path
+	//! READ-ACCESSOR for QPathEdit::path
 	QString path() const;
 	//! Returns the entered path as an QUrl
 	QUrl pathUrl() const;
-	//! READ-ACCESSOR for placeholder
+	//! READ-ACCESSOR for QPathEdit::placeholder
 	QString placeholder() const;
-	//! READ-ACCESSOR for nameFilters
+	//! READ-ACCESSOR for QPathEdit::nameFilters
 	QStringList nameFilters() const;
-	//! READ-ACCESSOR for mimeFilters
+	//! READ-ACCESSOR for QPathEdit::mimeTypeFilters
 	QStringList mimeTypeFilters() const;
-	//! READ-ACCESSOR for editable
+	//! READ-ACCESSOR for QPathEdit::editable
 	bool isEditable() const;
-	//! READ-ACCESSOR for useCompleter
+	//! READ-ACCESSOR for QPathEdit::useCompleter
 	bool useCompleter() const;
-	//! READ-ACCESSOR for style
+	//! READ-ACCESSOR for QPathEdit::style
 	Style style() const;
-	//! READ-ACCESSOR for dialogButtonIcon
+	//! READ-ACCESSOR for QPathEdit::dialogButtonIcon
 	QIcon dialogButtonIcon();
 
-	//! WRITE-ACCESSOR for pathMode
+	//! WRITE-ACCESSOR for QPathEdit::pathMode
 	void setPathMode(PathMode pathMode);
-	//! WRITE-ACCESSOR for dialogOptions
+	//! WRITE-ACCESSOR for QPathEdit::dialogOptions
 	void setDialogOptions(QFileDialog::Options dialogOptions);
-	//! WRITE-ACCESSOR for allowEmptyPath
+	//! WRITE-ACCESSOR for QPathEdit::allowEmptyPath
 	void setAllowEmptyPath(bool allowEmptyPath);
-	//! WRITE-ACCESSOR for defaultDirectory
+	//! WRITE-ACCESSOR for QPathEdit::defaultDirectory
 	void setDefaultDirectory(QString defaultDirectory);
-	//! WRITE-ACCESSOR for path
+	//! WRITE-ACCESSOR for QPathEdit::path
 	bool setPath(QString path, bool allowInvalid = false);
-	//! RESET-ACCESSOR for path
+	//! RESET-ACCESSOR for QPathEdit::path
 	void clear();
-	//! WRITE-ACCESSOR for placeholder
+	//! WRITE-ACCESSOR for QPathEdit::placeholder
 	void setPlaceholder(QString placeholder);
-	//! WRITE-ACCESSOR for nameFilters
+	//! WRITE-ACCESSOR for QPathEdit::nameFilters
 	void setNameFilters(QStringList nameFilters);
-	//! WRITE-ACCESSOR for mimeFilters
+	//! WRITE-ACCESSOR for QPathEdit::mimeTypeFilters
 	void setMimeTypeFilters(QStringList mimeTypeFilters);
-	//! WRITE-ACCESSOR for editable
+	//! WRITE-ACCESSOR for QPathEdit::editable
 	void setEditable(bool editable);
-	//! WRITE-ACCESSOR for useCompleter
+	//! WRITE-ACCESSOR for QPathEdit::useCompleter
 	void setUseCompleter(bool useCompleter);
-	//! WRITE-ACCESSOR for style
+	//! WRITE-ACCESSOR for QPathEdit::style
 	void setStyle(Style style);
-	//! WRITE-ACCESSOR for dialogButtonIcon
+	//! WRITE-ACCESSOR for QPathEdit::dialogButtonIcon
 	void setDialogButtonIcon(const QIcon &icon);
-	//! RESET-ACCESSOR for dialogButtonIcon
+	//! RESET-ACCESSOR for QPathEdit::dialogButtonIcon
 	void resetDialogButtonIcon();
 
 public slots:
@@ -135,7 +135,7 @@ public slots:
 	void showDialog();
 
 signals:
-	//! NOTIFY-ACCESSOR for pathMode
+	//! NOTIFY-ACCESSOR for QPathEdit::path
 	void pathChanged(QString path);
 
 private slots:
