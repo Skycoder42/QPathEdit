@@ -221,6 +221,18 @@ void QPathEdit::setNameFilters(QStringList nameFilters)
 	this->completerModel->setNameFilters(tmp);
 }
 
+QStringList QPathEdit::mimeTypeFilters() const
+{
+	return this->dialog->mimeTypeFilters();
+}
+
+void QPathEdit::setMimeTypeFilters(QStringList mimeFilters)
+{
+	this->dialog->setMimeTypeFilters(mimeFilters);
+	QStringList tmp = this->modelFilters(this->dialog->nameFilters());
+	this->completerModel->setNameFilters(tmp);
+}
+
 bool QPathEdit::isEditable() const
 {
 	return !this->edit->isReadOnly();

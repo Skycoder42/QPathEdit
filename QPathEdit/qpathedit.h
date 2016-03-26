@@ -47,6 +47,8 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	Q_PROPERTY(QString placeholder READ placeholder WRITE setPlaceholder)
 	//! Holds name filters for the dialog and the completer
 	Q_PROPERTY(QStringList nameFilters READ nameFilters WRITE setNameFilters)
+	//! Holds mime filters for the dialog and the completer
+	Q_PROPERTY(QStringList mimeTypeFilters READ mimeTypeFilters WRITE setMimeTypeFilters)
 
 public:
 	//! Descibes various styles that the edit can take
@@ -88,6 +90,8 @@ public:
 	QString placeholder() const;
 	//! READ-ACCESSOR for nameFilters
 	QStringList nameFilters() const;
+	//! READ-ACCESSOR for mimeFilters
+	QStringList mimeTypeFilters() const;
 	//! READ-ACCESSOR for editable
 	bool isEditable() const;
 	//! READ-ACCESSOR for useCompleter
@@ -113,6 +117,8 @@ public:
 	void setPlaceholder(QString placeholder);
 	//! WRITE-ACCESSOR for nameFilters
 	void setNameFilters(QStringList nameFilters);
+	//! WRITE-ACCESSOR for mimeFilters
+	void setMimeTypeFilters(QStringList mimeTypeFilters);
 	//! WRITE-ACCESSOR for editable
 	void setEditable(bool editable);
 	//! WRITE-ACCESSOR for useCompleter

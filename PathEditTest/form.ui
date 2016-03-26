@@ -60,12 +60,6 @@
        <property name="placeholder" stdset="0">
         <string>Path to an icon</string>
        </property>
-       <property name="nameFilters" stdset="0">
-        <stringlist>
-         <string>Icon files (*.png *.ico)</string>
-         <string>All files (*)</string>
-        </stringlist>
-       </property>
       </widget>
      </item>
      <item row="2" column="0">

@@ -1,12 +1,17 @@
 #include "form.h"
 #include "ui_form.h"
 #include <QDebug>
+#include <QImageReader>
 
 Form::Form(QWidget *parent) :
 	QWidget(parent),
 	ui(new Ui::Form)
 {
 	ui->setupUi(this);
+	QStringList l;
+	foreach(QByteArray a, QImageReader::supportedMimeTypes())
+		l += QString::fromLocal8Bit(a);
+	this->ui->dialogButtonIconPathEdit->setMimeTypeFilters(l);
 }
 
 Form::~Form()
