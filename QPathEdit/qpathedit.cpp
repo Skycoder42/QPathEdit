@@ -317,8 +317,9 @@ void QPathEdit::showDialog()
 	this->dialog->open();
 }
 
-void QPathEdit::updateValidInfo(const QString &text)
+void QPathEdit::updateValidInfo(const QString &path)
 {
+	this->completerModel->index(path);//DEBUG enforce "directory loading"
 	if(this->edit->hasAcceptableInput()) {
 		if(!this->wasPathValid) {
 			this->wasPathValid = true;
@@ -332,8 +333,6 @@ void QPathEdit::updateValidInfo(const QString &text)
 			this->edit->setPalette(pal);
 		}
 	}
-	if(!text.isEmpty())
-		this->edit->completer()->complete();
 }
 
 void QPathEdit::editTextUpdate()
