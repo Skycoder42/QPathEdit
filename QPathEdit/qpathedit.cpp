@@ -397,7 +397,7 @@ QIcon QPathEdit::getDefaultIcon()
 		return QPixmap::fromImage(image);
 	}
 	case JoinedButton:
-		return QIcon(QStringLiteral(":/icons/qpathedit/dialog.ico"));
+		return QIcon(QStringLiteral(":/qpathedit/icons/dialog.ico"));
 	case NoButton:
 		return QIcon();
 	default:

@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/icons/qpathedit">
+    <qresource prefix="/qpathedit/icons">
         <file alias="dialog.ico">Fatcow-Farm-Fresh-Dialog.ico</file>
     </qresource>
 </RCC>
