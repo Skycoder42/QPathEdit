@@ -85,6 +85,9 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	connect(this->dialogAction, &QAction::triggered, this, &QPathEdit::showDialog);
 	this->toolButton->setDefaultAction(this->dialogAction);
 	int height = this->edit->sizeHint().height();
+#ifdef Q_OS_WIN
+	height += 2;
+#endif
 	this->toolButton->setFixedSize(height, height);
 	switch(style) {
 	case JoinedButton:
