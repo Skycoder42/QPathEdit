@@ -10,40 +10,11 @@
 #include <QRegularExpressionMatch>
 #include <QEvent>
 #include <QTimer>
+#include <QAction>
+#include <QPainter>
 #include <functional>
 
 //HELPER CLASSES
-
-#ifdef Q_OS_WIN32
-#define SEP_OFFSET 2
-#else
-#define SEP_OFFSET 0
-#endif
-
-#ifdef Q_OS_WIN32
-#define JOIN_OFFSET 1
-#else
-#define JOIN_OFFSET 2
-#endif
-
-class JoinedToolButton : public QToolButton
-{
-public:
-	JoinedToolButton(QWidget *parent);
-	void fitPos();
-protected:
-	bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE;
-};
-
-class ClickEventListener : public QObject
-{
-public:
-	ClickEventListener(std::function<void()> func, QObject *parent);
-protected:
-	bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE;
-private:
-	std::function<void()> func;
-};
 
 class PathValidator : public QValidator
 {
@@ -73,12 +44,12 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	currentValidPath(),
 	wasPathValid(true),
 	uiStyle(style),
-	diagIcon(),
 	mode(ExistingFile),
 	defaultDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)),
 	allowEmpty(true),
-	currentToolButton(NULL),
-	setupResetObject(NULL)
+	toolButton(new QToolButton(this)),
+	dialogAction(new QAction(this->getDefaultIcon(), tr("Open File-Dialog"), this)),
+	hasCustomIcon(false)
 {
 	//setup dialog
 	this->dialog->setOptions(0);
@@ -94,6 +65,13 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	});
 	this->pathCompleter->setModel(this->completerModel);
 
+	//setup this
+	QHBoxLayout *layout = new QHBoxLayout(this);
+	layout->setContentsMargins(QMargins());
+	layout->setSpacing(0);
+	layout->addWidget(this->edit);
+	layout->addWidget(this->toolButton);
+	this->setLayout(layout);
 	//setup lineedit
 	this->edit->setCompleter(this->pathCompleter);
 	this->edit->setValidator(this->pathValidator);
@@ -101,23 +79,14 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	this->edit->setReadOnly(true);
 	connect(this->edit, &QLineEdit::editingFinished, this, &QPathEdit::editTextUpdate);
 	connect(this->edit, &QLineEdit::textChanged, this, &QPathEdit::updateValidInfo);
-	//setup this
-	QHBoxLayout *layout = new QHBoxLayout(this);
-	layout->setContentsMargins(QMargins());
-	layout->setSpacing(0);
-	layout->addWidget(this->edit);
-	this->setLayout(layout);
-
 	//setup "button"
+	connect(this->dialogAction, &QAction::triggered, this, &QPathEdit::showDialog);
+	this->toolButton->setDefaultAction(this->dialogAction);
 	switch(style) {
-	case SeperatedButton:
-		this->setupUiSeperate();
-		break;
 	case JoinedButton:
-		this->setupUiJoined();
-		break;
+		this->edit->addAction(this->dialogAction, QLineEdit::TrailingPosition);
 	case NoButton:
-		this->setupUiWithout();
+		this->toolButton->setVisible(false);
 		break;
 	default:
 		break;
@@ -282,33 +251,42 @@ void QPathEdit::setStyle(QPathEdit::Style style)
 	if (this->uiStyle == style)
 		return;
 
-	this->setupReset();
 	switch(style) {
 	case SeperatedButton:
-		this->setupUiSeperate();
+		this->edit->removeAction(this->dialogAction);
+		this->toolButton->setVisible(true);
 		break;
 	case JoinedButton:
-		this->setupUiJoined();
+		this->edit->addAction(this->dialogAction, QLineEdit::TrailingPosition);
+		this->toolButton->setVisible(false);
 		break;
 	case NoButton:
-		this->setupUiWithout();
-		break;
+		this->edit->removeAction(this->dialogAction);
+		this->toolButton->setVisible(false);
 	default:
 		break;
 	}
+
 	this->uiStyle = style;
+	if(!this->hasCustomIcon)
+		this->dialogAction->setIcon(this->getDefaultIcon());
 }
 
 QIcon QPathEdit::dialogButtonIcon()
 {
-	return this->diagIcon;
+	return this->dialogAction->icon();
 }
 
 void QPathEdit::setDialogButtonIcon(const QIcon &icon)
 {
-	this->diagIcon = icon;
-	if(!this->currentToolButton.isNull())
-		this->currentToolButton->setIcon(icon);
+	this->dialogAction->setIcon(icon);
+	this->hasCustomIcon = true;
+}
+
+void QPathEdit::resetDialogButtonIcon()
+{
+	this->dialogAction->setIcon(QPathEdit::getDefaultIcon());
+	this->hasCustomIcon = false;
 }
 
 void QPathEdit::showDialog()
@@ -375,68 +353,6 @@ void QPathEdit::dialogFileSelected(const QString &file)
 	}
 }
 
-void QPathEdit::setupUiSeperate()
-{
-	QToolButton *tbtn = new QToolButton(this);
-	this->setupResetObject = tbtn;
-	this->currentToolButton = tbtn;
-
-	tbtn->setText("…");
-	tbtn->setIcon(this->diagIcon);
-    tbtn->setFixedHeight(this->edit->sizeHint().height() + SEP_OFFSET);
-	connect(tbtn, &QToolButton::clicked, this, &QPathEdit::showDialog);
-
-	//setup this
-	this->layout()->addWidget(tbtn);
-}
-
-void QPathEdit::setupUiJoined()
-{
-	JoinedToolButton *tbtn = new JoinedToolButton(this->edit);
-	this->setupResetObject = tbtn;
-	this->currentToolButton = tbtn;
-
-	//create button
-	tbtn->setText("…");
-	tbtn->setIcon(this->diagIcon);
-	tbtn->setAutoRaise(true);
-    tbtn->setFixedHeight(this->edit->sizeHint().height() - JOIN_OFFSET);
-	tbtn->setMouseTracking(true);
-	QCursor cursor = tbtn->cursor();
-	cursor.setShape(Qt::ArrowCursor);
-	tbtn->setCursor(cursor);
-	connect(tbtn, &QToolButton::clicked, this, &QPathEdit::showDialog);
-
-	//update lineedit to contain the button
-	this->edit->setTextMargins(0, 0, tbtn->sizeHint().width(), 0);
-	this->edit->installEventFilter(tbtn);
-
-	//start timer to move button
-    QTimer::singleShot(0, this, [tbtn, this](){
-		if(this->uiStyle == JoinedButton){
-            tbtn->show();
-            tbtn->fitPos();
-		}
-	});
-}
-
-void QPathEdit::setupUiWithout()
-{
-	//install click listener
-	ClickEventListener *clicker = new ClickEventListener([this](){
-		this->showDialog();
-	}, this);
-	this->edit->installEventFilter(clicker);
-	this->setupResetObject = clicker;
-}
-
-void QPathEdit::setupReset()
-{
-	delete this->setupResetObject;
-	this->setupResetObject = NULL;
-	this->edit->setTextMargins(QMargins());
-}
-
 QStringList QPathEdit::modelFilters(const QStringList &normalFilters)
 {
 	QStringList res;
@@ -449,34 +365,28 @@ QStringList QPathEdit::modelFilters(const QStringList &normalFilters)
 	return res;
 }
 
+QIcon QPathEdit::getDefaultIcon()
+{
+	switch(this->uiStyle) {
+	case SeperatedButton: {
+		QImage image(16, 16, QImage::Format_ARGB32);
+		image.fill(Qt::transparent);
+		QPainter painter(&image);
+		painter.setFont(this->font());
+		painter.setPen(this->palette().color(QPalette::ButtonText));
+		painter.drawText(QRect(0, 0, 16, 16), Qt::AlignCenter, "…");
+		return QPixmap::fromImage(image);
+	}
+	case JoinedButton:
+		return QIcon(QStringLiteral(":/icons/qpathedit/dialog.ico"));
+	case NoButton:
+		return QIcon();
+	default:
+		Q_UNREACHABLE();
+	}
+}
+
 //HELPER CLASSES IMPLEMENTATION
-
-JoinedToolButton::JoinedToolButton(QWidget *parent) :
-	QToolButton(parent)
-{}
-
-void JoinedToolButton::fitPos() {
-	this->move(this->parentWidget()->width() - this->width() - 1, 1);
-}
-
-bool JoinedToolButton::eventFilter(QObject *, QEvent *event)
-{
-	if(event->type() == QEvent::Move || event->type() == QEvent::Resize)
-		this->fitPos();
-	return false;
-}
-
-ClickEventListener::ClickEventListener(std::function<void ()> func, QObject *parent) :
-	QObject(parent),
-	func(func)
-{}
-
-bool ClickEventListener::eventFilter(QObject *, QEvent *event)
-{
-	if(event->type() == QEvent::MouseButtonDblClick)
-		this->func();
-	return false;
-}
 
 PathValidator::PathValidator(QObject *parent) :
 	QValidator(parent),

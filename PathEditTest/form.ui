@@ -40,11 +40,6 @@
          <string>NoButton</string>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>NoDialog</string>
-        </property>
-       </item>
       </widget>
      </item>
      <item row="1" column="0">
@@ -55,17 +50,17 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QPathEdit" name="dialogButtonIconPathEdit">
-       <property name="useCompleter">
+      <widget class="QPathEdit" name="dialogButtonIconPathEdit" native="true">
+       <property name="useCompleter" stdset="0">
         <bool>false</bool>
        </property>
-       <property name="defaultDirectory">
+       <property name="defaultDirectory" stdset="0">
         <string/>
        </property>
-       <property name="placeholder">
+       <property name="placeholder" stdset="0">
         <string>Path to an icon</string>
        </property>
-       <property name="nameFilters">
+       <property name="nameFilters" stdset="0">
         <stringlist>
          <string>Icon files (*.png *.ico)</string>
          <string>All files (*)</string>
@@ -112,11 +107,11 @@
     </layout>
    </item>
    <item>
-    <widget class="QPathEdit" name="pathedit">
-     <property name="editable">
+    <widget class="QPathEdit" name="pathedit" native="true">
+     <property name="editable" stdset="0">
       <bool>true</bool>
      </property>
-     <property name="placeholder">
+     <property name="placeholder" stdset="0">
       <string>Demonstation path edit</string>
      </property>
     </widget>

@@ -28,7 +28,7 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	//! Defines the Widgets appereance
 	Q_PROPERTY(Style style READ style WRITE setStyle)
 	//! Holds the icon to be used for the edits button
-	Q_PROPERTY(QIcon dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon)
+	Q_PROPERTY(QIcon dialogButtonIcon READ dialogButtonIcon WRITE setDialogButtonIcon RESET resetDialogButtonIcon)
 	//! Specifies the kind of path to be entered
 	Q_PROPERTY(PathMode pathMode READ pathMode WRITE setPathMode)
 	//! Options for the QFileDialog
@@ -53,8 +53,7 @@ public:
 	enum Style {
 		SeperatedButton,//!< The button to open the dialog will be place next to the edit
 		JoinedButton,//!< The button to open the dialog will be placed inside the edit
-		NoButton,//!< No button will be displayed. However, if the user double-clicks the edit, the dialog will show
-		NoDialog//!< The QFileDialog is completly disabled and will never show. Thus, there is no button either
+		NoButton//!< The QFileDialog is completly disabled and will never show. Thus, there is no button either
 	};
 	Q_ENUM(Style)
 
@@ -122,6 +121,8 @@ public:
 	void setStyle(Style style);
 	//! WRITE-ACCESSOR for dialogButtonIcon
 	void setDialogButtonIcon(const QIcon &icon);
+	//! RESET-ACCESSOR for dialogButtonIcon
+	void resetDialogButtonIcon();
 
 public slots:
 	//! Shows the QFileDialog so the user can select a path
@@ -148,20 +149,16 @@ private:
 	bool wasPathValid;
 
 	Style uiStyle;
-	QIcon diagIcon;
 	PathMode mode;
 	QString defaultDir;
 	bool allowEmpty;
 
-	QPointer<QToolButton> currentToolButton;
-	QObject *setupResetObject;
-
-	void setupUiSeperate();
-	void setupUiJoined();
-	void setupUiWithout();
-	void setupReset();
+	QToolButton *toolButton;
+	QAction *dialogAction;
+	bool hasCustomIcon;
 
 	QStringList modelFilters(const QStringList &normalFilters);
+	QIcon getDefaultIcon();
 };
 
 #endif // QPATHEDIT_H

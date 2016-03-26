@@ -26,9 +26,6 @@ void Form::on_styleComboBox_activated(int index)
 	case 2:
 		this->ui->pathedit->setStyle(QPathEdit::NoButton);
 		break;
-	case 3:
-		this->ui->pathedit->setStyle(QPathEdit::NoDialog);
-		break;
 	default:
 		break;
 	}
