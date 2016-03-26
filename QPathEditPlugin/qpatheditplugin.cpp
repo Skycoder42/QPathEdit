@@ -5,8 +5,7 @@ QPathEditPlugin::QPathEditPlugin(QObject *parent) :
 	QObject(parent),
 	QDesignerCustomWidgetInterface(),
 	core(NULL)
-{
-}
+{}
 
 QString QPathEditPlugin::name() const
 {
@@ -79,7 +78,3 @@ QString QPathEditPlugin::domXml() const
 		   " </customwidgets>\n"
 		   "</ui>\n");
 }
-
-#if QT_VERSION < 0x050000
-Q_EXPORT_PLUGIN2(QPathEdit, QPathEditPlugin)
-#endif // QT_VERSION < 0x050000
