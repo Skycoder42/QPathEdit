@@ -46,7 +46,12 @@ int main(int argc, char *argv[])
 ```
 
 ### Installing the Plugin
-To install the plugin, you need to copy the right file from the zip-package to the QtCreators designer plugin path. Inside the `designerplugin` folder, there are a number of subfolders for operating systems I've created the plugin for. If yours is not present, you need to compile the plugin yourself. Copy file (for example `qpatheditplugin.dll`) into QtCreators path. The default path would be `<path_to_qt>/Tools/QtCreator/bin/plugins/designer` for windows and unix and `<qt_creator_bundle>/Contents/PlugIns/designer` for mac. After restarting the creator, navigate to the designer and to "Tools > Form Editor > About Qt Designer Plugins". The plugin should appear there. You can find it inside the "Input Widgets" Section.
+To install the plugin, you need to copy the right file from the zip-package to the QtCreators designer plugin path. Inside the `designerplugin` folder, there are a number of subfolders for operating systems I've created the plugin for. If yours is not present, you need to compile the plugin yourself. Copy file (for example `qpatheditplugin.dll`) into QtCreators path. The default path would be:
+- Windows: `<path_to_qt>/Tools/QtCreator/bin/plugins/designer`
+- OsX: `<qt_creator_bundle>/Contents/PlugIns/designer`
+- Linux: `<path_to_qt>/Tools/QtCreator/lib/Qt/plugins/designer` 
+
+After restarting the creator, navigate to the designer and to "Tools > Form Editor > About Qt Designer Plugins". The plugin should appear there. You can find it inside the "Input Widgets" Section.
 
 For more details, check [Adding Qt Designer Plugins](http://doc.qt.io/qtcreator/adding-plugins.html).
 
