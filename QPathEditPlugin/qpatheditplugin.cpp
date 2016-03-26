@@ -70,10 +70,6 @@ QString QPathEditPlugin::domXml() const
 		   "   <class>QPathEdit</class>\n"
 		   "   <extends>QWidget</extends>\n"
 		   "   <header>qpathedit.h</header>\n"
-		   "   <propertyspecifications>\n"
-		   "    <stringpropertyspecification name=\"defaultDirectory\" notr=\"true\" type=\"url\"/>\n"
-		   "    <stringpropertyspecification name=\"path\" notr=\"true\" type=\"url\"/>\n"
-		   "   </propertyspecifications>\n"
 		   "  </customwidget>\n"
 		   " </customwidgets>\n"
 		   "</ui>\n");

@@ -84,6 +84,8 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	//setup "button"
 	connect(this->dialogAction, &QAction::triggered, this, &QPathEdit::showDialog);
 	this->toolButton->setDefaultAction(this->dialogAction);
+	int height = this->edit->sizeHint().height();
+	this->toolButton->setFixedSize(height, height);
 	switch(style) {
 	case JoinedButton:
 		this->edit->addAction(this->dialogAction, QLineEdit::TrailingPosition);
