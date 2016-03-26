@@ -16,6 +16,8 @@
 
 //HELPER CLASSES
 
+void masterDialog(QDialog *dialog);
+
 class PathValidator : public QValidator
 {
 public:
@@ -53,8 +55,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 {
 	//setup dialog
 	this->dialog->setOptions(0);
-	this->dialog->setWindowModality(Qt::WindowModal);
-	this->dialog->setWindowFlags(this->dialog->windowFlags() & ~Qt::WindowContextHelpButtonHint);
+	masterDialog(this->dialog);
 	this->setPathMode(pathMode);
 	connect(this->dialog, &QFileDialog::fileSelected, this, &QPathEdit::dialogFileSelected);
 
@@ -453,3 +454,21 @@ QValidator::State PathValidator::validate(QString &text, int &) const
 
 	return QValidator::Invalid;
 }
+
+void masterDialog(QDialog *dialog)
+{
+	Qt::WindowFlags flags = Qt::WindowTitleHint |
+							Qt::WindowSystemMenuHint |
+							Qt::WindowCloseButtonHint;
+
+	dialog->setSizeGripEnabled(true);
+	if(dialog->parentWidget()) {
+		dialog->setWindowModality(Qt::WindowModal);
+		flags |= Qt::Sheet;
+	} else {
+		dialog->setWindowModality(Qt::ApplicationModal);
+		flags |= Qt::Dialog;
+	}
+	dialog->setWindowFlags(flags);
+}
+
