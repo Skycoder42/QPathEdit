@@ -17,7 +17,7 @@ The QPathEdit class provides the following features:
 You can check out the documentation by clicking on QPathEdit, or download the files below.
 
 ### Usage - A simple Example
-Since the QPathEdit is just a simple widget, you can use it like any other widget. To use the class, simply download the zip below and add the "qpathedit.pri" to you project - thats all you need (Just add `include(<path_to>/qpathedit.pri)` to your project and all the includes/libray imports/... will be done by that file!).
+Since the QPathEdit is just a simple widget, you can use it like any other widget.
 The following example will create a simple window with the QPathEdit inside. If the user enters a path, the new path will be logged on the console:
 
 ```cpp
@@ -61,7 +61,14 @@ The documentation is available within the releases and on [github pages](https:/
 The documentation was created using [doxygen](www.doxygen.org/). It includes an HTML-documentation and Qt-Help files that can be included into QtCreator (QtAssistant) to show F1-Help (See [Adding External Documentation](https://doc.qt.io/qtcreator/creator-help.html#adding-external-documentation) for more details).
 
 ## Download
-All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases).
+All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases). The downloads include:
+- A .pri file for easy project includes (Just add include(<path_to>/qpathedit.pri) to your project and all the includes/libray imports/... will be done by that file!)
+- The QPathEdit-class and a resource file with the icon (automatically included by the pri-file)
+- The HTML and QtHelp documentation
+- QtCreator-Plugins, all build with Qt 5.6 and working with at least the current version (3.6.1), for:
+  - Windows
+  - OsX
+  - X11 (x64 only)
 
 ## Icons
 The edit uses a default icon for joined dialog buttons. The icon was downloaded from http://www.fatcow.com/free-icons.
