@@ -9,7 +9,7 @@ RESOURCES   = qpatheditplugin_res.qrc
 
 DEFINES += DESIGNER_PLUGIN
 
-include(../QPathEdit/qpathedit.pri)
+include(../qpathedit.pri)
 
 VERSION = 1.2.0
 win32 {

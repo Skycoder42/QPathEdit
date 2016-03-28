@@ -18,7 +18,7 @@ SOURCES += main.cpp \
 HEADERS  += \
     form.h
 
-include(../QPathEdit/qpathedit.pri)
+include(../qpathedit.pri)
 
 FORMS += \
     form.ui
