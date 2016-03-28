@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cachemode',['cacheMode',['http://doc.qt.io/qt-5/qmovie.html#cacheMode-prop',0,'QMovie::cacheMode()'],['http://doc.qt.io/qt-5/qgraphicsview.html#cacheMode-prop',0,'QGraphicsView::cacheMode()']]],
+  ['cachepath',['cachePath',['http://doc.qt.io/qt-5/qquickwebengineprofile.html#cachePath-prop',0,'QQuickWebEngineProfile']]],
   ['calendarpopup',['calendarPopup',['http://doc.qt.io/qt-5/qdatetimeedit.html#calendarPopup-prop',0,'QDateTimeEdit']]],
   ['calibrationlevel',['calibrationLevel',['http://doc.qt.io/qt-5/qcompassreading.html#calibrationLevel-prop',0,'QCompassReading::calibrationLevel()'],['http://doc.qt.io/qt-5/qmagnetometerreading.html#calibrationLevel-prop',0,'QMagnetometerReading::calibrationLevel()']]],
   ['cancelbuttontext',['cancelButtonText',['http://doc.qt.io/qt-5/qinputdialog.html#cancelButtonText-prop',0,'QInputDialog']]],
@@ -36,8 +37,8 @@ var searchData=
   ['connectedtobackend',['connectedToBackend',['http://doc.qt.io/qt-5/qsensor.html#connectedToBackend-prop',0,'QSensor']]],
   ['contentitem',['contentItem',['http://doc.qt.io/qt-5/qquickwindow.html#contentItem-prop',0,'QQuickWindow']]],
   ['contentorientation',['contentOrientation',['http://doc.qt.io/qt-5/qwindow.html#contentOrientation-prop',0,'QWindow']]],
-  ['contentsscale',['contentsScale',['http://doc.qt.io/qt-5/qquickpainteditem.html#contentsScale-prop',0,'QQuickPaintedItem']]],
-  ['contentssize',['contentsSize',['http://doc.qt.io/qt-5/qquickpainteditem.html#contentsSize-prop',0,'QQuickPaintedItem']]],
+  ['contentsscale',['contentsScale',['http://doc.qt.io/qt-5/qquickpainteditem-obsolete.html#contentsScale-prop',0,'QQuickPaintedItem']]],
+  ['contentssize',['contentsSize',['http://doc.qt.io/qt-5/qquickpainteditem-obsolete.html#contentsSize-prop',0,'QQuickPaintedItem']]],
   ['context',['context',['http://doc.qt.io/qt-5/qshortcut.html#context-prop',0,'QShortcut']]],
   ['contextmenupolicy',['contextMenuPolicy',['http://doc.qt.io/qt-5/qwidget.html#contextMenuPolicy-prop',0,'QWidget']]],
   ['control',['control',['http://doc.qt.io/qt-5/qaxbase.html#control-prop',0,'QAxBase']]],

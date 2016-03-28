@@ -23,6 +23,7 @@ var searchData=
   ['textformat',['textFormat',['http://doc.qt.io/qt-5/qmessagebox.html#textFormat-prop',0,'QMessageBox::textFormat()'],['http://doc.qt.io/qt-5/qlabel.html#textFormat-prop',0,'QLabel::textFormat()']]],
   ['textinteractionflags',['textInteractionFlags',['http://doc.qt.io/qt-5/qmessagebox.html#textInteractionFlags-prop',0,'QMessageBox::textInteractionFlags()'],['http://doc.qt.io/qt-5/qlabel.html#textInteractionFlags-prop',0,'QLabel::textInteractionFlags()'],['http://doc.qt.io/qt-5/qplaintextedit.html#textInteractionFlags-prop',0,'QPlainTextEdit::textInteractionFlags()'],['http://doc.qt.io/qt-5/qtextedit.html#textInteractionFlags-prop',0,'QTextEdit::textInteractionFlags()']]],
   ['texturefollowsitemsize',['textureFollowsItemSize',['http://doc.qt.io/qt-5/qquickframebufferobject.html#textureFollowsItemSize-prop',0,'QQuickFramebufferObject']]],
+  ['texturesize',['textureSize',['http://doc.qt.io/qt-5/qquickpainteditem.html#textureSize-prop',0,'QQuickPaintedItem']]],
   ['textvalue',['textValue',['http://doc.qt.io/qt-5/qinputdialog.html#textValue-prop',0,'QInputDialog']]],
   ['textvisible',['textVisible',['http://doc.qt.io/qt-5/qprogressbar.html#textVisible-prop',0,'QProgressBar']]],
   ['textwidth',['textWidth',['http://doc.qt.io/qt-5/qtextdocument.html#textWidth-prop',0,'QTextDocument']]],
@@ -32,7 +33,7 @@ var searchData=
   ['timertype',['timerType',['http://doc.qt.io/qt-5/qtimer.html#timerType-prop',0,'QTimer']]],
   ['timespec',['timeSpec',['http://doc.qt.io/qt-5/qdatetimeedit.html#timeSpec-prop',0,'QDateTimeEdit']]],
   ['timestamp',['timestamp',['http://doc.qt.io/qt-5/qsensorreading.html#timestamp-prop',0,'QSensorReading']]],
-  ['title',['title',['http://doc.qt.io/qt-5/qwindow.html#title-prop',0,'QWindow::title()'],['http://doc.qt.io/qt-5/qsvggenerator.html#title-prop',0,'QSvgGenerator::title()'],['http://doc.qt.io/qt-5/qwebenginepage.html#title-prop',0,'QWebEnginePage::title()'],['http://doc.qt.io/qt-5/qwebengineview.html#title-prop',0,'QWebEngineView::title()'],['http://doc.qt.io/qt-5/qwizardpage.html#title-prop',0,'QWizardPage::title()'],['http://doc.qt.io/qt-5/qgroupbox.html#title-prop',0,'QGroupBox::title()'],['http://doc.qt.io/qt-5/qmenu.html#title-prop',0,'QMenu::title()']]],
+  ['title',['title',['http://doc.qt.io/qt-5/qwebenginepage.html#title-prop',0,'QWebEnginePage::title()'],['http://doc.qt.io/qt-5/qwebengineview.html#title-prop',0,'QWebEngineView::title()'],['http://doc.qt.io/qt-5/qsvggenerator.html#title-prop',0,'QSvgGenerator::title()'],['http://doc.qt.io/qt-5/qwindow.html#title-prop',0,'QWindow::title()'],['http://doc.qt.io/qt-5/qwizardpage.html#title-prop',0,'QWizardPage::title()'],['http://doc.qt.io/qt-5/qgroupbox.html#title-prop',0,'QGroupBox::title()'],['http://doc.qt.io/qt-5/qmenu.html#title-prop',0,'QMenu::title()']]],
   ['titleformat',['titleFormat',['http://doc.qt.io/qt-5/qwizard.html#titleFormat-prop',0,'QWizard']]],
   ['toolbuttonstyle',['toolButtonStyle',['http://doc.qt.io/qt-5/qmainwindow.html#toolButtonStyle-prop',0,'QMainWindow::toolButtonStyle()'],['http://doc.qt.io/qt-5/qtoolbar.html#toolButtonStyle-prop',0,'QToolBar::toolButtonStyle()'],['http://doc.qt.io/qt-5/qtoolbutton.html#toolButtonStyle-prop',0,'QToolButton::toolButtonStyle()']]],
   ['tooltip',['toolTip',['http://doc.qt.io/qt-5/qaction.html#toolTip-prop',0,'QAction::toolTip()'],['http://doc.qt.io/qt-5/qwidget.html#toolTip-prop',0,'QWidget::toolTip()'],['http://doc.qt.io/qt-5/qsystemtrayicon.html#toolTip-prop',0,'QSystemTrayIcon::toolTip()']]],
@@ -51,6 +52,6 @@ var searchData=
   ['transformoriginpoint',['transformOriginPoint',['http://doc.qt.io/qt-5/qgraphicsobject.html#transformOriginPoint-prop',0,'QGraphicsObject']]],
   ['transitiontype',['transitionType',['http://doc.qt.io/qt-5/qabstracttransition.html#transitionType-prop',0,'QAbstractTransition']]],
   ['tristate',['tristate',['http://doc.qt.io/qt-5/qcheckbox.html#tristate-prop',0,'QCheckBox']]],
-  ['type',['type',['http://doc.qt.io/qt-5/qdnslookup.html#type-prop',0,'QDnsLookup::type()'],['http://doc.qt.io/qt-5/qqmlndefrecord.html#type-prop',0,'QQmlNdefRecord::type()'],['http://doc.qt.io/qt-5/qgeoshape.html#type-prop',0,'QGeoShape::type()'],['http://doc.qt.io/qt-5/qsensor.html#type-prop',0,'QSensor::type()']]],
+  ['type',['type',['http://doc.qt.io/qt-5/qqmlndefrecord.html#type-prop',0,'QQmlNdefRecord::type()'],['http://doc.qt.io/qt-5/qsensor.html#type-prop',0,'QSensor::type()'],['http://doc.qt.io/qt-5/qgeoshape.html#type-prop',0,'QGeoShape::type()'],['http://doc.qt.io/qt-5/qdnslookup.html#type-prop',0,'QDnsLookup::type()']]],
   ['typenameformat',['typeNameFormat',['http://doc.qt.io/qt-5/qqmlndefrecord.html#typeNameFormat-prop',0,'QQmlNdefRecord']]]
 ];

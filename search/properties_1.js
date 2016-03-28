@@ -2,6 +2,7 @@ var searchData=
 [
   ['background',['background',['http://doc.qt.io/qt-5/qmdiarea.html#background-prop',0,'QMdiArea']]],
   ['backgroundbrush',['backgroundBrush',['http://doc.qt.io/qt-5/qgraphicsscene.html#backgroundBrush-prop',0,'QGraphicsScene::backgroundBrush()'],['http://doc.qt.io/qt-5/qgraphicsview.html#backgroundBrush-prop',0,'QGraphicsView::backgroundBrush()']]],
+  ['backgroundcolor',['backgroundColor',['http://doc.qt.io/qt-5/qwebenginepage.html#backgroundColor-prop',0,'QWebEnginePage']]],
   ['backgroundvisible',['backgroundVisible',['http://doc.qt.io/qt-5/qplaintextedit.html#backgroundVisible-prop',0,'QPlainTextEdit']]],
   ['baselineoffset',['baselineOffset',['http://doc.qt.io/qt-5/qquickitem.html#baselineOffset-prop',0,'QQuickItem']]],
   ['basesize',['baseSize',['http://doc.qt.io/qt-5/qwidget.html#baseSize-prop',0,'QWidget']]],

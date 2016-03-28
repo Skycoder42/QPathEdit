@@ -11,7 +11,7 @@ var searchData=
   ['emptylabel',['emptyLabel',['http://doc.qt.io/qt-5/qundoview.html#emptyLabel-prop',0,'QUndoView']]],
   ['enabled',['enabled',['http://doc.qt.io/qt-5/qquickitem.html#enabled-prop',0,'QQuickItem::enabled()'],['http://doc.qt.io/qt-5/qgraphicseffect.html#enabled-prop',0,'QGraphicsEffect::enabled()'],['http://doc.qt.io/qt-5/qgraphicsobject.html#enabled-prop',0,'QGraphicsObject::enabled()'],['http://doc.qt.io/qt-5/qaction.html#enabled-prop',0,'QAction::enabled()'],['http://doc.qt.io/qt-5/qactiongroup.html#enabled-prop',0,'QActionGroup::enabled()'],['http://doc.qt.io/qt-5/qshortcut.html#enabled-prop',0,'QShortcut::enabled()'],['http://doc.qt.io/qt-5/qwidget.html#enabled-prop',0,'QWidget::enabled()']]],
   ['endvalue',['endValue',['http://doc.qt.io/qt-5/qvariantanimation.html#endValue-prop',0,'QVariantAnimation']]],
-  ['error',['error',['http://doc.qt.io/qt-5/qdnslookup.html#error-prop',0,'QDnsLookup::error()'],['http://doc.qt.io/qt-5/qsensor.html#error-prop',0,'QSensor::error()']]],
+  ['error',['error',['http://doc.qt.io/qt-5/qsensor.html#error-prop',0,'QSensor::error()'],['http://doc.qt.io/qt-5/qdnslookup.html#error-prop',0,'QDnsLookup::error()']]],
   ['errorstate',['errorState',['http://doc.qt.io/qt-5/qstate.html#errorState-prop',0,'QState']]],
   ['errorstring',['errorString',['http://doc.qt.io/qt-5/qstatemachine.html#errorString-prop',0,'QStateMachine::errorString()'],['http://doc.qt.io/qt-5/qdnslookup.html#errorString-prop',0,'QDnsLookup::errorString()']]],
   ['eventsource',['eventSource',['http://doc.qt.io/qt-5/qeventtransition.html#eventSource-prop',0,'QEventTransition']]],

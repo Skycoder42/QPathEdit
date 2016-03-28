@@ -7,5 +7,6 @@ var searchData=
   ['qt',['Qt',['http://doc.qt.io/qt-5/qt.html',0,'']]],
   ['qtconcurrent',['QtConcurrent',['http://doc.qt.io/qt-5/qtconcurrent.html',0,'']]],
   ['qtest',['QTest',['http://doc.qt.io/qt-5/qtest.html',0,'']]],
+  ['qtwebengine',['QtWebEngine',['http://doc.qt.io/qt-5/qtwebengine.html',0,'']]],
   ['qwebsocketprotocol',['QWebSocketProtocol',['http://doc.qt.io/qt-5/qwebsocketprotocol.html',0,'']]]
 ];

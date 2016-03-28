@@ -14,5 +14,6 @@ var searchData=
   ['printdialogoptions',['PrintDialogOptions',['http://doc.qt.io/qt-5/qabstractprintdialog.html#PrintDialogOption-enum',0,'QAbstractPrintDialog']]],
   ['processeventsflags',['ProcessEventsFlags',['http://doc.qt.io/qt-5/qeventloop.html#ProcessEventsFlag-enum',0,'QEventLoop']]],
   ['propertybag',['PropertyBag',['http://doc.qt.io/qt-5/qaxbase.html#PropertyBag-typedef',0,'QAxBase']]],
-  ['propertytypes',['PropertyTypes',['http://doc.qt.io/qt-5/qlowenergycharacteristic.html#PropertyType-enum',0,'QLowEnergyCharacteristic']]]
+  ['propertytypes',['PropertyTypes',['http://doc.qt.io/qt-5/qlowenergycharacteristic.html#PropertyType-enum',0,'QLowEnergyCharacteristic']]],
+  ['ptr',['Ptr',['http://doc.qt.io/qt-5/qabstractxmlnodemodel.html#Ptr-typedef',0,'QAbstractXmlNodeModel']]]
 ];
