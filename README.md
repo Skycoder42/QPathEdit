@@ -62,7 +62,7 @@ The documentation was created using [doxygen](www.doxygen.org/). It includes an 
 
 ## Download
 All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases). The downloads include:
-- A .pri file for easy project includes (Just add include(<path_to>/qpathedit.pri) to your project and all the includes/libray imports/... will be done by that file!)
+- A .pri file for easy project includes (Just add `include(<path_to>/qpathedit.pri)` to your project and all the includes/libray imports/... will be done by that file!)
 - The QPathEdit-class and a resource file with the icon (automatically included by the pri-file)
 - The HTML and QtHelp documentation
 - QtCreator-Plugins, all build with Qt 5.6 and working with at least the current version (3.6.1), for:
