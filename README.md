@@ -65,10 +65,11 @@ All downloads are located at [github release](https://github.com/Skycoder42/QPat
 - A .pri file for easy project includes (Just add `include(<path_to>/qpathedit.pri)` to your project and all the includes/libray imports/... will be done by that file!)
 - The QPathEdit-class and a resource file with the icon (automatically included by the pri-file)
 - The HTML and QtHelp documentation
-- QtCreator-Plugins, all build with Qt 5.6 and working with at least the current version (3.6.1), for:
+- QtCreator-Plugins, all build with Qt 5.6 and working with at least the current version (3.6.1), for: (optional)
   - Windows
   - OsX
   - X11 (x64 only)
+- Readme and license
 
 ## Icons
 The edit uses a default icon for joined dialog buttons. The icon was downloaded from http://www.fatcow.com/free-icons.
