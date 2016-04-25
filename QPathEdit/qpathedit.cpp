@@ -98,6 +98,10 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	default:
 		break;
 	}
+
+	QWidget::setTabOrder(this->edit, this->toolButton);
+	this->setFocusPolicy(this->edit->focusPolicy());
+	this->setFocusProxy(this->edit);
 }
 
 QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QString defaultDirectory, QWidget *parent, QPathEdit::Style style) :
