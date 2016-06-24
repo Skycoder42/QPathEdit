@@ -295,7 +295,7 @@ void QPathEdit::setStyle(QPathEdit::Style style)
 		this->dialogAction->setIcon(this->getDefaultIcon());
 }
 
-QIcon QPathEdit::dialogButtonIcon()
+QIcon QPathEdit::dialogButtonIcon() const
 {
 	return this->dialogAction->icon();
 }

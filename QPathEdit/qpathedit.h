@@ -99,7 +99,7 @@ public:
 	//! READ-ACCESSOR for QPathEdit::style
 	Style style() const;
 	//! READ-ACCESSOR for QPathEdit::dialogButtonIcon
-	QIcon dialogButtonIcon();
+	QIcon dialogButtonIcon() const;
 
 	//! WRITE-ACCESSOR for QPathEdit::pathMode
 	void setPathMode(PathMode pathMode);
