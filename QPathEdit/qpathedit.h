@@ -2,6 +2,7 @@
 #define QPATHEDIT_H
 
 #include <QWidget>
+#include <QLineEdit>
 #include <QFileDialog>
 #include <QIcon>
 #include <QString>
@@ -124,7 +125,7 @@ public:
 	//! WRITE-ACCESSOR for QPathEdit::useCompleter
 	void setUseCompleter(bool useCompleter);
 	//! WRITE-ACCESSOR for QPathEdit::style
-	void setStyle(Style style);
+	void setStyle(Style style, QLineEdit::ActionPosition position = QLineEdit::TrailingPosition);
 	//! WRITE-ACCESSOR for QPathEdit::dialogButtonIcon
 	void setDialogButtonIcon(const QIcon &icon);
 	//! RESET-ACCESSOR for QPathEdit::dialogButtonIcon

@@ -269,7 +269,7 @@ QPathEdit::Style QPathEdit::style() const
 	return this->uiStyle;
 }
 
-void QPathEdit::setStyle(QPathEdit::Style style)
+void QPathEdit::setStyle(QPathEdit::Style style, QLineEdit::ActionPosition position)
 {
 	if (this->uiStyle == style)
 		return;
@@ -280,7 +280,7 @@ void QPathEdit::setStyle(QPathEdit::Style style)
 		this->toolButton->setVisible(true);
 		break;
 	case JoinedButton:
-		this->edit->addAction(this->dialogAction, QLineEdit::TrailingPosition);
+		this->edit->addAction(this->dialogAction, position);
 		this->toolButton->setVisible(false);
 		break;
 	case NoButton:
