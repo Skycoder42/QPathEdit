@@ -13,6 +13,7 @@
 #include <QAction>
 #include <QPainter>
 #include <functional>
+#include <QKeyEvent>
 
 //HELPER CLASSES
 
@@ -75,6 +76,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	layout->addWidget(toolButton);
 	setLayout(layout);
 	//setup lineedit
+	edit->installEventFilter(this);
 	edit->setCompleter(pathCompleter);
 	edit->setValidator(pathValidator);
 	edit->setDragEnabled(true);
@@ -410,6 +412,20 @@ QIcon QPathEdit::getDefaultIcon()
 	default:
 		Q_UNREACHABLE();
 	}
+}
+
+bool QPathEdit::eventFilter(QObject *watched, QEvent *event)
+{
+	if (event->type() == QEvent::KeyPress){
+		QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+		if(keyEvent->key() == Qt::Key_Space &&
+				keyEvent->modifiers() == Qt::ControlModifier){
+			pathCompleter->complete();
+			return true;
+		} else
+			return QObject::eventFilter(watched, event);
+	} else
+		return QObject::eventFilter(watched, event);
 }
 
 //HELPER CLASSES IMPLEMENTATION
