@@ -342,7 +342,7 @@ void QPathEdit::showDialog()
 
 void QPathEdit::updateValidInfo(const QString &path)
 {
-	this->completerModel->index(QFileInfo(path).dir().absolutePath());//DEBUG enforce "directory loading"
+	this->completerModel->index(QFileInfo(path).dir().absolutePath());//enforce "directory loading"
 	if(this->edit->hasAcceptableInput()) {
 		if(!this->wasPathValid) {
 			this->wasPathValid = true;

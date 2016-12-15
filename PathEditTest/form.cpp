@@ -11,6 +11,7 @@ Form::Form(QWidget *parent) :
 	QStringList l;
 	foreach(QByteArray a, QImageReader::supportedMimeTypes())
 		l += QString::fromLocal8Bit(a);
+	l += "application/octet-stream";
 	this->ui->dialogButtonIconPathEdit->setMimeTypeFilters(l);
 }
 
