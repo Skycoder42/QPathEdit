@@ -12,7 +12,7 @@ Form::Form(QWidget *parent) :
 	foreach(QByteArray a, QImageReader::supportedMimeTypes())
 		l += QString::fromLocal8Bit(a);
 	l += "application/octet-stream";
-	this->ui->dialogButtonIconPathEdit->setMimeTypeFilters(l);
+	ui->dialogButtonIconPathEdit->setMimeTypeFilters(l);
 }
 
 Form::~Form()
@@ -24,13 +24,13 @@ void Form::on_styleComboBox_activated(int index)
 {
 	switch(index) {
 	case 0:
-		this->ui->pathedit->setStyle(QPathEdit::SeperatedButton);
+		ui->pathedit->setStyle(QPathEdit::SeperatedButton);
 		break;
 	case 1:
-		this->ui->pathedit->setStyle(QPathEdit::JoinedButton);
+		ui->pathedit->setStyle(QPathEdit::JoinedButton);
 		break;
 	case 2:
-		this->ui->pathedit->setStyle(QPathEdit::NoButton);
+		ui->pathedit->setStyle(QPathEdit::NoButton);
 		break;
 	default:
 		break;
@@ -40,20 +40,20 @@ void Form::on_styleComboBox_activated(int index)
 void Form::on_dialogButtonIconPathEdit_pathChanged(const QString &path)
 {
 	if(!path.isEmpty())
-		this->ui->pathedit->setDialogButtonIcon(QIcon(path));
+		ui->pathedit->setDialogButtonIcon(QIcon(path));
 }
 
 void Form::on_pathModeComboBox_activated(int index)
 {
 	switch(index) {
 	case 0:
-		this->ui->pathedit->setPathMode(QPathEdit::ExistingFile);
+		ui->pathedit->setPathMode(QPathEdit::ExistingFile);
 		break;
 	case 1:
-		this->ui->pathedit->setPathMode(QPathEdit::ExistingFolder);
+		ui->pathedit->setPathMode(QPathEdit::ExistingFolder);
 		break;
 	case 2:
-		this->ui->pathedit->setPathMode(QPathEdit::AnyFile);
+		ui->pathedit->setPathMode(QPathEdit::AnyFile);
 		break;
 	default:
 		break;
