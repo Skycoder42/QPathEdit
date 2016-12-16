@@ -53,7 +53,7 @@ QWidget *QPathEditPlugin::createWidget(QWidget *parent)
 
 bool QPathEditPlugin::isInitialized() const
 {
-	return this->core;
+	return core;
 }
 
 void QPathEditPlugin::initialize(QDesignerFormEditorInterface *core)

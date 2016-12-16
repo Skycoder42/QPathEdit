@@ -166,6 +166,8 @@ private:
 
 	QStringList modelFilters(const QStringList &normalFilters);
 	QIcon getDefaultIcon();
+
+	bool eventFilter(QObject *watched, QEvent *event) override;
 };
 
 #endif // QPATHEDIT_H
