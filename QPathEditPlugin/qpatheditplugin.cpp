@@ -4,7 +4,7 @@
 QPathEditPlugin::QPathEditPlugin(QObject *parent) :
 	QObject(parent),
 	QDesignerCustomWidgetInterface(),
-	core(NULL)
+	core(nullptr)
 {}
 
 QString QPathEditPlugin::name() const

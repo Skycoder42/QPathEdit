@@ -263,7 +263,7 @@ bool QPathEdit::useCompleter() const
 
 void QPathEdit::setUseCompleter(bool useCompleter)
 {
-	edit->setCompleter(useCompleter ? pathCompleter : NULL);
+	edit->setCompleter(useCompleter ? pathCompleter : nullptr);
 }
 
 QPathEdit::Style QPathEdit::style() const
@@ -288,7 +288,9 @@ void QPathEdit::setStyle(QPathEdit::Style style, QLineEdit::ActionPosition posit
 	case NoButton:
 		edit->removeAction(dialogAction);
 		toolButton->setVisible(false);
+		break;
 	default:
+		Q_UNREACHABLE();
 		break;
 	}
 

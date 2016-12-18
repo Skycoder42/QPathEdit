@@ -69,11 +69,11 @@ public:
 	Q_ENUM(PathMode)
 
 	//! Constructs a new QPathEdit widget. The mode will be QPathEdit::ExistingFile
-	explicit QPathEdit(QWidget *parent = NULL, Style style = SeperatedButton);
+	explicit QPathEdit(QWidget *parent = nullptr, Style style = SeperatedButton);
 	//! Constructs a new QPathEdit widget
-	explicit QPathEdit(PathMode pathMode, QWidget *parent = NULL, Style style = SeperatedButton);
+	explicit QPathEdit(PathMode pathMode, QWidget *parent = nullptr, Style style = SeperatedButton);
 	//! Constructs a new QPathEdit widget with the given default directory
-	explicit QPathEdit(PathMode pathMode, QString defaultDirectory, QWidget *parent = NULL, Style style = SeperatedButton);
+	explicit QPathEdit(PathMode pathMode, QString defaultDirectory, QWidget *parent = nullptr, Style style = SeperatedButton);
 
 	//! READ-ACCESSOR for QPathEdit::pathMode
 	PathMode pathMode() const;
