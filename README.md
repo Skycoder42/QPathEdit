@@ -46,12 +46,12 @@ int main(int argc, char *argv[])
 ```
 
 ### Installing the Plugin
-To install the plugin, you need to copy the right file from the zip-package to the QtCreators designer plugin path. Inside the `designerplugin` folder, there are a number of subfolders for operating systems I've created the plugin for. If yours is not present, you need to compile the plugin yourself. Copy file (for example `qpatheditplugin.dll`) into QtCreators path. The default path would be:
+To install the plugin, you need to copy the right file from the `designerplugins.zip` zip-package to the QtCreators designer plugin path. There are a number of subfolders for operating systems I've created the plugin for. If yours is not present, you need to compile the plugin yourself. Copy file (for example `qpatheditplugin.dll`) into QtCreators path. The default path would be:
 - Windows: `<path_to_qt>/Tools/QtCreator/bin/plugins/designer`
 - OsX: `<qt_creator_bundle>/Contents/PlugIns/designer`
 - Linux: `<path_to_qt>/Tools/QtCreator/lib/Qt/plugins/designer` 
 
-After restarting the creator, navigate to the designer and to "Tools > Form Editor > About Qt Designer Plugins". The plugin should appear there. You can find it inside the "Input Widgets" Section.
+After restarting the creator, navigate to the designer and to "Tools > Form Editor > About Qt Designer Plugins". The plugin should appear there. In the editor itself, you can find it inside the "Input Widgets" Section.
 
 For more details, check [Adding Qt Designer Plugins](http://doc.qt.io/qtcreator/adding-plugins.html).
 
@@ -61,15 +61,13 @@ The documentation is available within the releases and on [github pages](https:/
 The documentation was created using [doxygen](www.doxygen.org/). It includes an HTML-documentation and Qt-Help files that can be included into QtCreator (QtAssistant) to show F1-Help (See [Adding External Documentation](https://doc.qt.io/qtcreator/creator-help.html#adding-external-documentation) for more details).
 
 ## Download
-All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases). The downloads include:
-- A .pri file for easy project includes (Just add `include(<path_to>/qpathedit.pri)` to your project and all the includes/libray imports/... will be done by that file!)
-- The QPathEdit-class and a resource file with the icon (automatically included by the pri-file)
-- The HTML and QtHelp documentation
-- QtCreator-Plugins, all build with Qt 5.6 and working with at least the current version (3.6.1), for: (optional)
+All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases). The release includes:
+- The sourcecode. To use it, simply copy the repository into you application (preferebly by adding it as a git submodule) and add the line `include(./QPathEdit/qpathedit.pri)` to your .pro-file. This way all files and required libraries will automatically be added.
+- The documentation, if you want to keep it local or add it to QtCreator
+- The precompiled QtCreator Plugins, all build with Qt 5.7.1 and working with at least the current version of QtCreator (4.2.0), for:
   - Windows
-  - OsX
-  - X11 (x64 only)
-- Readme and license
+  - MacOs
+  - X11 (Linux, x64 only)
 
 ## Icons
 The edit uses a default icon for joined dialog buttons. The icon was downloaded from http://www.fatcow.com/free-icons.
