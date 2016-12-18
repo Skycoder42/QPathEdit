@@ -12,6 +12,6 @@ var searchData=
   ['const_5fiterator',['const_iterator',['http://doc.qt.io/qt-5/qassociativeiterable-const-iterator.html',0,'QAssociativeIterable']]],
   ['const_5fiterator',['const_iterator',['http://doc.qt.io/qt-5/qsequentialiterable-const-iterator.html',0,'QSequentialIterable']]],
   ['const_5fiterator',['const_iterator',['http://doc.qt.io/qt-5/qjsonarray-const-iterator.html',0,'QJsonArray']]],
-  ['control',['Control',['http://doc.qt.io/qt-5/qml-control.html',0,'']]],
-  ['converterstate',['ConverterState',['http://doc.qt.io/qt-5/qtextcodec-converterstate.html',0,'QTextCodec']]]
+  ['converterstate',['ConverterState',['http://doc.qt.io/qt-5/qtextcodec-converterstate.html',0,'QTextCodec']]],
+  ['createprocessarguments',['CreateProcessArguments',['http://doc.qt.io/qt-5/qprocess-createprocessarguments.html',0,'QProcess']]]
 ];

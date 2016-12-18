@@ -5,7 +5,7 @@
   <filterSection>
     <filterAttribute>doxygen</filterAttribute>
     <toc>
-      <section title="QPathEdit 1.2.0" ref="index.html">
+      <section title="QPathEdit 1.2.2" ref="index.html">
         <section title="Classes" ref="annotated.html">
           <section title="Class List" ref="annotated.html">
             <section title="QPathEdit" ref="class_q_path_edit.html">
@@ -19,22 +19,22 @@
                 <section title="JoinedButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a7a5f4c7286921e056de61863b7f0881e" />
                 <section title="NoButton" ref="class_q_path_edit.html#a5f772e9405220fd9cbace22ccd7e38b5a0a4f96e969427195af7e97dbd3a36ff4" />
               </section>
-              <section title="QPathEdit" ref="class_q_path_edit.html#a32a5b9c90d9e67f79eaa117e0b5f0e62" />
-              <section title="QPathEdit" ref="class_q_path_edit.html#af28b15442b84e95c5dab1e83f7cf8cd9" />
-              <section title="QPathEdit" ref="class_q_path_edit.html#a5f5bbcba2c377da296a382a32ea81c55" />
+              <section title="QPathEdit" ref="class_q_path_edit.html#a637d40340d80bb3372ed77a5043e0ce9" />
+              <section title="QPathEdit" ref="class_q_path_edit.html#a2115a63272b57b2b402f2d4497126d37" />
+              <section title="QPathEdit" ref="class_q_path_edit.html#aff8788beb99fc322c601967d8ff27ce5" />
               <section title="clear" ref="class_q_path_edit.html#aec51450621d24c9645987b485298b658" />
-              <section title="defaultDirectory" ref="class_q_path_edit.html#a53eb651342642c480d45d605aefeab80" />
-              <section title="dialogButtonIcon" ref="class_q_path_edit.html#afdda9a62258556ba83f258c2d278dc17" />
-              <section title="dialogOptions" ref="class_q_path_edit.html#a9d8a20571ff9e25e75ac625522824607" />
-              <section title="isEditable" ref="class_q_path_edit.html#a83df0df76bf9551d7c7f835ad2a54545" />
-              <section title="isEmptyPathAllowed" ref="class_q_path_edit.html#a805802e8e00e2160be5658328a777a78" />
-              <section title="mimeTypeFilters" ref="class_q_path_edit.html#a6eba66ea79097b6c233c0e82d732d3c0" />
-              <section title="nameFilters" ref="class_q_path_edit.html#a82e7d9e8150770d1c73a2ab88a364f64" />
-              <section title="path" ref="class_q_path_edit.html#a173e2cf9fc2ed454739ff5c23c33a7ed" />
+              <section title="defaultDirectory" ref="class_q_path_edit.html#a5c7f168fbf0e3558690b6825bc038be0" />
+              <section title="dialogButtonIcon" ref="class_q_path_edit.html#af9710e1b7fc118946f6213e8f4033bd8" />
+              <section title="dialogOptions" ref="class_q_path_edit.html#abc83fb9799ff61fa00cf3fcb8dd612b5" />
+              <section title="isEditable" ref="class_q_path_edit.html#acf489450b7362137db236920cce5072f" />
+              <section title="isEmptyPathAllowed" ref="class_q_path_edit.html#a4912f84ceffa69cfc7de90e76eae5495" />
+              <section title="mimeTypeFilters" ref="class_q_path_edit.html#acd4121ec89d6c769d4d36bf11cac53ed" />
+              <section title="nameFilters" ref="class_q_path_edit.html#a3debbcca107d42a032d694268c0508f4" />
+              <section title="path" ref="class_q_path_edit.html#a52b20d3ac8c6a4600ecb7715186c4b15" />
               <section title="pathChanged" ref="class_q_path_edit.html#aef3a7669cfb6a6e6b6c8b0fc573163c6" />
-              <section title="pathMode" ref="class_q_path_edit.html#a7276511cb70f2011bbd640f947720c7d" />
-              <section title="pathUrl" ref="class_q_path_edit.html#a36028fc61e6f6b913ca3c8b777acb5bd" />
-              <section title="placeholder" ref="class_q_path_edit.html#a7e78a691d8644912aeacec4e89c1423d" />
+              <section title="pathMode" ref="class_q_path_edit.html#aaebd2d67c93c0dcc2cf76027ab886f4f" />
+              <section title="pathUrl" ref="class_q_path_edit.html#a5d908b7c3536162a01ba7b10aa899075" />
+              <section title="placeholder" ref="class_q_path_edit.html#adcd17826cbd74acec673fba834c6bd29" />
               <section title="resetDialogButtonIcon" ref="class_q_path_edit.html#acd3a2c60674d56b98d8ec9d4936d8ede" />
               <section title="setAllowEmptyPath" ref="class_q_path_edit.html#a0c3528301303946e6c0ad76342cbd44e" />
               <section title="setDefaultDirectory" ref="class_q_path_edit.html#a5ae5f11fddb6df5e6e759f4518f26e67" />
@@ -46,11 +46,11 @@
               <section title="setPath" ref="class_q_path_edit.html#aa157d650dabb35e85ba07d9705ba2368" />
               <section title="setPathMode" ref="class_q_path_edit.html#a1778da36610ef97465cbb3cf795370a2" />
               <section title="setPlaceholder" ref="class_q_path_edit.html#aa4c034da96ae3c3fdde4b8a9eba13ac2" />
-              <section title="setStyle" ref="class_q_path_edit.html#a72ac39571390c2dcbb65398eacaba863" />
+              <section title="setStyle" ref="class_q_path_edit.html#abca1a6eaacb3c04033be3d7ac06b1794" />
               <section title="setUseCompleter" ref="class_q_path_edit.html#a6ead24e287828efe0e0c5dae504ecbdc" />
               <section title="showDialog" ref="class_q_path_edit.html#a60b5a5b4bbf60a331f229c6745c45503" />
-              <section title="style" ref="class_q_path_edit.html#a970a798980cd2aa21ff397e113a2381a" />
-              <section title="useCompleter" ref="class_q_path_edit.html#aeee486c496906bbbc063e1e3ca35fbdc" />
+              <section title="style" ref="class_q_path_edit.html#a4f2e048c80176dd5c3629737f912b0c7" />
+              <section title="useCompleter" ref="class_q_path_edit.html#a791c3418951bbff2b4e90944004ec45e" />
               <section title="allowEmptyPath" ref="class_q_path_edit.html#a67e8a24fd2ce4dc22a77febb9df60667" />
               <section title="defaultDirectory" ref="class_q_path_edit.html#ad77b6c18b3ebf71d32f61b857aeb1279" />
               <section title="dialogButtonIcon" ref="class_q_path_edit.html#add3dacd7a1b27d19c50a1f50cda88d94" />
@@ -97,22 +97,22 @@
       <keyword name="QPathEdit" id="QPathEdit" ref="class_q_path_edit.html" />
       <keyword name="showDialog" id="QPathEdit::showDialog" ref="class_q_path_edit.html#a60b5a5b4bbf60a331f229c6745c45503" />
       <keyword name="pathChanged" id="QPathEdit::pathChanged" ref="class_q_path_edit.html#aef3a7669cfb6a6e6b6c8b0fc573163c6" />
-      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a32a5b9c90d9e67f79eaa117e0b5f0e62" />
-      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#af28b15442b84e95c5dab1e83f7cf8cd9" />
-      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a5f5bbcba2c377da296a382a32ea81c55" />
-      <keyword name="pathMode" id="QPathEdit::pathMode" ref="class_q_path_edit.html#a7276511cb70f2011bbd640f947720c7d" />
-      <keyword name="dialogOptions" id="QPathEdit::dialogOptions" ref="class_q_path_edit.html#a9d8a20571ff9e25e75ac625522824607" />
-      <keyword name="isEmptyPathAllowed" id="QPathEdit::isEmptyPathAllowed" ref="class_q_path_edit.html#a805802e8e00e2160be5658328a777a78" />
-      <keyword name="defaultDirectory" id="QPathEdit::defaultDirectory" ref="class_q_path_edit.html#a53eb651342642c480d45d605aefeab80" />
-      <keyword name="path" id="QPathEdit::path" ref="class_q_path_edit.html#a173e2cf9fc2ed454739ff5c23c33a7ed" />
-      <keyword name="pathUrl" id="QPathEdit::pathUrl" ref="class_q_path_edit.html#a36028fc61e6f6b913ca3c8b777acb5bd" />
-      <keyword name="placeholder" id="QPathEdit::placeholder" ref="class_q_path_edit.html#a7e78a691d8644912aeacec4e89c1423d" />
-      <keyword name="nameFilters" id="QPathEdit::nameFilters" ref="class_q_path_edit.html#a82e7d9e8150770d1c73a2ab88a364f64" />
-      <keyword name="mimeTypeFilters" id="QPathEdit::mimeTypeFilters" ref="class_q_path_edit.html#a6eba66ea79097b6c233c0e82d732d3c0" />
-      <keyword name="isEditable" id="QPathEdit::isEditable" ref="class_q_path_edit.html#a83df0df76bf9551d7c7f835ad2a54545" />
-      <keyword name="useCompleter" id="QPathEdit::useCompleter" ref="class_q_path_edit.html#aeee486c496906bbbc063e1e3ca35fbdc" />
-      <keyword name="style" id="QPathEdit::style" ref="class_q_path_edit.html#a970a798980cd2aa21ff397e113a2381a" />
-      <keyword name="dialogButtonIcon" id="QPathEdit::dialogButtonIcon" ref="class_q_path_edit.html#afdda9a62258556ba83f258c2d278dc17" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a637d40340d80bb3372ed77a5043e0ce9" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#a2115a63272b57b2b402f2d4497126d37" />
+      <keyword name="QPathEdit" id="QPathEdit::QPathEdit" ref="class_q_path_edit.html#aff8788beb99fc322c601967d8ff27ce5" />
+      <keyword name="pathMode" id="QPathEdit::pathMode" ref="class_q_path_edit.html#aaebd2d67c93c0dcc2cf76027ab886f4f" />
+      <keyword name="dialogOptions" id="QPathEdit::dialogOptions" ref="class_q_path_edit.html#abc83fb9799ff61fa00cf3fcb8dd612b5" />
+      <keyword name="isEmptyPathAllowed" id="QPathEdit::isEmptyPathAllowed" ref="class_q_path_edit.html#a4912f84ceffa69cfc7de90e76eae5495" />
+      <keyword name="defaultDirectory" id="QPathEdit::defaultDirectory" ref="class_q_path_edit.html#a5c7f168fbf0e3558690b6825bc038be0" />
+      <keyword name="path" id="QPathEdit::path" ref="class_q_path_edit.html#a52b20d3ac8c6a4600ecb7715186c4b15" />
+      <keyword name="pathUrl" id="QPathEdit::pathUrl" ref="class_q_path_edit.html#a5d908b7c3536162a01ba7b10aa899075" />
+      <keyword name="placeholder" id="QPathEdit::placeholder" ref="class_q_path_edit.html#adcd17826cbd74acec673fba834c6bd29" />
+      <keyword name="nameFilters" id="QPathEdit::nameFilters" ref="class_q_path_edit.html#a3debbcca107d42a032d694268c0508f4" />
+      <keyword name="mimeTypeFilters" id="QPathEdit::mimeTypeFilters" ref="class_q_path_edit.html#acd4121ec89d6c769d4d36bf11cac53ed" />
+      <keyword name="isEditable" id="QPathEdit::isEditable" ref="class_q_path_edit.html#acf489450b7362137db236920cce5072f" />
+      <keyword name="useCompleter" id="QPathEdit::useCompleter" ref="class_q_path_edit.html#a791c3418951bbff2b4e90944004ec45e" />
+      <keyword name="style" id="QPathEdit::style" ref="class_q_path_edit.html#a4f2e048c80176dd5c3629737f912b0c7" />
+      <keyword name="dialogButtonIcon" id="QPathEdit::dialogButtonIcon" ref="class_q_path_edit.html#af9710e1b7fc118946f6213e8f4033bd8" />
       <keyword name="setPathMode" id="QPathEdit::setPathMode" ref="class_q_path_edit.html#a1778da36610ef97465cbb3cf795370a2" />
       <keyword name="setDialogOptions" id="QPathEdit::setDialogOptions" ref="class_q_path_edit.html#a74428b901f7b212d0d0dd0879e0b9fbe" />
       <keyword name="setAllowEmptyPath" id="QPathEdit::setAllowEmptyPath" ref="class_q_path_edit.html#a0c3528301303946e6c0ad76342cbd44e" />
@@ -124,7 +124,7 @@
       <keyword name="setMimeTypeFilters" id="QPathEdit::setMimeTypeFilters" ref="class_q_path_edit.html#ae56675d84cd2a4b7aaac90812d09f1f6" />
       <keyword name="setEditable" id="QPathEdit::setEditable" ref="class_q_path_edit.html#a517b474893fd93028cf11289195ffd04" />
       <keyword name="setUseCompleter" id="QPathEdit::setUseCompleter" ref="class_q_path_edit.html#a6ead24e287828efe0e0c5dae504ecbdc" />
-      <keyword name="setStyle" id="QPathEdit::setStyle" ref="class_q_path_edit.html#a72ac39571390c2dcbb65398eacaba863" />
+      <keyword name="setStyle" id="QPathEdit::setStyle" ref="class_q_path_edit.html#abca1a6eaacb3c04033be3d7ac06b1794" />
       <keyword name="setDialogButtonIcon" id="QPathEdit::setDialogButtonIcon" ref="class_q_path_edit.html#ae5a53b70f97fe086e62f170c6610fae0" />
       <keyword name="resetDialogButtonIcon" id="QPathEdit::resetDialogButtonIcon" ref="class_q_path_edit.html#acd3a2c60674d56b98d8ec9d4936d8ede" />
       <keyword name="QWidget" id="QWidget::QWidget" ref="qwidget.html#QWidget" />
@@ -338,8 +338,8 @@
       <keyword name="setAcceptDrops" id="QWidget::setAcceptDrops" ref="qwidget.html#acceptDrops-prop" />
       <keyword name="addAction" id="QWidget::addAction" ref="qwidget.html#addAction" />
       <keyword name="addActions" id="QWidget::addActions" ref="qwidget.html#addActions" />
-      <keyword name="insertAction" id="QWidget::insertAction" ref="qwidget.html#insertAction" />
       <keyword name="insertActions" id="QWidget::insertActions" ref="qwidget.html#insertActions" />
+      <keyword name="insertAction" id="QWidget::insertAction" ref="qwidget.html#insertAction" />
       <keyword name="removeAction" id="QWidget::removeAction" ref="qwidget.html#removeAction" />
       <keyword name="actions" id="QWidget::actions" ref="qwidget.html#actions" />
       <keyword name="parentWidget" id="QWidget::parentWidget" ref="qwidget.html#parentWidget" />
@@ -368,7 +368,6 @@
       <keyword name="inputMethodHints" id="QWidget::inputMethodHints" ref="qwidget.html#inputMethodHints-prop" />
       <keyword name="setInputMethodHints" id="QWidget::setInputMethodHints" ref="qwidget.html#inputMethodHints-prop" />
       <keyword name="QObject" id="QObject::QObject" ref="qobject.html#QObject" />
-      <keyword name="eventFilter" id="QObject::eventFilter" ref="qobject.html#eventFilter" />
       <keyword name="metaObject" id="QObject::metaObject" ref="qobject.html#metaObject" />
       <keyword name="objectName" id="QObject::objectName" ref="qobject.html#objectName-prop" />
       <keyword name="setObjectName" id="QObject::setObjectName" ref="qobject.html#objectName-prop" />
@@ -402,7 +401,6 @@
       <keyword name="inherits" id="QObject::inherits" ref="qobject.html#inherits" />
       <keyword name="deleteLater" id="QObject::deleteLater" ref="qobject.html#deleteLater" />
       <keyword name="paintingActive" id="QPaintDevice::paintingActive" ref="qpaintdevice.html#paintingActive" />
-      <keyword name="paintEngine" id="QPaintDevice::paintEngine" ref="qpaintdevice.html#paintEngine" />
       <keyword name="width" id="QPaintDevice::width" ref="qpaintdevice.html#width" />
       <keyword name="height" id="QPaintDevice::height" ref="qpaintdevice.html#height" />
       <keyword name="widthMM" id="QPaintDevice::widthMM" ref="qpaintdevice.html#widthMM" />
