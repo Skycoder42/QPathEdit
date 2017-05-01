@@ -16,6 +16,7 @@ win32 {
 
 DEFINES += DESIGNER_PLUGIN
 
+include(../vendor/vendor.pri)
 include(../qpathedit.pri)
 
 HEADERS     += qpatheditplugin.h

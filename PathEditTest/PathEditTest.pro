@@ -1,24 +1,17 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2015-09-05T13:09:09
-#
-#-------------------------------------------------
-
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-TARGET = PathEditTest
 TEMPLATE = app
 
+QT += widgets
 
-SOURCES += main.cpp \
-    form.cpp
+TARGET = PathEditTest
 
-HEADERS  += \
-    form.h
-
+include(../vendor/vendor.pri)
 include(../qpathedit.pri)
 
+HEADERS  += \
+	form.h
+
+SOURCES += main.cpp \
+	form.cpp
+
 FORMS += \
-    form.ui
+	form.ui

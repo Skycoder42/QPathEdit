@@ -14,10 +14,9 @@
 #include <QPainter>
 #include <functional>
 #include <QKeyEvent>
+#include <dialogmaster.h>
 
 //HELPER CLASSES
-
-void masterDialog(QDialog *dialog);
 
 class PathValidator : public QValidator
 {
@@ -25,7 +24,7 @@ public:
 	PathValidator(QObject *parent);
 	void setMode(QPathEdit::PathMode mode);
 	void setAllowEmpty(bool allow);
-	State validate(QString &text, int &) const Q_DECL_OVERRIDE;
+	State validate(QString &text, int &) const override;
 private:
 	QPathEdit::PathMode mode;
 	bool allowEmpty;
@@ -56,7 +55,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 {
 	//setup dialog
 	dialog->setOptions(0);
-	masterDialog(dialog);
+	DialogMaster::masterDialog(dialog);
 	setPathMode(pathMode);
 	connect(dialog, &QFileDialog::fileSelected, this, &QPathEdit::dialogFileSelected);
 
@@ -482,21 +481,3 @@ QValidator::State PathValidator::validate(QString &text, int &) const
 
 	return QValidator::Invalid;
 }
-
-void masterDialog(QDialog *dialog)
-{
-	Qt::WindowFlags flags = Qt::WindowTitleHint |
-							Qt::WindowSystemMenuHint |
-							Qt::WindowCloseButtonHint;
-
-	dialog->setSizeGripEnabled(true);
-	if(dialog->parentWidget()) {
-		dialog->setWindowModality(Qt::WindowModal);
-		flags |= Qt::Sheet;
-	} else {
-		dialog->setWindowModality(Qt::ApplicationModal);
-		flags |= Qt::Dialog;
-	}
-	dialog->setWindowFlags(flags);
-}
-
