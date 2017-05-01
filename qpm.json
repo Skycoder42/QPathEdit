@@ -15,6 +15,7 @@
     "fingerprint": ""
   },
   "dependencies": [
+    "de.skycoder42.dialog-master@1.2.5"
   ],
   "license": "MIT",
   "pri_filename": "qpathedit.pri",
