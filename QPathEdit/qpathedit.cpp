@@ -398,7 +398,8 @@ QStringList QPathEdit::modelFilters(const QStringList &normalFilters)
 QIcon QPathEdit::getDefaultIcon()
 {
 	switch(uiStyle) {
-	case SeperatedButton: {
+	case SeperatedButton:
+	{
 		QImage image(16, 16, QImage::Format_ARGB32);
 		image.fill(Qt::transparent);
 		QPainter painter(&image);
@@ -408,7 +409,7 @@ QIcon QPathEdit::getDefaultIcon()
 		return QPixmap::fromImage(image);
 	}
 	case JoinedButton:
-		return QIcon(QStringLiteral(":/qpathedit/icons/dialog.ico"));
+		return QIcon::fromTheme(QStringLiteral("view-choose"), QIcon(QStringLiteral(":/qpathedit/icons/dialog.ico")));
 	case NoButton:
 		return QIcon();
 	default:
@@ -418,7 +419,7 @@ QIcon QPathEdit::getDefaultIcon()
 
 bool QPathEdit::eventFilter(QObject *watched, QEvent *event)
 {
-	if (event->type() == QEvent::KeyPress){
+	if (event->type() == QEvent::KeyPress) {
 		QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 		if(keyEvent->key() == Qt::Key_Space &&
 				keyEvent->modifiers() == Qt::ControlModifier){

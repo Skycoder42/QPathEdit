@@ -1,15 +1,18 @@
-TEMPLATE    = lib
+PLUGIN_TYPE = designer
+PLUGIN_CLASS_NAME = QPathEditPlugin
 
-QT += core gui widgets uiplugin
-CONFIG += plugin skip_target_version_ext c++11
+TARGET = qpathedit
+VERSION = 2.0.0
 
-TARGET      = $$qtLibraryTarget(qpatheditplugin)
-VERSION = 1.2.2
+load(qt_plugin)
+
+QT += widgets uiplugin
+
 win32 {
 	QMAKE_TARGET_COMPANY = "Skycoder42"
 	QMAKE_TARGET_PRODUCT = "QPathEdit QtDesigner Plugin"
 	QMAKE_TARGET_DESCRIPTION = $$QMAKE_TARGET_PRODUCT
-} else:unix:!mac: QMAKE_LFLAGS += '-Wl,-rpath,\'\$$ORIGIN/../../lib\''
+}
 
 DEFINES += DESIGNER_PLUGIN
 
@@ -19,5 +22,4 @@ HEADERS     += qpatheditplugin.h
 SOURCES     += qpatheditplugin.cpp
 RESOURCES   += qpatheditplugin_res.qrc
 
-DISTFILES += \
-    qpathedit.json
+OTHER_FILES += qpathedit.json
