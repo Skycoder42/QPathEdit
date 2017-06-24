@@ -13,8 +13,19 @@ The QPathEdit class provides the following features:
  - **Editable:** The edit can be editable or readonly. If editable, the validator will mark invalid paths and an auto completer will simplify path entering.
  - **Completer:** The edit uses an auto completer, that uses the underlying file-system to provide paths as autocompletion to make entering paths even easiert. It can be turned on and off.
  - **QtCreator Plugin:** The edit widget comes with an designer-plugin for Qt-Creator, to make it possible to user the pathEdit insider .ui files.
- 
-You can check out the documentation by clicking on QPathEdit, or download the files below.
+
+## Installation
+The package is providet as qpm package, [`de.skycoder42.qpathedit`](https://www.qpm.io/packages/de.skycoder42.qpathedit/index.html). To install:
+
+1. Install qpm (See [GitHub - Installing](https://github.com/Cutehacks/qpm/blob/master/README.md#installing), for **windows** see below)
+2. In your projects root directory, run `qpm install de.skycoder42.qpathedit`
+3. Include qpm to your project by adding `include(vendor/vendor.pri)` to your `.pro` file
+
+Check their [GitHub - Usage for App Developers](https://github.com/Cutehacks/qpm/blob/master/README.md#usage-for-app-developers) to learn more about qpm.
+
+**Important for Windows users:** QPM Version *0.10.0* (the one you can download on the website) is currently broken on windows! It's already fixed in master, but not released yet. Until a newer versions gets released, you can download the latest dev build from here:
+- https://storage.googleapis.com/www.qpm.io/download/latest/windows_amd64/qpm.exe
+- https://storage.googleapis.com/www.qpm.io/download/latest/windows_386/qpm.exe
 
 ### Usage - A simple Example
 Since the QPathEdit is just a simple widget, you can use it like any other widget.
@@ -59,15 +70,6 @@ For more details, check [Adding Qt Designer Plugins](http://doc.qt.io/qtcreator/
 The documentation is available within the releases and on [github pages](https://skycoder42.github.io/QPathEdit/).
 
 The documentation was created using [doxygen](www.doxygen.org/). It includes an HTML-documentation and Qt-Help files that can be included into QtCreator (QtAssistant) to show F1-Help (See [Adding External Documentation](https://doc.qt.io/qtcreator/creator-help.html#adding-external-documentation) for more details).
-
-## Download
-All downloads are located at [github release](https://github.com/Skycoder42/QPathEdit/releases). The release includes:
-- The sourcecode. To use it, simply copy the repository into you application (preferebly by adding it as a git submodule) and add the line `include(./QPathEdit/qpathedit.pri)` to your .pro-file. This way all files and required libraries will automatically be added.
-- The documentation, if you want to keep it local or add it to QtCreator
-- The precompiled QtCreator Plugins, all build with Qt 5.7.1 and working with at least the current version of QtCreator (4.2.0), for:
-  - Windows
-  - MacOs
-  - X11 (Linux, x64 only)
 
 ## Icons
 The edit uses a default icon for joined dialog buttons. The icon was downloaded from http://www.fatcow.com/free-icons.
