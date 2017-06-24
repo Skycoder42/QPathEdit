@@ -60,7 +60,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	connect(dialog, &QFileDialog::fileSelected, this, &QPathEdit::dialogFileSelected);
 
 	//setup completer
-	completerModel->setRootPath("");
+	completerModel->setRootPath(QStringLiteral(""));
 	completerModel->setNameFilterDisables(false);
 	connect(completerModel, &QFileSystemModel::directoryLoaded, pathCompleter, [this](QString){
 		pathCompleter->complete();
@@ -404,7 +404,7 @@ QIcon QPathEdit::getDefaultIcon()
 		QPainter painter(&image);
 		painter.setFont(font());
 		painter.setPen(palette().color(QPalette::ButtonText));
-		painter.drawText(QRect(0, 0, 16, 16), Qt::AlignCenter, "…");
+		painter.drawText(QRect(0, 0, 16, 16), Qt::AlignCenter, tr("…"));
 		return QPixmap::fromImage(image);
 	}
 	case JoinedButton:
