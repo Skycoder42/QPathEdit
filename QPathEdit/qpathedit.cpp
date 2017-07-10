@@ -90,6 +90,8 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	height += 2;
 #endif
 	toolButton->setFixedSize(height, height);
+	QT_WARNING_PUSH
+	QT_WARNING_DISABLE_GCC("-Wimplicit-fallthrough")
 	switch(style) {
 	case JoinedButton:
 		edit->addAction(dialogAction, QLineEdit::TrailingPosition);
@@ -99,6 +101,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	default:
 		break;
 	}
+	QT_WARNING_POP
 
 	QWidget::setTabOrder(edit, toolButton);
 	setFocusPolicy(edit->focusPolicy());
