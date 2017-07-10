@@ -188,6 +188,11 @@ QUrl QPathEdit::pathUrl() const
 	return QUrl::fromLocalFile(currentValidPath);
 }
 
+bool QPathEdit::hasAcceptableInput() const
+{
+	return wasPathValid;
+}
+
 bool QPathEdit::setPath(QString path, bool allowInvalid)
 {
 	if (edit->text() == path)
@@ -353,6 +358,7 @@ void QPathEdit::updateValidInfo(const QString &path)
 		if(!wasPathValid) {
 			wasPathValid = true;
 			edit->setPalette(palette());
+			emit acceptableInputChanged(wasPathValid);
 		}
 	} else {
 		if(wasPathValid) {
@@ -360,6 +366,7 @@ void QPathEdit::updateValidInfo(const QString &path)
 			QPalette pal = palette();
 			pal.setColor(QPalette::Text, QColor(QStringLiteral("#B40404")));
 			edit->setPalette(pal);
+			emit acceptableInputChanged(wasPathValid);
 		}
 	}
 }
