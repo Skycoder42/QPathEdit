@@ -16,11 +16,11 @@ win32 {
 
 DEFINES += DESIGNER_PLUGIN
 
-include(../vendor/vendor.pri)
-include(../qpathedit.pri)
-
 HEADERS     += qpatheditplugin.h
 SOURCES     += qpatheditplugin.cpp
 RESOURCES   += qpatheditplugin_res.qrc
 
 OTHER_FILES += qpathedit.json
+
+system(qpmx -d $$shell_quote($$_PRO_FILE_PWD_) --qmake-run init $$QPMX_EXTRA_OPTIONS $$shell_quote($$QMAKE_QMAKE) $$shell_quote($$OUT_PWD)):include($$OUT_PWD/qpmx_generated.pri)
+else: error(qpmx initialization failed. Check the compilation log for details.)
