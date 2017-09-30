@@ -1,24 +1,23 @@
 {
-  "name": "de.skycoder42.qpathedit",
-  "description": "",
-  "author": {
-    "name": "Skycoder",
-    "email": "skycoder42.de@gmx.de"
-  },
-  "repository": {
-    "type": "GITHUB",
-    "url": "https://github.com/Skycoder42/QPathEdit.git"
-  },
-  "version": {
-    "label": "2.1.0",
-    "revision": "",
-    "fingerprint": ""
-  },
-  "dependencies": [
-    "de.skycoder42.dialog-master@1.2.7",
-    "de.skycoder42.qpm-translate@1.1.0"
-  ],
-  "license": "MIT",
-  "pri_filename": "qpathedit.pri",
-  "webpage": ""
+    "author": {
+        "email": "skycoder42.de@gmx.de",
+        "name": "Skycoder"
+    },
+    "dependencies": [
+        "de.skycoder42.dialog-master@1.3.0"
+    ],
+    "description": "A Qt-Widget to get local file and folder-paths in an optimized and simple way",
+    "license": "MIT",
+    "name": "de.skycoder42.qpathedit",
+    "pri_filename": "qpathedit.pri",
+    "repository": {
+        "type": "GITHUB",
+        "url": "https://github.com/Skycoder42/QPathEdit.git"
+    },
+    "version": {
+        "fingerprint": "",
+        "label": "2.2.0",
+        "revision": ""
+    },
+    "webpage": "https://github.com/Skycoder42/QPathEdit"
 }

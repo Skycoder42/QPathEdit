@@ -1,0 +1,33 @@
+{
+    "dependencies": [
+        {
+            "package": "de.skycoder42.dialog-master",
+            "provider": "qpm",
+            "version": "1.3.0"
+        }
+    ],
+    "license": {
+        "file": "LICENSE",
+        "name": "MIT"
+    },
+    "prcFile": "",
+    "priFile": "qpathedit.pri",
+    "priIncludes": [
+    ],
+    "publishers": {
+        "qpm": {
+            "author": {
+                "email": "skycoder42.de@gmx.de",
+                "name": "Skycoder"
+            },
+            "description": "A Qt-Widget to get local file and folder-paths in an optimized and simple way",
+            "name": "de.skycoder42.qpathedit",
+            "repository": {
+                "type": "GITHUB",
+                "url": "https://github.com/Skycoder42/QPathEdit.git"
+            },
+            "webpage": "https://github.com/Skycoder42/QPathEdit"
+        }
+    },
+    "source": false
+}

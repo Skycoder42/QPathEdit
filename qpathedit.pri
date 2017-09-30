@@ -5,7 +5,7 @@ SOURCES += $$PWD/QPathEdit/qpathedit.cpp
 
 INCLUDEPATH += $$PWD/QPathEdit
 
-QPM_TRANSLATIONS += $$PWD/qpathedit_de.ts \
+TRANSLATIONS += $$PWD/qpathedit_de.ts \
 	$$PWD/qpathedit_template.ts
 
 RESOURCES += $$PWD/QPathEdit/qpathedit_res.qrc
