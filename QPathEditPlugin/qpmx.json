@@ -3,7 +3,7 @@
         {
             "package": "https://github.com/skycoder42/qpathedit.git",
             "provider": "git",
-            "version": "2.2.0"
+            "version": "2.2.2"
         }
     ],
     "license": {
