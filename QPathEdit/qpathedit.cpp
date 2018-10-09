@@ -60,7 +60,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	connect(dialog, &QFileDialog::fileSelected, this, &QPathEdit::dialogFileSelected);
 
 	//setup completer
-	completerModel->setRootPath(QStringLiteral(""));
+    completerModel->setRootPath(QString());
 	completerModel->setNameFilterDisables(false);
 	connect(completerModel, &QFileSystemModel::directoryLoaded, pathCompleter, [this](QString){
 		pathCompleter->complete();
