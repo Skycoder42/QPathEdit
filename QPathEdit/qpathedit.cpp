@@ -183,6 +183,11 @@ QString QPathEdit::path() const
 	return currentValidPath;
 }
 
+QString QPathEdit::editPath() const
+{
+	return edit->text();
+}
+
 QUrl QPathEdit::pathUrl() const
 {
 	return QUrl::fromLocalFile(currentValidPath);
@@ -353,6 +358,7 @@ void QPathEdit::showDialog()
 
 void QPathEdit::updateValidInfo(const QString &path)
 {
+	emit editPathChanged(path);
 	completerModel->index(QFileInfo(path).dir().absolutePath());//enforce "directory loading"
 	if(edit->hasAcceptableInput()) {
 		if(!wasPathValid) {
