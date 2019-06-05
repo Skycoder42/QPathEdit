@@ -44,6 +44,8 @@ class DESIGNER_PLUGIN_EXPORT QPathEdit : public QWidget
 	Q_PROPERTY(QString defaultDirectory READ defaultDirectory WRITE setDefaultDirectory)
 	//! Holds the currently entered, valid path
 	Q_PROPERTY(QString path READ path WRITE setPath RESET clear NOTIFY pathChanged)
+	//! Holds the currently entered text which might not be a valid path
+	Q_PROPERTY(QString editPath READ editPath NOTIFY editPathChanged)
 	//! Holds the information, whether the current edits contents are a valid path or not
 	Q_PROPERTY(bool acceptableInput READ hasAcceptableInput NOTIFY acceptableInputChanged)
 	//! Specifiy a placeholder to be shown if no path is entered
@@ -87,6 +89,8 @@ public:
 	QString defaultDirectory() const;
 	//! READ-ACCESSOR for QPathEdit::path
 	QString path() const;
+	//! READ-ACCESSOR for QPathEdit::editPath
+	QString editPath() const;
 	//! Returns the entered path as an QUrl
 	QUrl pathUrl() const;
 	//! READ-ACCESSOR for QPathEdit::acceptableInput
@@ -142,6 +146,8 @@ public slots:
 signals:
 	//! NOTIFY-ACCESSOR for QPathEdit::path
 	void pathChanged(QString path);
+	//! NOTIFY-ACCESSOR for QPathEdit::editPath
+	void editPathChanged(QString path);
 	//! NOTIFY-ACCESSOR for QPathEdit::acceptableInput
 	void acceptableInputChanged(bool acceptableInput);
 
