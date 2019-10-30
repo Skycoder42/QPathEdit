@@ -1,19 +1,24 @@
 #include "qpathedit.h"
-#include <QLineEdit>
-#include <QToolButton>
-#include <QHBoxLayout>
+
+#include <QAction>
 #include <QCompleter>
-#include <QValidator>
-#include <QStandardPaths>
+#include <QDropEvent>
+#include <QEvent>
 #include <QFileSystemModel>
+#include <QHBoxLayout>
+#include <QKeyEvent>
+#include <QLineEdit>
+#include <QMimeData>
+#include <QPainter>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QEvent>
+#include <QStandardPaths>
 #include <QTimer>
-#include <QAction>
-#include <QPainter>
+#include <QToolButton>
+#include <QUrl>
+#include <QValidator>
+
 #include <functional>
-#include <QKeyEvent>
 #include <dialogmaster.h>
 
 //HELPER CLASSES
@@ -106,6 +111,7 @@ QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QWidget *parent, QPathEdit::S
 	QWidget::setTabOrder(edit, toolButton);
 	setFocusPolicy(edit->focusPolicy());
 	setFocusProxy(edit);
+	setAcceptDrops(true);
 }
 
 QPathEdit::QPathEdit(QPathEdit::PathMode pathMode, QString defaultDirectory, QWidget *parent, QPathEdit::Style style) :
@@ -442,6 +448,57 @@ bool QPathEdit::eventFilter(QObject *watched, QEvent *event)
 			return true;
 		} else
 			return QObject::eventFilter(watched, event);
+	} else if (event->type() == QEvent::Drop) {
+		QDropEvent *dropEvent = static_cast<QDropEvent*>(event);
+		if (dropEvent->mimeData()->hasUrls()
+			&& dropEvent->mimeData()->urls().count() == 1
+			&& dropEvent->mimeData()->urls().first().isLocalFile()) {
+			
+			QString filePath = dropEvent->mimeData()->urls().first().toLocalFile();
+			bool matched = true;
+
+			QFileInfo fi(filePath);
+			if (!dialog->nameFilters().isEmpty() && fi.isFile() && mode == ExistingFile) {
+				const QString fileNameSuffix = fi.suffix();
+				if (!fileNameSuffix.isEmpty()) {
+					// regexp copied from Qt sources QPlatformFileDialogHelper::filterRegExp
+					QRegularExpression regexp("^(.*)\\(([a-zA-Z0-9_.,*? +;#\\-\\[\\]@\\{\\}/!<>\\$%&=^~:\\|]*)\\)$");
+
+					// Makes a ["*.png", "*.jpg", "*.bmp"] formatted list of filters
+					// from the extension filters in format ["Image Files (*.png *.jpg)", ""Bitmaps (*.bmp)]
+					QStringList extensionsFilters;
+					foreach (const QString & filter, dialog->nameFilters()) {
+						QString f = filter;
+						QRegularExpressionMatch match;
+						filter.indexOf(regexp, 0, &match);
+						if (match.hasMatch())
+							f = match.captured(2);
+						extensionsFilters.append(f.split(QLatin1Char(' '), QString::SkipEmptyParts));
+					}
+
+					matched = false;
+					foreach (const QString & extensionFilter, extensionsFilters) {
+						if (extensionFilter == QStringLiteral("*.*")) {
+							matched = true;
+							break;
+						}
+
+						const QString filterSuffix = QFileInfo(extensionFilter).suffix();
+						if (!filterSuffix.isEmpty()) {
+							if (fileNameSuffix == filterSuffix) {
+								matched = true;
+								break;
+							}
+						}
+					}
+				}
+			}
+
+			if (matched)
+				setPath(filePath);
+			return true;
+		}
+		return false;
 	} else
 		return QObject::eventFilter(watched, event);
 }
